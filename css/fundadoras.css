@@ -1,0 +1,34 @@
+.contairner-fundadoras
+{
+
+    margin-top: 100px;
+    margin-bottom: 36px;
+
+    display: flex;
+    justify-content: center;
+}
+
+.card-fundadora
+{
+    margin: 0 16px;
+    width: 400px;
+    height: 400px;
+
+}
+
+.card-fundadora img
+{
+    width: 100%;
+    height: 85%;
+    margin: 0px;
+
+    border: 1px solid black;    
+}
+
+.card-fundadora p
+{
+    width: 100%;
+    height: 15%;
+
+    border: 1px solid black;
+}

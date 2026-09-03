@@ -1,0 +1,59 @@
+.navbar
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-height: 120px;
+
+    background-color: #7646e8;
+    font-family: monospace;
+}
+
+a
+{
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 24px;
+    color: #fff;
+
+    margin: 0 24px;
+}
+
+.navbar .paginas :hover
+{
+    color: #000000;
+}
+
+.logo
+{
+    width: 70px;
+    height: 100px;
+    margin-left: 60px;
+    
+}
+
+
+.src
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 60px;
+
+}
+
+.src img
+{
+    width: 150px;
+    height: 150x;
+}
+
+.navbar .src input
+{
+    height: 24px;
+    width: 200px;
+    
+    border-style: none;
+    border-radius: 16px;
+
+}
