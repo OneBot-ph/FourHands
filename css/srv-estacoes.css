@@ -1,0 +1,24 @@
+.grid-estacoes
+{
+    margin-top: 24px;
+}
+
+.grid-estacoes p
+{
+    width: 640px;
+    height: 30px;
+
+    margin: auto;
+    margin-bottom: 16px;
+    text-align: center;
+
+    border: 1px solid black;
+}
+
+.grid-estacoes img
+{
+    width: 100%;
+    height: 290px;
+
+    border: 1px solid black;
+}

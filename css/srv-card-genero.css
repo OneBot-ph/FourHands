@@ -1,0 +1,49 @@
+.grid-genero
+{
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+    gap: 36px;
+
+}
+
+.grid-genero-card
+{
+    max-width: 430px;
+    max-height: 650px;
+}
+
+.grid-genero-card img
+{
+    height: 100%;
+    width: 100%;
+
+    border-radius: 16px;
+}
+
+.grid-genero-card:hover p
+{
+    opacity: 0.9;
+    transition: 0.8s ease;
+}
+
+.grid-genero-card p
+{
+    width: 90%;
+    height: 24px;
+    
+    position: relative;
+
+
+    text-align: center;
+    border-radius: 8px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    opacity: 0;
+
+    top: 1;
+    bottom: 10%;
+    right: 5%;
+    left: 5%;
+
+}
