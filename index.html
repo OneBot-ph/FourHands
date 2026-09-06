@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,92 +10,95 @@
 
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/carrossel-topo.css">
-    <link rel="stylesheet" href="css/carrosel-servicos.css">
-    <link rel="stylesheet" href="css/experiencias.css">
+    <link rel="stylesheet" href="css/ind-carrossel-topo.css">
+    <link rel="stylesheet" href="css/ind-carrosel-servicos.css">
+    <link rel="stylesheet" href="css/ind-experiencias.css">
     <link rel="stylesheet" href="css/footer.css">
 </head>
+
 <body>
-    <main class="principal">
-        <!-- cabeçalho -->
-        <header>
-            <nav class="navbar">
-                <a href="index.html">
-                    <img src="imagens/logo-esboco.png" alt="" class="logo">
-                </a>
+    <!-- cabeçalho -->
+    <header>
+        <nav class="navbar">
+            <a href="index.html">
+                <img src="imagens/logo-esboco.png" alt="" class="logo">
+            </a>
 
-                <div class="paginas">
-                    <a href="html/quemsomos.html">QuemSomos</a>
-                    <a href="#servicos">Serviços</a>
-                </div>
-
-                <div class="src">
-                    <form>
-                        <input type="text" list="pesquisa">
-                        <datalist id="pesquisa">
-                            <!-- Pesquisar-->
-                        </datalist>
-                    </form>
-                    <a href="#carrinho"><img src="imagens/carrinho.png" alt=""></a>
-                </div>
-            </nav>
-        </header>
-
-        <!-- carrossel topo -->
-        <section class="container carrossel-topo">
-            <!-- Carrossel de imagens -->
-            <div class="carrossel-img-topo">
-                <img src="1" alt="">
-                <img src="2" alt="">
-                <img src="3" alt="">
-            </div>
-            <div class="carrossel-txt"></div>
-            <p></p>
-            <p></p>
-            <p></p>
-        </section>
-
-        <!-- carrossel "Nossos Serviços" -->
-        <section class="container carrossel-container">
-
-           <div class="carrossel-img-servicos fade">
-                <img class="img-servico" src="imagens/servico1.svg" alt="">
-            </div>
-            
-            <div class="carrossel-img-servicos fade">
-                <img class="img-servico" src="imagens/servico2.svg" alt="">
+            <div class="paginas">
+                <a href="html/quemSomos.html">QuemSomos</a>
+                <a href="html/servicos.html">Serviços</a>
             </div>
 
-            <div class="carrossel-img-servicos fade">
-                <img class="img-servico" src="imagens/servico3.svg" alt="">
+            <div class="src">
+                <form>
+                    <input type="text" list="pesquisa">
+                    <datalist id="pesquisa">
+                        <!-- Pesquisar-->
+                    </datalist>
+                </form>
+                <a href="#carrinho"><img src="imagens/carrinho.png" alt=""></a>
             </div>
+        </nav>
+    </header>
 
-            <button class="proximo" onclick="proximoSlide(1)">></button>
-            <button class="anterior" onclick="proximoSlide(-1)"><</button>
-        </section>
+    <!-- carrossel topo -->
+    <section class="container carrossel-topo">
+        <!-- Carrossel de imagens -->
+        <div class="carrossel-img-topo">
+            <img src="1" alt="">
+            <img src="2" alt="">
+            <img src="3" alt="">
+        </div>
+        <div class="carrossel-txt"></div>
+        <p></p>
+        <p></p>
+        <p></p>
+    </section>
 
-        <!-- Experiências -->
+    <!-- carrossel "Nossos Serviços" -->
+    <section class="container carrossel-container">
 
-        <section class="container-experiencias">
-            <div class="experiencias-cardTxt">
-                <h1>Nossas Experiências</h1>
-                <div class="background-p"> 
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam explicabo mollitia tempora aliquid consectetur ab temporibus nostrum quam quae, libero reiciendis numquam similique voluptates qui asperiores fuga. Fugit, labore consectetur?
-                    </p>
-                </div>
+        <div class="carrossel-img-servicos fade">
+            <img class="img-servico" src="imagens/servico1.svg" alt="">
+        </div>
+
+        <div class="carrossel-img-servicos fade">
+
+            <img class="img-servico" src="imagens/servico2.svg" alt="">
+        </div>
+
+        <div class="carrossel-img-servicos fade">
+            <img class="img-servico" src="imagens/servico3.svg" alt="">
+        </div>
+
+        <button class="proximo" onclick="proximoSlide(1)">></button>
+        <button class="anterior" onclick="proximoSlide(-1)"><</button>
+    </section>
+
+    <!-- Experiências -->
+
+    <section class="container-experiencias">
+        <div class="experiencias-cardTxt">
+            <h1>Nossas Experiências</h1>
+            <div class="background-p">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam explicabo mollitia tempora aliquid
+                    consectetur ab temporibus nostrum quam quae, libero reiciendis numquam similique voluptates qui
+                    asperiores fuga. Fugit, labore consectetur?
+                </p>
             </div>
+        </div>
 
-            <img src="" alt="">
+        <img src="" alt="">
 
-        </section>
+    </section>
 
-        <!-- footer -->
+    <!-- footer -->
 
-        <footer class="footer">
-            
-        </footer>
+    <footer class="footer">
 
-    </main>
+    </footer>
+
 </body>
+
 </html>
