@@ -1,0 +1,71 @@
+a
+{
+    margin: 0;
+    padding: 0;
+}
+
+.place-pecas
+{
+    margin: 32px 16px 0 16px;
+    max-width: 100%;
+    height: 810px;
+}
+
+.place-pecas p
+{
+    margin-bottom: 24px ;
+    height: 30px;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+.grid-pecas
+{
+    display: flex;
+    height: 72%;
+    gap: 10px;
+}
+
+#pecas-aside-esquerda
+{
+    width: 25%;
+    border: 1px solid black;
+}
+
+.grid-pecas-aside
+{
+    width: 75%;
+}
+
+.link-pecas-header #pecas-header
+{
+    height: 39%;
+    width: 100%;
+    border: 1px solid black;
+    margin-bottom: 12px;
+}
+
+.grid-pecas-footer
+{
+    display: flex;
+    height: 59%;
+    gap: 12px;
+
+}
+
+.link-pecas-footer
+{
+    width: 50%;
+    height: 100%;
+    border: 1px solid black;
+}
+
+
+#peca-footer
+{
+    margin-top: 12px;
+    width: 100%;
+    height: 20%;
+    border: 1px solid black;
+}

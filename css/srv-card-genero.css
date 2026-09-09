@@ -13,11 +13,10 @@
     max-height: 650px;
 }
 
-.grid-genero-card img
+.link-genero img
 {
     height: 100%;
     width: 100%;
-
     border-radius: 16px;
 }
 
@@ -27,23 +26,19 @@
     transition: 0.8s ease;
 }
 
-.grid-genero-card p
+.link-genero p
 {
     width: 90%;
-    height: 24px;
-    
     position: relative;
-
-
     text-align: center;
+    font-size: 18px;
     border-radius: 8px;
     background-color: rgb(0, 0, 0);
     color: white;
     opacity: 0;
-
     top: 1;
     bottom: 10%;
-    right: 5%;
+    right: 0;
     left: 5%;
 
 }

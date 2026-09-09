@@ -1,0 +1,16 @@
+.desc
+{
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid black;
+    gap: 50px;
+}
+
+#pesquisa-roupas
+{
+    padding: 4px;
+    gap: 4px;
+    border-radius: 8px;
+    width: 150px;
+}

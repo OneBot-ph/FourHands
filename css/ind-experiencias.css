@@ -1,15 +1,20 @@
 .container-experiencias
 {
     padding-bottom: 24px;
+    height: 800px;
     display: flex;
     justify-content: center;
     justify-content: space-around;
     background-color: #ccc;
 }
 
+.experiencias-cardTxt, .exp-card-img
+{
+    margin-top: 150px;
+}
+
 .experiencias-cardTxt
 {
-    margin-top: 50px;
     gap: 16px;
 }
 
@@ -38,7 +43,6 @@
 
 .container-experiencias img
 {
-    margin-top: 50px;
     width: 560px;
     height: 500px;
     border: 1px solid #000;

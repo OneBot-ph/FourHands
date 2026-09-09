@@ -1,6 +1,6 @@
 .grid-estacoes
 {
-    margin-top: 24px;
+    margin-top: 82px;
 }
 
 .grid-estacoes p
@@ -12,6 +12,7 @@
     margin-bottom: 16px;
     text-align: center;
 
+    border-radius: 8px;
     border: 1px solid black;
 }
 
