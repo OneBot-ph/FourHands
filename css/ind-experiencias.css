@@ -36,6 +36,10 @@
     height: 430px;
     padding: 16px;
     border-radius: 16px;
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    padding: 16px;
     
     opacity: 0.8;
     background-color: #000;

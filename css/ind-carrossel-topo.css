@@ -1,34 +1,35 @@
-.carrossel-topo
-{
-
+.carrossel-topo{
     display: flex;
-    height: 400px;
-    width: 60%;
-    justify-content: end;
+    height: 75vh;
     align-items: center;
-    margin-top: 24px;
-
-
-    background-color: antiquewhite;
-
-    border-radius: 24px;
-    
-    
+    position: relative;
+    background: url("../imagens/background-index.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top;
 }
+
 /*
 terá que ser realizado depois, pois precisa ser estudado
 .carrossel-img
 {
- 
 }
 */
-.carrossel-txt
-{
+.carrossel-txt {
     width: 20%;
     height: 50%;
     margin-right: 34px;
-    
-    border: 1px solid black;
+    display: flex;
+    align-items: center;
+
+    position: absolute ;
+    right: 10%;
+    background-color: #000;
+    color:white ;
+    opacity: .7;
     border-radius: 16px;
 }
-
+.carrossel-txt p{
+    padding: 16px;
+    text-align: justify;
+}

@@ -7,7 +7,6 @@ function proximoSlide(n) {
 
 function showSlides(n) {
 
-
   let slides = document.getElementsByClassName("carrossel-img-servicos");
 
   // Verificação do valor do indice

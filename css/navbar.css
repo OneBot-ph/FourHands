@@ -1,59 +1,106 @@
-.navbar
-{
+.navbar {
+
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    max-height: 120px;
+    justify-content: center;
+    gap: 100px;
+    position: fixed;
+    top: 5%;
+    left: 25%;
+    right: 25%;
+    z-index: 5;
 
-    background-color: #7646e8;
     font-family: monospace;
 }
 
-a
-{
+.grid-navbar:hover,
+.src:hover {
+    background-color: #845cbc;
+    transition: .8s ease-in;
+}
+
+.grid-navbar:hover .paginas a {
+    color: #fdcce6;
+}
+
+a {
     text-decoration: none;
-    font-family: monospace;
-    font-size: 24px;
-    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #845cbc;
+    text-align: center;
+    transition: color .3 ease;
 
-    margin: 0 24px;
+
+    transition: .5s ease-in;
+    padding: 8px;
+    margin: 0 24px 8px 24px;
 }
 
-.navbar .paginas :hover
-{
-    color: #000000;
-}
-
-.logo
-{
-    width: 70px;
-    height: 100px;
-    margin-left: 60px;
-    
-}
-
-
-.src
-{
+.paginas {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin-right: 60px;
+}
+
+.paginas a {
+    margin-top: 8px;
 
 }
 
-.src img
-{
-    width: 150px;
-    height: 150x;
+a img {
+
+    width: 50px;
+    object-fit: cover;
+    object-position: center;
 }
 
-.navbar .src input
-{
-    height: 24px;
+.grid-navbar {
+    padding-left: 60px;
+    display: flex;
+}
+
+
+.logo {
+    width: 120px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+
+
+.src img {
+    width: 92px;
+    height: 80px;
+    object-fit: cover;
+    object-position: center;
+    display: flex;
+    align-items: center;
+}
+
+.src input {
+    height: 30px;
     width: 200px;
-    
-    border-style: none;
-    border-radius: 16px;
+    margin-left: 32px;
 
+    text-align: center;
+    font-size: 16px;
+
+    border: none;
+    border-radius: 24px;
+
+}
+
+.grid-navbar,
+.src {
+    transition: background-color .8s ease-in;
+    background-color: #fdcce6;
+    display: flex;
+    align-items: center;
+    height: 80px;
+    padding: 16px;
+
+    object-fit: cover;
+    object-position: center;
+    border-radius: 64px;
 }

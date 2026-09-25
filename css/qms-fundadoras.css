@@ -21,8 +21,10 @@
     width: 100%;
     height: 85%;
     margin: 0px;
+    object-fit: cover;
+    object-position: center;
 
-    border: 1px solid black;    
+    border: 1px solid black;
 }
 
 .card-fundadora p

@@ -1,10 +1,8 @@
-.apresentacao
-{
+.apresentacao {
     margin-top: 24px;
 }
 
-.texto-apresentacao
-{
+.texto-apresentacao {
     width: 400px;
     height: 30px;
     margin: auto;
@@ -12,18 +10,18 @@
     border: 1px solid black;
 }
 
-.container-img
-{
+.container-img {
     display: flex;
     justify-content: center;
     margin-bottom: 24px;
 }
 
-.img-roupa
-{
+.img-roupa {
     height: 600px;
     width: 400px;
     margin: 0 24px;
+    object-fit: cover;
+    object-position: center;
 
     /*animação*/
     display: block;
@@ -33,25 +31,22 @@
 
 /*Animação*/
 
-.img-interativo
-{
+.img-interativo {
     padding: 0;
     margin: 0;
 
-    position:relative;
+    position: relative;
 }
 
-.overlay
-{
+.overlay {
     position: absolute;
     bottom: 0;
     opacity: 0;
     transition: .8s ease;
+    object-fit: cover;
+    object-position: center;
 }
 
-.img-interativo:hover .overlay
-{
+.img-interativo:hover .overlay {
     opacity: 1;
 }
-
-

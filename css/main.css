@@ -7,9 +7,10 @@
 
 html
 {
-    background-color: #fff;
+    background-color: aliceblue;
     color: #000;
     line-height: 1.5;
+    scroll-behavior: smooth;
 }
 
 .container
