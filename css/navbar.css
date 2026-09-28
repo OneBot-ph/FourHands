@@ -5,7 +5,7 @@
     justify-content: center;
     gap: 100px;
     position: fixed;
-    top: 5%;
+    top: 2%;
     left: 25%;
     right: 25%;
     z-index: 5;
@@ -23,7 +23,7 @@
     color: #fdcce6;
 }
 
-a {
+.grid-navbar a, .src a{
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;

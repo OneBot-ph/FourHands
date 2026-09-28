@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedidos</title>
+
+    <script src="../javaScript/anexo.js" async></script>
+
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/pedidos.css">
+</head>
+
+<body>
+    <!-- cabeçalho -->
+    <header>
+        <nav class="navbar">
+
+            <div class="grid-navbar">
+                <a href="../index.html">
+                    <img src="../imagens/logo.png" alt="" class="logo">
+                </a>
+
+                <div class="paginas">
+                    <a href="servicos.html">
+                        Serviços
+                    </a>
+                    <a href="quemSomos.html">
+                        Quem Somos?
+                    </a>
+                </div>
+            </div>
+            <div class="src">
+                <form>
+                    <input type="text" list="pesquisa">
+                    <datalist id="pesquisa">
+                        <!-- Pesquisar-->
+                    </datalist>
+                </form>
+                <a href="#carrinho"><img src="../imagens/carrinho2.png " alt=""></a>
+            </div>
+        </nav>
+    </header>
+    <!-- fim Cabeçalho -->
+
+    <!-- Pedidos de peças personalizadas -->
+    <section class="place-pedido">
+        <aside class="desc-pedido">
+            <form action="">
+                <textarea id="desc-form" required>
+
+                </textarea>
+                <div class="place-anexo">
+                    <label id="anexo" for="arquivo">
+                        <h3>Envie um arquivo de Exemplo</h3>
+                        <input type="file" id="arquivo">
+                        <img class="img">
+                    </label>
+                </div>
+            </form>
+        </aside>
+
+
+        <aside class="info">
+            <h1>Faça seu pedido</h1>
+            <form id="pedido">
+                <input id="nome" type="text" placeholder="Digite o seu nome" required>
+                <input id="email" type="email" placeholder="Digite o seu e-mail" required>
+                <input id="numero" type="tel" placeholder="Digite o seu telefone" required>
+
+                <h2>Nos conte um pouco mais</h2>
+                <div class="grid-questoes">
+                    <input type="text" id="" list="jaFez" placeholder="Já fez alguma peça antes?">
+                    <datalist id="jaFez">
+                        <option value="Sim"></option>
+                        <option value="Não"></option>
+                    </datalist>
+
+                    <input type="text" id="" list="Cores" placeholder="Cor da Peça">
+                    <datalist id="Cores">
+                        <option value="Branco"></option>
+                        <option value="Preto"></option>
+                        <option value="Roxo"></option>
+                    </datalist>
+
+                    <input type="text" id="" list="tamanho" placeholder="Tamanho da peça">
+                    <datalist id="tamanho">
+                        <option value="P"></option>
+                        <option value="M"></option>
+                        <option value="G"></option>
+                    </datalist>
+                </div>
+            </form>
+            <button id="enviar">Enviar mensagem</button>
+        </aside>
+    </section>
+    <!-- Fim questionario -->
+
+    <!-- footer -->
+    <footer class="footer">
+
+    </footer>
+    <!-- fim footer -->
+</body>
+
+</html>
