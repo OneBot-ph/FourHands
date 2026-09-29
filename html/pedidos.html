@@ -7,6 +7,7 @@
     <title>Pedidos</title>
 
     <script src="../javaScript/anexo.js" async></script>
+    <script src="../javaScript/apiWhast.js" defer></script>
 
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/navbar.css">
@@ -46,57 +47,116 @@
     </header>
     <!-- fim Cabeçalho -->
 
+    <h1 class="titulo">Faça o seu pedido</h1>
     <!-- Pedidos de peças personalizadas -->
-    <section class="place-pedido">
-        <aside class="desc-pedido">
-            <form action="">
-                <textarea id="desc-form" required>
+    <form id="place-pedido">
+        <section class="desc-pedido">
 
-                </textarea>
-                <div class="place-anexo">
-                    <label id="anexo" for="arquivo">
-                        <h3>Envie um arquivo de Exemplo</h3>
-                        <input type="file" id="arquivo">
-                        <img class="img">
-                    </label>
-                </div>
-            </form>
-        </aside>
+            <textarea id="desc-form" placeholder="Escreva sobre o seu pedido:"></textarea>
 
+            <div class="place-anexo">
 
-        <aside class="info">
-            <h1>Faça seu pedido</h1>
-            <form id="pedido">
-                <input id="nome" type="text" placeholder="Digite o seu nome" required>
-                <input id="email" type="email" placeholder="Digite o seu e-mail" required>
-                <input id="numero" type="tel" placeholder="Digite o seu telefone" required>
+                <label id="anexo" for="arquivo">
+                    <h3>Envie um arquivo de Exemplo</h3>
+                    <input type="file" id="arquivo">
+                    <img class="img">
+                </label>
 
-                <h2>Nos conte um pouco mais</h2>
+            </div>
+        </section>
+
+        <section class="info" id="pedido">
+            <div class="grid-pedido">
+                <h1>Seu Dados</h1>
+                <input id="nome" name="nome" type="text" placeholder="Digite seu nome completo" required>
+                <input id="email" name="email" type="email" placeholder="Digite o seu e-mail" required>
+                <input id="numero" name="telefone" type="tel" placeholder="Digite o seu telefone" required>
+
+                <h2>Nos conte um pouco mais sobre a peça</h2>
                 <div class="grid-questoes">
-                    <input type="text" id="" list="jaFez" placeholder="Já fez alguma peça antes?">
-                    <datalist id="jaFez">
-                        <option value="Sim"></option>
-                        <option value="Não"></option>
+
+                    <input type="text" name="genero" list="genero" placeholder="Para quem será feita essa peça?">
+                    <datalist id="genero">
+                        <option value="Feminino"></option>
+                        <option value="Masculino"></option>
+                        <option value="Unissex"></option>
                     </datalist>
 
-                    <input type="text" id="" list="Cores" placeholder="Cor da Peça">
-                    <datalist id="Cores">
-                        <option value="Branco"></option>
-                        <option value="Preto"></option>
-                        <option value="Roxo"></option>
+                    <input type="text" name="categoria" list="categoria" placeholder="Que tipo de peça você deseja?">
+                    <datalist id="categoria">
+                        <option value="camisa"></option>
+                        <option value="camiseta"></option>
+                        <option value="blusa"></option>
+
+                        <option value="regata"></option>
+                        <option value="Vestido"></option>
+                        <option value="saia"></option>
+
+                        <option value="calça"></option>
+                        <option value="short"></option>
+                        <option value="bermuda"></option>
+
+                        <option value="jaqueta"></option>
+                        <option value="casaco"></option>
+                        <option value="conjunto"></option>
                     </datalist>
 
-                    <input type="text" id="" list="tamanho" placeholder="Tamanho da peça">
+                    <input type="text" name="tamanho" list="tamanho" placeholder="Tamanho da peça">
                     <datalist id="tamanho">
+                        <option value="PP"></option>
                         <option value="P"></option>
                         <option value="M"></option>
                         <option value="G"></option>
+                        <option value="GG"></option>
+                        <option value="XG"></option>
+                    </datalist>
+
+                    <input type="text" name="caimento" list="caimento"
+                        placeholder="Como você gostaria que a peça ficasse no seu corpo?">
+                    <datalist id="caimento">
+                        <option value="Muito justa"></option>
+                        <option value="Justa"></option>
+                        <option value="Ajustada"></option>
+                        <option value="Normal"></option>
+                        <option value="Solta"></option>
+                        <option value="Oversized"></option>
+                        <option value="Muito larga"></option>
+                    </datalist>
+
+
+                    <input type="text" name="comprimento" list="comprimento"
+                        placeholder="Como você gostaria que fosse o comprimento?">
+                    <datalist id="comprimento">
+                        <option value="curto"></option>
+                        <option value="Médio"></option>
+                        <option value="Longo"></option>
+                    </datalist>
+
+                    <input type="text" name="cores" list="Cores" placeholder="Qual será a cor principal da Peça">
+
+
+                    <input type="text" name="tecido" list="tecidos"
+                        placeholder="Você já possui preferência pelo tecido?">
+                    <datalist id="tecidos">
+                        <option value="Algodão"></option>
+                        <option value="Malha"></option>
+                        <option value="Linho"></option>
+                        <option value="Viscose"></option>
+                        <option value="Jeans"></option>
+                        <option value="Sarja"></option>
+                        <option value="Moletom"></option>
+                        <option value="Cetim"></option>
+                        <option value="Renda"></option>
+                        <option value="Veludo"></option>
+                        <option value="Tecido espotivo"></option>
                     </datalist>
                 </div>
-            </form>
-            <button id="enviar">Enviar mensagem</button>
-        </aside>
-    </section>
+            </div>
+            <div class="botao">
+                <button id="enviar" type="submit">Enviar mensagem</button>
+            </div>
+        </section>
+    </form>
     <!-- Fim questionario -->
 
     <!-- footer -->

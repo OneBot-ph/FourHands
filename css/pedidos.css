@@ -1,5 +1,15 @@
-.place-pedido {
+.titulo {
     margin-top: 120px;
+    width: 50%;
+    margin-inline: auto;
+    background-color: #845cbc;
+    text-align: center;
+    border-radius: 24px;
+    color: white;
+}
+
+#place-pedido {
+    margin-top: 12px;
     margin-inline: auto;
     max-height: 1000px;
     width: 80%;
@@ -11,7 +21,7 @@
 }
 
 .desc-pedido {
-    width: 50%;
+    width: 100%;
 }
 
 .desc-pedido form {
@@ -21,26 +31,30 @@
 
 #desc-form {
     margin-bottom: 12px;
-    height: 400px;
+    height: 50%;
+    width: 100%;
     background-color: white;
     border-radius: 16px;
     border: 2px solid #845cbc;
     overflow-y: auto;
     resize: none;
-
-    padding: 12px;
+    padding: 16px;
     font-size: 20px;
 }
 
 .place-anexo {
-    max-height: 400px;
     background-color: #fdcce6;
     border-radius: 16px;
-
+    height: 300px;
+    display: flex;
+    justify-content: center;
 }
 
 #anexo {
     cursor: pointer;
+    width: 100%;
+    height: 50px;
+
 }
 
 #anexo input[type="file"] {
@@ -48,19 +62,15 @@
 }
 
 #anexo h3 {
-    width: 40%;
-    margin: 12px auto;
     padding: 12px;
     text-align: center;
-    border-radius: 16px;
-    background-color: white;
-    transition: .4s;
+    background-color: #845cbc;
+    color: #f3f3f3;
 }
 
 #anexo h3:hover {
     transition: .4s;
-    background-color: #845cbc;
-    color: white;
+    background-color: #c1d591;
 }
 
 #anexo .img {
@@ -75,8 +85,6 @@
     padding: 24px;
     text-align: center;
     font-family: monospace;
-
-    position: relative;
 }
 
 .info h1 {
@@ -84,41 +92,51 @@
     margin-bottom: 32px;
 }
 
-#nome,
-#email,
-#numero{
+.info input {
     width: 100%;
     height: 40px;
     margin-bottom: 10px;
     border: none;
     border-radius: 16px;
+    background-color: #f3f3f3;
 
     padding: 12px;
 }
 
-.info h2{
+.grid-questoes input {
+    margin-bottom: 18px;
+
+}
+
+.info h2 {
     margin-top: 52px;
 }
 
-.grid-questoes input{
-    margin-top: 18px;
-    width: 210px;
-    height: 40px;
+
+.info button {
+    cursor: pointer;
+    height: 60px;
+    width: 300px;
     border: none;
     border-radius: 16px;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-family: monospace;
     padding: 12px;
+    color: #fff;
+    background-color: #845cbc;
 }
 
-.info button{
-    position: absolute;
-    bottom: 5%;
-    right: 25%;
-    left: 25%;
-    height: 40px;
-    border: none;
-    border-radius: 16px;
-    padding: 12px;
-    color: #fdcce6;
-    background-color: #845cbc;
+.grid-pedido {
+    padding: 24px;
+    border-radius: 12px;
+    background-color: #fff;
+}
+
+.botao {
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
 }
