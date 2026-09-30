@@ -1,12 +1,10 @@
-.carrossel-topo{
+.carrossel-topo {
+    position: relative;
     display: flex;
-    height: 75vh;
+    height: 100vh;
     align-items: center;
     position: relative;
-    background: url("../imagens/background-index.svg");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: top;
+    background-color: #4B1F6F;
 }
 
 /*
@@ -15,21 +13,99 @@ terá que ser realizado depois, pois precisa ser estudado
 {
 }
 */
-.carrossel-txt {
-    width: 20%;
-    height: 50%;
-    margin-right: 34px;
-    display: flex;
-    align-items: center;
 
-    position: absolute ;
-    right: 10%;
-    background-color: #000;
-    color:white ;
-    opacity: .7;
-    border-radius: 16px;
+/*---------------*/
+.frase-impacto {
+    width: 100%;
+    display: flex;
+    position: relative;
+    top: -25%;
+    left: 50%;
+    color: white;
 }
-.carrossel-txt p{
+
+.frase-impacto p {
+    z-index: 3;
+    position: absolute;
+    top: -10px;
+    left: -10%;
     padding: 16px;
-    text-align: justify;
+    font-size: 32px;
+}
+
+.frase-impacto img {
+    object-fit: cover;
+    object-position: center;
+}
+
+#stand {
+    z-index: 2;
+    position: absolute;
+    bottom: -70px;
+    left: -15.5%;
+    transform: rotate(-24deg);
+    height: 140px;
+}
+
+#tufo {
+    position: absolute;
+    left: -11%;
+    top: -30px;
+    z-index: 1;
+    height: 80px;
+}
+
+/*---------------*/
+
+.grid-card img {
+    object-fit: cover;
+    object-position: center;
+
+}
+
+#moca {
+    position: absolute;
+    right: 45%;
+    bottom: 10%;
+    height: 400px;
+    z-index: 2;
+}
+
+.background-moca {
+    position: absolute;
+    right: 45%;
+    bottom: 10%;
+    z-index: 1;
+    width: 200px;
+    height: 200px;
+    border-radius: 24px;
+    background-color: bisque;
+}
+
+.grid-card p {
+    z-index: 1;
+    color: #4B1F6F;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 24px;
+}
+
+#roupas {
+    position: absolute;
+    right: 51%;
+    bottom: 17%;
+    z-index: 2;
+}
+
+#e {
+    position: absolute;
+    right: 52%;
+    bottom: 14%;
+    z-index: 2;
+}
+
+#conjuntos {
+    position: absolute;
+    right: 46%;
+    bottom: 12%;
+    z-index: 2;
 }
