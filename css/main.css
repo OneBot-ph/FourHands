@@ -1,20 +1,17 @@
-*
-{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html
-{
+html {
     background-color: aliceblue;
     color: #000;
     line-height: 1.5;
     scroll-behavior: smooth;
+
 }
 
-.container
-{
+.container {
     margin: auto;
 }
-

@@ -1,4 +1,4 @@
-.carrossel-topo {
+.banner-ind {
     position: relative;
     display: flex;
     height: 100vh;
@@ -6,14 +6,8 @@
     align-items: center;
     position: relative;
     background-color: #4B1F6F;
+    overflow: hidden;
 }
-
-/*
-terá que ser realizado depois, pois precisa ser estudado
-.carrossel-img
-{
-}
-*/
 
 /*---------------*/
 .frase-impacto {
@@ -32,6 +26,7 @@ terá que ser realizado depois, pois precisa ser estudado
     left: -64%;
     padding: 16px;
     font-size: 64px';
+
 }
 
 .frase-impacto img {
@@ -65,9 +60,23 @@ terá que ser realizado depois, pois precisa ser estudado
 #moca {
     position: absolute;
     right: 46%;
-    bottom: 15%;
     height: 400px;
+    bottom: 15%;
     z-index: 2;
+    animation-name: Movimentacao;
+    animation-duration: 3s;
+
+}
+
+
+@keyframes movimentacaoMoca {
+    0% {
+        bottom: 0%;
+    }
+
+    100% {
+        bottom: 15%;
+    }
 }
 
 .background-moca {
@@ -79,12 +88,16 @@ terá que ser realizado depois, pois precisa ser estudado
     height: 200px;
     border-radius: 24px;
     background-color: #fdcce6;
+
+    animation-name: Movimentacao;
+    animation-duration: 3s;
+
 }
 
 .grid-card p {
     z-index: 1;
     color: #4B1F6F;
-    font-family:monospace;
+    font-family: monospace;
     font-size: 24px;
 }
 
@@ -93,6 +106,10 @@ terá que ser realizado depois, pois precisa ser estudado
     right: 52%;
     bottom: 21%;
     z-index: 2;
+    animation-name: OpacidadeP;
+    animation-duration: 3s;
+
+
 }
 
 #e {
@@ -100,6 +117,10 @@ terá que ser realizado depois, pois precisa ser estudado
     right: 52.6%;
     bottom: 17.5%;
     z-index: 2;
+    animation-name: OpacidadeP;
+    animation-duration: 3s;
+
+
 }
 
 #conjuntos {
@@ -107,6 +128,20 @@ terá que ser realizado depois, pois precisa ser estudado
     right: 47%;
     bottom: 15%;
     z-index: 2;
+    animation-name: OpacidadeP;
+    animation-duration: 3s;
+
+
+}
+
+@keyframes OpacidadeP {
+    0% {
+        opacity: 0;
+    }
+
+    39% {
+        transform: translateY(40px);
+    }
 }
 
 
@@ -117,62 +152,94 @@ terá que ser realizado depois, pois precisa ser estudado
     object-position: center;
 }
 
-#personalizado{
+#personalizado {
     height: 350px;
     position: absolute;
-    right: 10%;
-    bottom: 10%;
+    right: 16%;
+    bottom: 8%;
     z-index: 3;
+    animation-name: MovimentacaoPersonalizado;
+    animation-duration: 3s;
+
 }
 
-.grid-card #bloco1, #bloco2{
+@keyframes MovimentacaoPersonalizado {
+    0% {
+        bottom: -2%;
+    }
+
+    100% {
+        bottom: 8%;
+    }
+}
+
+
+.grid-card #bloco1,
+#bloco2 {
     position: absolute;
-    height: 140px;  
+    height: 140px;
     width: 140px;
     border-radius: 100%;
     background-color: #fdcce6;
     z-index: 2;
+    animation-name: Movimentacao;
+    animation-duration: 3s;
+
 }
 
-#bloco1{
-    right: 18%;
-    bottom: 28%;
+#bloco1 {
+    right: 24%;
+    bottom: 26%;
 }
 
-#bloco2{
-    right: 13%;
-    bottom: 10%;
+#bloco2 {
+    right: 19%;
+    bottom: 8%;
 }
 
-.grid-card #peca-psz, #personalizadas{
+.grid-card #peca-psz,
+#personalizadas {
     color: white;
     position: absolute;
     z-index: 4;
     font-size: 24px;
     font-family: monospace;
+    animation-name: Movimentacao;
+    animation-duration: 3s;
+
+
 }
 
-#peca-psz{
-    right: 22.5%;
-    bottom: 35%;
+#peca-psz {
+    right: 28.5%;
+    bottom: 33%;
 }
 
-#personalizadas{
-    right: 14%;
-    bottom: 13%;
+#personalizadas {
+    right: 20%;
+    bottom: 11%;
+}
+
+@keyframes Movimentacao {
+    0% {
+        bottom: 0;
+    }
 }
 
 /*----------------------*/
 
-.grid-card #moldes{
+.grid-card #moldes {
     position: absolute;
-    left: 10%;
-    bottom: 8%;
+    left: 16%;
+    bottom: 5%;
     height: 320px;
     z-index: 3;
+    animation-name: Movimentacao;
+    animation-duration: 3s;
+
 }
 
-.grid-card #background-moldes{
+.grid-card #background-moldes {
     background-color: aliceblue;
     height: 220px;
     width: 140px;
@@ -180,11 +247,16 @@ terá que ser realizado depois, pois precisa ser estudado
     transform: rotate(-20deg);
     z-index: 1;
     position: absolute;
-    left: 12.8%;
-    bottom: 20%;
-    height: 180px;   
+    left: 18.8%;
+    bottom: 16%;
+    height: 180px;
+    animation-name: Movimentacao;
+    animation-duration: 3s;
+
 }
-.grid-card #bloco3, #bloco4, #bloco5{
+
+.grid-card #bloco3,
+#bloco4 {
     height: 100px;
     width: 100px;
     border-radius: 24px;
@@ -192,21 +264,26 @@ terá que ser realizado depois, pois precisa ser estudado
     position: absolute;
     transform: rotate(-20deg);
     z-index: 2;
+    animation-name: Movimentacao;
+    animation-duration: 3s;
+
 }
 
-#bloco3{
-    bottom: 28%;
-    left: 10%;
+#bloco3 {
+    bottom: 25%;
+    left: 16%;
 }
 
 
-#bloco4{
-    bottom: 18%;
-    left: 19%;
+#bloco4 {
+    bottom: 15%;
+    left: 25%;
 }
 
-.grid-card #p-conh, #p-nossos, #p-moldes{
-    color: white;
+.grid-card #p-conh,
+#p-nossos,
+#p-moldes {
+    color: #4B1F6F;
     position: absolute;
     z-index: 4;
     font-family: monospace;
@@ -215,29 +292,54 @@ terá que ser realizado depois, pois precisa ser estudado
     background-size: 20%;
     padding: 2px 0 0 8px;
     border-radius: 24px;
+    animation-name: Movimentacao;
+    animation-duration: 3s;
+
 }
 
-#p-conh{
-    bottom: 33%;
-    left: 8%;
-}
-
-#p-nossos{
+#p-conh {
     bottom: 30%;
-    left: 9%;
+    left: 14%;
 }
 
-#p-moldes{
+#p-nossos {
     bottom: 27%;
-    left: 10%;
+    left: 15%;
+}
+
+#p-moldes {
+    bottom: 24%;
+    left: 16%;
     padding-right: 4px;
 }
 
-@keyframes movimentacao {
-    from{
-        transform: rotate();
-    }
-    to{
-        transform: rotate(-20deg);
-    }
+/*---------*/
+
+.cetim,
+.cetim2 {
+    width: 100%;
+    height: 85px;
+    z-index: 0;
+    position: absolute;
+    bottom: 0;
+    background-image: url(../imagens/cetim.png);
+    animation-name: MovimentaçãoHorizontal1;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+}
+
+.cetim2 {
+    background-image: url(../imagens/cetim.png);
+    animation-name: MovimentaçãoHorizontal2;
+}
+
+@keyframes MovimentaçãoHorizontal1 {
+    0% {left: 0%;}
+    100% {left: 100%;}
+}
+
+@keyframes MovimentaçãoHorizontal2 {
+    0% {left: -100%;}
+
+    100% {left: 0%;}
 }
