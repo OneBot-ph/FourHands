@@ -2,6 +2,7 @@
     position: relative;
     display: flex;
     height: 100vh;
+    width: 100%;
     align-items: center;
     position: relative;
     background-color: #4B1F6F;
@@ -16,21 +17,21 @@ terá que ser realizado depois, pois precisa ser estudado
 
 /*---------------*/
 .frase-impacto {
-    width: 100%;
+    width: 400px;
     display: flex;
     position: relative;
-    top: -25%;
+    top: -30%;
     left: 50%;
     color: white;
 }
 
-.frase-impacto p {
+.frase-impacto h1 {
     z-index: 3;
     position: absolute;
     top: -10px;
-    left: -10%;
+    left: -64%;
     padding: 16px;
-    font-size: 32px;
+    font-size: 64px';
 }
 
 .frase-impacto img {
@@ -42,70 +43,201 @@ terá que ser realizado depois, pois precisa ser estudado
     z-index: 2;
     position: absolute;
     bottom: -70px;
-    left: -15.5%;
+    left: -90%;
     transform: rotate(-24deg);
     height: 140px;
 }
 
 #tufo {
     position: absolute;
-    left: -11%;
+    left: -65%;
     top: -30px;
     z-index: 1;
     height: 80px;
 }
 
 /*---------------*/
-
 .grid-card img {
     object-fit: cover;
     object-position: center;
-
 }
 
 #moca {
     position: absolute;
-    right: 45%;
-    bottom: 10%;
+    right: 46%;
+    bottom: 15%;
     height: 400px;
     z-index: 2;
 }
 
 .background-moca {
     position: absolute;
-    right: 45%;
-    bottom: 10%;
+    right: 46%;
+    bottom: 15%;
     z-index: 1;
     width: 200px;
     height: 200px;
     border-radius: 24px;
-    background-color: bisque;
+    background-color: #fdcce6;
 }
 
 .grid-card p {
     z-index: 1;
     color: #4B1F6F;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family:monospace;
     font-size: 24px;
 }
 
 #roupas {
     position: absolute;
-    right: 51%;
-    bottom: 17%;
+    right: 52%;
+    bottom: 21%;
     z-index: 2;
 }
 
 #e {
     position: absolute;
-    right: 52%;
-    bottom: 14%;
+    right: 52.6%;
+    bottom: 17.5%;
     z-index: 2;
 }
 
 #conjuntos {
     position: absolute;
-    right: 46%;
-    bottom: 12%;
+    right: 47%;
+    bottom: 15%;
     z-index: 2;
+}
+
+
+/*---------------------------*/
+
+.grid-card img {
+    object-fit: cover;
+    object-position: center;
+}
+
+#personalizado{
+    height: 350px;
+    position: absolute;
+    right: 10%;
+    bottom: 10%;
+    z-index: 3;
+}
+
+.grid-card #bloco1, #bloco2{
+    position: absolute;
+    height: 140px;  
+    width: 140px;
+    border-radius: 100%;
+    background-color: #fdcce6;
+    z-index: 2;
+}
+
+#bloco1{
+    right: 18%;
+    bottom: 28%;
+}
+
+#bloco2{
+    right: 13%;
+    bottom: 10%;
+}
+
+.grid-card #peca-psz, #personalizadas{
+    color: white;
+    position: absolute;
+    z-index: 4;
+    font-size: 24px;
+    font-family: monospace;
+}
+
+#peca-psz{
+    right: 22.5%;
+    bottom: 35%;
+}
+
+#personalizadas{
+    right: 14%;
+    bottom: 13%;
+}
+
+/*----------------------*/
+
+.grid-card #moldes{
+    position: absolute;
+    left: 10%;
+    bottom: 8%;
+    height: 320px;
+    z-index: 3;
+}
+
+.grid-card #background-moldes{
+    background-color: aliceblue;
+    height: 220px;
+    width: 140px;
+    border-radius: 16px;
+    transform: rotate(-20deg);
+    z-index: 1;
+    position: absolute;
+    left: 12.8%;
+    bottom: 20%;
+    height: 180px;   
+}
+.grid-card #bloco3, #bloco4, #bloco5{
+    height: 100px;
+    width: 100px;
+    border-radius: 24px;
+    background-color: #fdcce6;
+    position: absolute;
+    transform: rotate(-20deg);
+    z-index: 2;
+}
+
+#bloco3{
+    bottom: 28%;
+    left: 10%;
+}
+
+
+#bloco4{
+    bottom: 18%;
+    left: 19%;
+}
+
+.grid-card #p-conh, #p-nossos, #p-moldes{
+    color: white;
+    position: absolute;
+    z-index: 4;
+    font-family: monospace;
+    font-size: 18px;
+    background-color: #fdcce6;
+    background-size: 20%;
+    padding: 2px 0 0 8px;
+    border-radius: 24px;
+}
+
+#p-conh{
+    bottom: 33%;
+    left: 8%;
+}
+
+#p-nossos{
+    bottom: 30%;
+    left: 9%;
+}
+
+#p-moldes{
+    bottom: 27%;
+    left: 10%;
+    padding-right: 4px;
+}
+
+@keyframes movimentacao {
+    from{
+        transform: rotate();
+    }
+    to{
+        transform: rotate(-20deg);
+    }
 }
