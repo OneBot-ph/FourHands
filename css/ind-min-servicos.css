@@ -1,0 +1,130 @@
+.mini-servicos {
+    width: 100%;
+    height: 250px;
+    background-color: #fdcce6;
+    display: flex;
+    justify-content: space-around;
+}
+
+.grid-mini-servicos {
+    padding-bottom: 24px;
+    text-align: center;
+    display: flex;
+    border-radius:24px;
+}
+
+.grid-mini-servicos img {
+    object-fit: cover;
+    object-position: center;
+    height: 250px;
+    z-index: 2;
+}
+
+.grid-mini-text p{
+    font-size: 16px;
+    text-align: center;
+    width: 200px;
+    margin-left: 24px;
+    margin-top: 24px;
+    margin-bottom: 10px;
+    padding: 12px;
+
+    background-color: aliceblue;
+    border-radius: 16px;
+}
+
+.mini-moca{
+    position: relative;
+}
+
+#quadrado-mini-moca{
+    position: absolute;
+    bottom: 4.7%;
+    left: 23px;
+    border-radius: 16px;
+    height: 80px;
+    width: 130px;
+    background-color: #4B1F6F;
+}
+
+.mini-molde{
+    position: relative;
+}
+
+#quadrado1-mini-molde{
+    position: absolute;
+    top: 2%;
+    left: 30px;
+    border-radius: 16px;
+    height: 60px;
+    width: 60px;
+    background-color: #4B1F6F;
+}
+#quadrado2-mini-molde{
+    position: absolute;
+    top: 50%;
+    left: 90px;
+    border-radius: 16px;
+    height: 60px;
+    width: 60px;
+    background-color: #4B1F6F;
+}
+
+#quadrado3-mini-molde{
+    position: absolute;
+    bottom: 0%;
+    left: -2%;
+    border-radius: 16px;
+    height: 60px;
+    width: 60px;
+    background-color: #4B1F6F;
+}
+
+.mini-personalizado{
+    position: relative;
+}
+
+
+#quadrado-mini-personalizado1{
+    position: absolute;
+    bottom: 10%;
+    right: 85%;
+    border-radius: 100%;
+    height: 60px;
+    width: 60px;
+    background-color: #4B1F6F;
+}
+
+#quadrado-mini-personalizado2{
+    position: absolute;
+    bottom: 65%;
+    right: 65%;
+    border-radius: 100%;
+    height: 60px;
+    width: 60px;
+    background-color: #4B1F6F;
+}
+
+#quadrado-mini-personalizado1,
+#quadrado-mini-personalizado2,
+#quadrado-mini-moca,
+#quadrado1-mini-molde,
+#quadrado2-mini-molde,
+#quadrado3-mini-molde{
+    animation-name: movimentacao;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes movimentacao {
+    25%{
+        transform:  translateY(5px);
+    }
+    50%{
+        transform: translateX(10px) ;
+    }
+    75%{
+        transform:  translateY(10px);
+    }
+
+}

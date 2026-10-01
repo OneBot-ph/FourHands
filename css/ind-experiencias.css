@@ -1,55 +1,30 @@
-.container-experiencias
-{
-    padding-bottom: 24px;
-    height: 800px;
-    display: flex;
-    justify-content: center;
-    justify-content: space-around;
-    background-color: #ccc;
+.container-experiencias {
+    padding: 64px;
+    height: 100vh;
+
+    background-color: #4B1F6F;
 }
 
-.experiencias-cardTxt, .exp-card-img
-{
-    margin-top: 150px;
+.place-experiencias {
+    width: 50%;
+    height: 100%;
+    margin-inline: auto;
+    background-color: #fdcce6;
+
 }
 
-.experiencias-cardTxt
-{
-    gap: 16px;
+.place-experiencias header {
+    height: 40px;
+    width: 100%;
+    background-color: white;
+    font-size: 24px;
+    color: #c1d591;
 }
 
-.experiencias-cardTxt h1
-{
-    text-align: center;
-    margin-bottom: 16px;
-    font-size: 32px;
-}
-
-.background-p p
-{
-    color: #fff;
-}
-
-.background-p
-{
-    width: 350px;
-    height: 430px;
-    padding: 16px;
-    border-radius: 16px;
-    display: flex;
-    align-items: center;
-    text-align: justify;
-    padding: 16px;
-    
-    opacity: 0.8;
-    background-color: #000;
-}
-
-.container-experiencias img
-{
-    width: 560px;
-    height: 500px;
-    border: 1px solid #000;
-    background-color: #000;
-    border-radius: 16px;
+.background-experiencias{
+    object-position: top;
+    object-fit: cover;
+    padding-inline: 12px;
+    width: 100%;
+    height: 40%;
 }

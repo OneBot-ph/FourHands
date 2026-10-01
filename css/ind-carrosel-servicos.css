@@ -1,6 +1,5 @@
 .carrossel-container {
     width: 100%;
-    
     display: flex;
     justify-content: center;
     position: relative;
@@ -13,9 +12,6 @@
 
 .carrossel-img-servicos {
     display: none;
-    object-fit: cover;
-    object-position: center;
-    
 }
 
 /*Botões*/
@@ -26,7 +22,7 @@
     cursor: pointer;
     position: absolute;
     top: 50%;
-    margin-top: -22px;
+    margin-top: -40px;
 
     transition: 0.6s ease;
     user-select: none;
@@ -39,21 +35,22 @@
     box-shadow: 1px 1px 1px 1px #ccc;
     font-weight: bold;
     font-size: 10px;
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
 }
 
 .anterior {
-    left: 0;
+    left: 1%;
 }
 
 .proximo {
-    right: 0;
+    right: 1%;
 }
 
 .proximo:hover,
 .anterior:hover {
-    background-color: #ccc;
+    background-color: #fdcce6;
+    color: #4B1F6F;
 }
 
 /*-------*/
@@ -62,16 +59,16 @@
 /*Estudar mais*/
 .fade {
     animation-name: fade;
-    animation-duration: 1.5s;
+    animation-duration: .4s;
 }
 
 @keyframes fade {
-    from {
-        opacity: .4
+    0% {
+        opacity: .5;
     }
 
-    to {
-        opacity: 1
+    100% {
+        opacity: 1;
     }
 }
 
