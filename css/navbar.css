@@ -1,3 +1,5 @@
+
+
 .navbar {
 
     display: flex;
@@ -5,12 +7,29 @@
     justify-content: center;
     gap: 100px;
     position: fixed;
-    top: 2%;
+    top: 180%;
     left: 25%;
     right: 25%;
     z-index: 5;
 
     font-family: monospace;
+
+    animation: mov-navBar forwards;
+    animation-timeline: view();
+    animation-range: entry 0% exit 100%;
+    animation-timing-function: ease-in-out;
+}
+
+
+@keyframes mov-navBar {
+    0% {
+        opacity: 0;
+        bottom: -10%;
+    }
+
+    100% {
+        top: 2%;
+    }
 }
 
 .grid-navbar:hover,
@@ -23,7 +42,8 @@
     color: #fdcce6;
 }
 
-.grid-navbar a, .src a{
+.grid-navbar a,
+.src a {
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;

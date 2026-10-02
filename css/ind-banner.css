@@ -10,46 +10,6 @@
 }
 
 /*---------------*/
-.frase-impacto {
-    width: 400px;
-    display: flex;
-    position: relative;
-    top: -30%;
-    left: 50%;
-    color: white;
-}
-
-.frase-impacto h1 {
-    z-index: 3;
-    position: absolute;
-    top: -10px;
-    left: -64%;
-    padding: 16px;
-    font-size: 64px';
-
-}
-
-.frase-impacto img {
-    object-fit: cover;
-    object-position: center;
-}
-
-#stand {
-    z-index: 2;
-    position: absolute;
-    bottom: -70px;
-    left: -90%;
-    transform: rotate(-24deg);
-    height: 140px;
-}
-
-#tufo {
-    position: absolute;
-    left: -65%;
-    top: -30px;
-    z-index: 1;
-    height: 80px;
-}
 
 /*---------------*/
 .grid-card img {
@@ -315,31 +275,57 @@
 
 /*---------*/
 
-.cetim,
-.cetim2 {
+.place-semi-circulos{
     width: 100%;
-    height: 85px;
+    display: flex;
+    position: relative;
+    bottom: -45%;
+}
+
+.semi-circulos {
+    width: 100%;
+    height: 120px;
     z-index: 0;
+    position: relative;
+    display: flex;
+
+}
+
+
+.semi-circulos-fundo .circulo {
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    z-index: 3;
+    background-color: #f6a6bb;
+    animation: Onda 5s ease-in-out infinite;
+}
+
+.semi-circulos-topo .circulo {
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    z-index: 1;
+
     position: absolute;
-    bottom: 0;
-    background-image: url(../imagens/cetim.png);
-    animation-name: MovimentaçãoHorizontal1;
-    animation-duration: 40s;
-    animation-iteration-count: infinite;
+    left: -50%;
+    background-color: #fdcce6;
+    animation: Onda 5s ease-in-out infinite;
+    animation-delay: -1s;
 }
 
-.cetim2 {
-    background-image: url(../imagens/cetim.png);
-    animation-name: MovimentaçãoHorizontal2;
-}
 
-@keyframes MovimentaçãoHorizontal1 {
-    0% {left: 0%;}
-    100% {left: 100%;}
-}
 
-@keyframes MovimentaçãoHorizontal2 {
-    0% {left: -100%;}
+@keyframes Onda {
+    25% {
+        transform: translateY(15%);
+    }
 
-    100% {left: 0%;}
+    50% {
+        transform: translateY(0%);
+    }
+
+    75% {
+        transform: translateY(15%);
+    }
 }

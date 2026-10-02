@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Four Hands</title>
 
-    <script src="javaScript/CarrosselServicos.js" defer></script>
+    <script type="text/javascript" src="javaScript/CarrosselInsta.js" async></script>
+    <script type="text/javascript" src="javaScript/CarrosselServicos.js" async></script>
+
 
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/navbar.css">
@@ -18,6 +20,7 @@
 </head>
 
 <body>
+
     <!-- cabeçalho -->
     <header>
         <nav class="navbar">
@@ -48,15 +51,8 @@
         </nav>
     </header>
 
-    <!-- carrossel topo -->
+    <!-- banner topo -->
     <section class="container banner-ind">
-
-        <!--<div class="frase-impacto">
-            <img id="stand" src="imagens/stand.png" alt="">
-            <img id="tufo" src="imagens/tufoDeLinha.png">
-            <h1>O seu guarda roupa nasce Aqui</p>
-        </div>-->
-
         <div class="place-cards">
             <div class="grid-card">
                 <img id="moca" src="imagens/roupas2.png" alt="">
@@ -84,9 +80,49 @@
             </div>
         </div>
 
-        <div class="cetim"></div>
-        <div class="cetim2"></div>
+
+
+        <div class="place-semi-circulos">
+            <div class="semi-circulos">
+                <div class="semi-circulos-fundo">
+                    <div class="circulo"></div>
+                </div>
+                <div class="semi-circulos-topo">
+                    <div class="circulo"></div>
+                </div>
+            </div>
+            <div class="semi-circulos">
+                <div class="semi-circulos-fundo">
+                    <div class="circulo"></div>
+                </div>
+                <div class="semi-circulos-topo">
+                    <div class="circulo"></div>
+                </div>
+            </div>
+            <div class="semi-circulos">
+                <div class="semi-circulos-fundo">
+                    <div class="circulo"></div>
+                </div>
+                <div class="semi-circulos-topo">
+                    <div class="circulo"></div>
+                </div>
+            </div>
+            <div class="semi-circulos">
+                <div class="semi-circulos-fundo">
+                    <div class="circulo"></div>
+                </div>
+                <div class="semi-circulos-topo">
+                    <div class="circulo"></div>
+                </div>
+            </div>
+        </div>
+
+
+
+        </div>
     </section>
+
+
 
     <section class="mini-servicos">
         <div class="grid-mini-servicos mini-molde">
@@ -136,9 +172,11 @@
             <img class="img-servico" src="imagens/servico3.svg" alt="">
         </div>
 
-        <button class="proximo" onclick="proximoSlide(1)">></button>
-        <button class="anterior" onclick="proximoSlide(-1)">
-            << /button>
+        <div class="btn-srv">
+            <button class="proximo" onclick="proximoSlide(1)">&rarr;</button>
+            <button class="anterior" onclick="proximoSlide(-1)">
+                &larr;<button>
+        </div>
     </section>
 
     <!-- Experiências -->
@@ -146,13 +184,54 @@
     <section class="container-experiencias">
         <div class="place-experiencias">
             <header>
-                <p>O que é a FourHands?</p>
+                <div class="frase-impacto">
+                    <img id="stand" src="imagens/stand.png" alt="">
+                    <img id="tufo" src="imagens/tufoDeLinha.png">
+                    <h1>O seu guarda roupa nasce Aqui</p>
+                </div>
+
             </header>
             <img class="background-experiencias" src="imagens/background-index.jpeg" alt="">
+            <div class="background-qms">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo sint consequuntur quibusdam
+                    doloremque quidem laudantium libero ab? Odit saepe, autem quibusdam eveniet temporibus debitis,
+                    dicta officiis eaque velit, recusandae laudantium? Lorem, ipsum dolor sit amet consectetur
+                    adipisicing elit. Reiciendis quos autem dolore quaerat laboriosam. Id totam, ullam vitae voluptatem
+                    repudiandae omnis molestias dicta officiis nisi, reprehenderit temporibus debitis est quibusdam!
+                </p>
+            </div>
+            <div class="grid-ex-fundadoras">
+                <img id="fundadoraA" src="imagens/fundadoraA.png" alt="">
+                <img id="fundadoraB" src="imagens/fundadoraB.png" alt="">
+                <div class="quadradoA"></div>
+                <div class="quadradoB"></div>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo sint consequuntur quibusdam
+                    doloremque quidem laudantium libero ab? Odit saepe, autem quibusdam eveniet temporibus debitis,
+                    dicta officiis eaque velit, recusandae laudantium? Lorem, ipsum dolor sit amet consectetur
+                    adipisicing elit. Reiciendis quos autem dolore quaerat laboriosam. Id totam, ullam vitae voluptatem
+                    repudiandae omnis molestias dicta officiis nisi, reprehenderit temporibus debitis est quibusdam!
+                </p>
+            </div>
+
+            <div class="instagram-fundadoras">
+                <button class="proximoA" onclick="Proximo(1)">&rarr;</button>
+                <button class="anteriorB" onclick="Proximo(-1)">&larr;</button>
+                <div class="card-fundadoras">
+                    <img src="imagens/paisagem2.jpeg" alt="">
+                    <a href=""><img src="imagens/user.jpeg" alt=""></a>
+                    <div class="background"></div>
+                </div>
+                <div class="card-fundadoras">
+                    <img src="imagens/instagramA.jpeg" alt="">
+                    <a href=""><img src="imagens/user2.jpeg" alt=""></a>
+                    <div class="background"></div>
+                </div>
+
+            </div>
+
         </div>
-
-
-
     </section>
 
     <!-- footer -->
