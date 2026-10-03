@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QuemSomos</title>
 
+    <link rel="stylesheet" href="../css/ind-experiencias.css">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/qms-apresetacao.css">
@@ -15,21 +16,19 @@
 </head>
 
 <body>
-
     <!-- cabeçalho -->
-    <header>
+    <header class="place-navbar">
         <nav class="navbar">
 
             <div class="grid-navbar">
-                <a href="../index.html">
-                    <img src="../imagens/logo.png" alt="" class="logo">
+                <a id="logo" href="../index.html">
+                    <h3>Four<br>Hands</h2>
                 </a>
-
                 <div class="paginas">
                     <a href="servicos.html">
-                        Serviços
-                    </a>
-                    <a href="quemSomos.html">
+                    Serviços
+                   </a>
+                   <a href="quemSomos.html">
                         Quem Somos?
                     </a>
                 </div>
@@ -45,6 +44,7 @@
             </div>
         </nav>
     </header>
+
 
     <!-- Apresentação -->
     <section class="container apresentacao">
@@ -85,31 +85,53 @@
 
     <!-- Historia-->
 
-    <section class="container historia">
-        <img src="" alt="" class="img-lateral">
-        <div class="texto-historia">
-            <p></p>
+  <!-- Experiências -->
+
+    <section class="container-experiencias">
+        <div class="place-experiencias">
+            <img class="background-experiencias" src="../imagens/background-index.jpeg" alt="">
+            <div class="background-qms">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo sint consequuntur quibusdam
+                    doloremque quidem laudantium libero ab? Odit saepe, autem quibusdam eveniet temporibus debitis,
+                    dicta officiis eaque velit, recusandae laudantium? Lorem, ipsum dolor sit amet consectetur
+                    adipisicing elit. Reiciendis quos autem dolore quaerat laboriosam. Id totam, ullam vitae voluptatem
+                    repudiandae omnis molestias dicta officiis nisi, reprehenderit temporibus debitis est quibusdam!
+                </p>
+            </div>
+            <div class="grid-ex-fundadoras">
+                <img id="fundadoraA" src="../imagens/fundadoraA.png" alt="">
+                <img id="fundadoraB" src="../imagens/fundadoraB.png" alt="">
+                <div class="quadradoA"></div>
+                <div class="quadradoB"></div>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo sint consequuntur quibusdam
+                    doloremque quidem laudantium libero ab? Odit saepe, autem quibusdam eveniet temporibus debitis,
+                    dicta officiis eaque velit, recusandae laudantium? Lorem, ipsum dolor sit amet consectetur
+                    adipisicing elit. Reiciendis quos autem dolore quaerat laboriosam. Id totam, ullam vitae voluptatem
+                    repudiandae omnis molestias dicta officiis nisi, reprehenderit temporibus debitis est quibusdam!
+                </p>
+            </div>
+
+            <div class="instagram-fundadoras">
+                <button class="proximoA" onclick="Proximo(1)">&rarr;</button>
+                <button class="anteriorB" onclick="Proximo(-1)">&larr;</button>
+                <div class="card-fundadoras">
+                    <img src="../imagens/paisagem2.jpeg" alt="">
+                    <a href=""><img src="../imagens/user.jpeg" alt=""></a>
+                    <div class="background"></div>
+                </div>
+                <div class="card-fundadoras">
+                    <img src="../imagens/instagramA.jpeg" alt="">
+                    <a href=""><img src="../imagens/user2.jpeg" alt=""></a>
+                    <div class="background"></div>
+                </div>
+
+            </div>
+
         </div>
     </section>
 
-    <section class="container contairner-fundadoras">
-        <div class="card-fundadora">
-            <img src="" alt="">
-            <p></p>
-        </div>
-        <div class="card-fundadora">
-            <img src="" alt="">
-            <p></p>
-        </div>
-        <div class="card-fundadora">
-            <img src="" alt="">
-            <p></p>
-        </div>
-        <div class="card-fundadora">
-            <img src="" alt="">
-            <p></p>
-        </div>
-    </section>
 
     <footer class="footer">
 

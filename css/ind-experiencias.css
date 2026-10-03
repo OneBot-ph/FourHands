@@ -1,8 +1,5 @@
 .container-experiencias {
-    padding: 64px;
     height: 1900px;
-
-    background-color: #4B1F6F;
 }
 
 .place-experiencias {
@@ -11,14 +8,6 @@
     margin-inline: auto;
     background-color: #fae6e7;
     border-radius: 0 0 24px 24px;
-}
-
-.place-experiencias header {
-    height: 40px;
-    width: 100%;
-    background-color: white;
-    color: #c1d591;
-    padding-inline: 12px;
 }
 
 .background-experiencias {
@@ -46,7 +35,7 @@
     position: relative;
     background-color: #4B1F6F;
     font-size: 18px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: monospace;
 }
 
 .grid-ex-fundadoras p {

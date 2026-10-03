@@ -1,108 +1,46 @@
-
+.place-navbar{
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    font-family: monospace;
+    background-color: #fdcce6;
+}
 
 .navbar {
-
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 100px;
-    position: fixed;
-    top: 180%;
-    left: 25%;
-    right: 25%;
-    z-index: 5;
-
-    font-family: monospace;
-
-    animation: mov-navBar forwards;
-    animation-timeline: view();
-    animation-range: entry 0% exit 100%;
-    animation-timing-function: ease-in-out;
-}
-
-
-@keyframes mov-navBar {
-    0% {
-        opacity: 0;
-        bottom: -10%;
-    }
-
-    100% {
-        top: 2%;
-    }
-}
-
-.grid-navbar:hover,
-.src:hover {
-    background-color: #845cbc;
-    transition: .8s ease-in;
-}
-
-.grid-navbar:hover .paginas a {
-    color: #fdcce6;
 }
 
 .grid-navbar a,
 .src a {
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
     color: #845cbc;
     text-align: center;
     transition: color .3 ease;
-
 
     transition: .5s ease-in;
     padding: 8px;
     margin: 0 24px 8px 24px;
 }
 
-.paginas {
-    display: flex;
-    align-items: center;
-}
-
-.paginas a {
-    margin-top: 8px;
-
-}
-
-a img {
-
-    width: 50px;
+.navbar a img {
     object-fit: cover;
     object-position: center;
 }
-
-.grid-navbar {
-    padding-left: 60px;
-    display: flex;
-}
-
-
-.logo {
-    width: 120px;
-    height: 100px;
-    display: flex;
-    align-items: center;
-}
-
-
 
 .src img {
-    width: 92px;
-    height: 80px;
-    object-fit: cover;
-    object-position: center;
+    width: 55px;
+    height: 45px;
     display: flex;
     align-items: center;
 }
 
 .src input {
     height: 30px;
-    width: 200px;
-    margin-left: 32px;
-
+    width: 400px;
+    margin-left: 180px;
     text-align: center;
     font-size: 16px;
 
@@ -113,8 +51,6 @@ a img {
 
 .grid-navbar,
 .src {
-    transition: background-color .8s ease-in;
-    background-color: #fdcce6;
     display: flex;
     align-items: center;
     height: 80px;
@@ -123,4 +59,32 @@ a img {
     object-fit: cover;
     object-position: center;
     border-radius: 64px;
+}
+
+.src{
+    width: 100%;
+    justify-content: space-between;
+}
+
+#logo{
+    padding-top: 24px;
+    padding-bottom: 24px;
+    text-align: justify;
+}
+
+.paginas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.paginas a{
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    width: 100px;
+    color: #845cbc;
+    text-align: center;
+    margin-inline:12px;
 }
