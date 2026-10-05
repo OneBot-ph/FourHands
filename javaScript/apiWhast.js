@@ -1,13 +1,12 @@
 //http://127.0.0.1:5678/webhook-test/Formulário' || http://n8n:5678/webhook-test/Formulário'
 const urlWebhook = "http://127.0.0.1:5678/webhook/formulario";
-let form = document.getElementById("place-pedido");
+let form = document.getElementById("pedido");
 let botao = document.getElementById("enviar");
 
 form.addEventListener('submit', async function enviarDadosN8n(dados) {
     dados.preventDefault();
     const lista = Object.fromEntries(new FormData(form));
     botao.innerHTML = "enviando";
-
 
     try {
         const resposta = fetch(urlWebhook, {
@@ -20,7 +19,7 @@ form.addEventListener('submit', async function enviarDadosN8n(dados) {
                 lista
             ),
         });
-        console.log("enviado com sucesso" + lista);
+        console.log(lista);
         botao.innerHTML = "pedido enviado";
         botao.style.backgroundColor = "#c1d591"
 

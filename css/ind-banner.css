@@ -89,13 +89,9 @@
 }
 
 @keyframes OpacidadeP {
-    0% {
-        opacity: 0;
-    }
+    0% {opacity: 0;}
 
-    39% {
-        transform: translateY(40px);
-    }
+    39% {transform: translateY(40px);}
 }
 
 
@@ -118,13 +114,9 @@
 }
 
 @keyframes MovimentacaoPersonalizado {
-    0% {
-        bottom: -2%;
-    }
+    0% {bottom: -2%;}
 
-    100% {
-        bottom: 8%;
-    }
+    100% {bottom: 8%;}
 }
 
 

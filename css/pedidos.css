@@ -1,78 +1,106 @@
 #place-pedido {
-    margin-inline: auto;
-    width: 80%;
+    width: 100%;
     padding-bottom: 24px;
-
     display: flex;
+    justify-content: center;
 }
+
+/*------*/
+
 
 .desc-pedido {
-    width: 100%;
+    width: 30%;
 
-    background-color: #845cbc;
-
+    background-color: #4B1F6F;
+    border-radius: 24px 0 0 24px;
 }
+
+.desc-pedido h1 {
+    text-align: center;
+    color: #fdcce6;
+    padding: 32px;
+}
+
+.grid-acompanhar {
+    width: 50%;
+    margin-inline: auto;
+    margin-bottom: 24px;
+    color: #fdcce6;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    opacity: .5;
+}
+
+.circulo-acompanhar{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #8a5ca8;
+    
+}
+
+/*------*/
+
 
 #track {
     display: flex;
     transition: 3s;
-    border-radius: 24px 0 0 24px;
-
 }
 
-/* .desc-pedido form {
+.desc-pedido form {
     display: flex;
     flex-direction: column;
-} */
+}
 
-/* #desc-form {
+#desc-form {
     margin-bottom: 12px;
-    height: 50%;
-    width: 100%;
+    height: 280px;
+    width: 600px;
     background-color: white;
     border-radius: 16px;
-    border: 2px solid #845cbc;
+    border: 2px solid #4B1F6F;
     overflow-y: auto;
     resize: none;
     padding: 16px;
     font-size: 20px;
-} */
+}
 
-/* .place-anexo {
-    background-color: #fdcce6;
+.place-anexo {
     border-radius: 16px;
-    height: 300px;
     display: flex;
     justify-content: center;
-} */
 
-/* #anexo {
+}
+
+#anexo {
     cursor: pointer;
     width: 100%;
-    height: 50px;
+    height: 200px;
 
-} */
+    border: 1px solid #4a1f6b;
+}
 
-/* #anexo input[type="file"] {
+#anexo input[type="file"] {
     display: none;
-} */
+}
 
-/* #anexo h3 {
+#anexo h3 {
     padding: 12px;
     text-align: center;
     background-color: #845cbc;
     color: #f3f3f3;
-} */
+}
 
-/* #anexo h3:hover {
+#anexo h3:hover {
     transition: .4s;
     background-color: #c1d591;
 }
 
 #anexo .img {
-    height: 200px;
-    margin: 12px 0 12px 35%;
-} */
+    height: 130px;
+    padding-top: 4px;
+}
 
 
 .botoes-pedido {
@@ -82,8 +110,9 @@
     padding-inline: 30px;
     width: 100%;
     height: 100px;
-    background-color: white;
+    background-color: #8a5ca8;
     border-radius: 0 0 24px 0;
+    transition: 3s;
 }
 
 .botoes-pedido #proximoForm,
@@ -91,39 +120,44 @@
     width: 150px;
 }
 
+#enviar {
+    margin-right: 40px;
+}
+
 .info {
-    text-align: center;
+    width: 50%;
+    height: 100%;
     font-family: monospace;
     overflow: hidden;
-
+    border-radius: 0 24px 0 0;
+    font-family: sans-serif;
 }
 
 .info h1 {
-    color: #845cbc;
-    margin-bottom: 32px;
+
+
+    color: #4B1F6F;
+    margin-bottom: 24px;
+    font-family: Cormorant Garamond;
     font-size: 32px;
 }
 
 .info input {
-    width: 85%;
-    height: 40px;
+    width: 50%;
+    height: 50px;
     margin-bottom: 20px;
     border: none;
     border-radius: 16px;
     background-color: white;
 
+    font-size: 18px;
     padding: 12px;
+
 }
 
 .grid-questoes input {
-    margin-bottom: 18px;
-
+    margin-bottom: 24px;
 }
-
-.info h2 {
-    margin-top: 52px;
-}
-
 
 .info button {
     cursor: pointer;
@@ -137,8 +171,7 @@
     font-size: 18px;
     font-family: monospace;
     padding: 12px;
-    color: #845cbc;
-    border: 2px solid #845cbc;
+    color: #4B1F6F;
 }
 
 .grid-pedido {
@@ -146,7 +179,6 @@
     flex: 0 0 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
     background-color: #fdcce6;
 }
 
@@ -154,4 +186,170 @@
     margin-top: 24px;
     display: flex;
     justify-content: center;
+}
+
+.grid-perguntas {
+    display: flex;
+    justify-content: left;
+
+    align-items: center;
+    height: 100px;
+    gap: 50px;
+}
+
+.grid-perguntas input {
+    width: auto;
+}
+
+.info p {
+    margin: 0 0 12px 12px;
+    color: #4a1f6b;
+}
+
+/*-----*/
+
+.grid-opcoes {
+    margin: 0 0 12px 0;
+}
+
+.categorias input {
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+}
+
+.opcao {
+    margin: 24px 0 20px 0;
+}
+
+.opcao label {
+    padding: 10px 30px;
+    border-radius: 99px;
+    background: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.opcao input:checked+label {
+    background: #4a1f6b;
+    color: #fff;
+}
+
+.categoria-peca input {
+    margin: 0 0 4px -6px;
+}
+
+/*-----------*/
+
+.segmento {
+    display: flex;
+    gap: 4px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 4px;
+    width: 340px;
+    margin-bottom: 20px;
+}
+
+.segmento label {
+    flex: 1;
+    /* todas com a mesma largura */
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.segmento input:checked+label {
+    background: #f7b6dc;
+    font-weight: 700;
+}
+
+/*-----------*/
+
+.segmento-caracteristicas {
+    display: flex;
+    gap: 4px;
+    border-radius: 10px;
+    padding: 4px;
+    width: 340px;
+    margin-bottom: 20px;
+    color: #4a1f6b;
+    font-size: 15px;
+
+}
+
+.segmento-caracteristicas label {
+    flex: 1;
+    /* todas com a mesma largura */
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 7px;
+    cursor: pointer;
+    background: #fff;
+}
+
+.segmento-caracteristicas input:checked+label {
+    border: 2px solid #4a1f6b;
+    font-weight: 700;
+}
+
+/*------------*/
+
+#tecidoPe {
+    width: auto;
+}
+
+/*-------*/
+
+#qtdPecas {
+    width: 150px;
+}
+
+/*-----------*/
+
+.segmento-aviamentos {
+    display: flex;
+    gap: 4px;
+    border-radius: 10px;
+    padding: 4px;
+    width: 340px;
+    color: #4a1f6b;
+    font-size: 15px;
+}
+
+.segmento-aviamentos label {
+    flex: 1;
+    /* todas com a mesma largura */
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 7px;
+    cursor: pointer;
+    background: #fff;
+}
+
+.segmento-aviamentos input:checked+label {
+    border: 2px solid #4a1f6b;
+    font-weight: 700;
+}
+
+#avimentoPe p {
+    margin-top: -52px;
+}
+
+
+/*--------*/
+.ordem-pedido .resumo {
+    background-color: #fff;
+    border-radius: 24px;
+    padding: 12px;
+    width: 800px;
+}
+
+.resumo div {
+    display: flex;
+    margin: 12px;
+    gap: 20px;
+    font-size: 20px;
 }
