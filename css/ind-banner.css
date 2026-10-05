@@ -233,8 +233,7 @@
     position: absolute;
     z-index: 4;
     font-family: monospace;
-    font-size: 18px;
-    background-color: #fdcce6;
+    font-size: 22px;
     background-size: 20%;
     padding: 2px 0 0 8px;
     border-radius: 24px;
@@ -245,17 +244,17 @@
 
 #p-conh {
     bottom: 30%;
-    left: 14%;
+    left: 12%;
 }
 
 #p-nossos {
     bottom: 27%;
-    left: 15%;
+    left: 13%;
 }
 
 #p-moldes {
     bottom: 24%;
-    left: 16%;
+    left: 14%;
     padding-right: 4px;
 }
 

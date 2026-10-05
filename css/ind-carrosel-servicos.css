@@ -3,11 +3,12 @@
     display: flex;
     justify-content: center;
     position: relative;
+    margin-top: 30px;
 }
 
 .carrossel-img-servicos img {
     vertical-align: middle;
-    width: 1280px;
+    width: 100%;
 }
 
 .carrossel-img-servicos {
@@ -35,20 +36,20 @@
     background-color: #fff;
     box-shadow: 1px 1px 1px 1px #ccc;
     font-weight: bold;
-    font-size: 10px;
-    width: 40px;
-    height: 40px;
+    font-size: 20px;
+    width: 60px;
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .anterior {
-    left: 15.2%;
+    left: .8%;
 }
 
 .proximo {
-    right: 15.4%;
+    right: .8%;
 }
 
 .proximo:hover,

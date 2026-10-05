@@ -1,0 +1,80 @@
+.place-moldes {
+    margin-bottom: 100px;
+}
+
+.place-moldes h1 {
+    font-size: 64px;
+    color: #f6a6bb;
+    text-align: center;
+    font-family: Cormorant Garamond;
+    margin-bottom: 14px;
+}
+
+
+.place-moldes p {
+    border: 1px solid #f6a6bb;
+    width: 70.7%;
+    margin: 0 auto;
+    margin-bottom: 6px;
+}
+
+.grid-moldes {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    gap: 30px;
+}
+
+.grid-moldes img {
+    object-position: top center;
+    object-fit: cover;
+    height: 200px;
+    width: 100%;
+}
+
+.grid-moldes .desc-moldes {
+    padding: 12px;
+    color: #4a1f6b;
+    border-radius: 0 0 16px 16px;
+    text-align: center;
+}
+
+.grid-moldes .grid-valor-moldes {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    margin: 8px 0;
+    font-size: 18px;
+
+}
+
+.grid-moldes .grid-valor-moldes input {
+    width: 60px;
+    padding: 4px;
+    border: none;
+    text-align: center;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 1px solid #4a1f6b;
+}
+
+.grid-moldes .desc-moldes button {
+    display: flex;
+    margin: auto;
+    align-items: center;
+    padding: 12px;
+    height: 30px;
+    border: none;
+    background: #4a1f6b;
+    color: #ffff;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.grid-moldes .desc-moldes button:hover {
+    transition: .3s;
+    background: #fdcce6;
+    color: #4a1f6b;
+}

@@ -1,71 +1,115 @@
-.grid-genero-card a, .place-pecas a, .place-vitrine a
-{
+.grid-genero-card a,
+.place-pecas a,
+.place-vitrine a {
     margin: 0;
     padding: 0;
+    text-decoration: none;
 }
 
-.place-pecas
-{
+.place-pecas {
     margin: 32px 16px 0 16px;
     max-width: 100%;
-    height: 810px;
+    height: 1000px;
 }
 
-.place-pecas p
-{
-    margin-bottom: 24px ;
+.place-pecas h2 {
+    margin-bottom: 24px;
     height: 30px;
     width: 100%;
     text-align: center;
-    border-bottom: 1px solid black;
+    font-size: 32px;
+    padding-bottom: 40px;
+    color: #f6a6bb;
+    border-bottom: 3px solid #f6a6bb;
 }
 
-.grid-pecas
-{
+.grid-pecas {
     display: flex;
     height: 72%;
     gap: 10px;
 }
 
-#pecas-aside-esquerda
-{
+#pecas-aside-esquerda {
+    position: relative;
     width: 25%;
-    border: 1px solid black;
+    border-radius: 12px;
 }
 
-.grid-pecas-aside
-{
+#pecas-aside-esquerda .titulo {
+    margin: 50px 0px 0px 70px;
+
+}
+
+#pecas-aside-esquerda #subTitulo-srv {
+    margin-left: 30px;
+}
+
+#pecas-aside-esquerda img {
+    position: absolute;
+    object-fit: cover;
+    object-position: center;
+    height: 600px;
+    right: 50px;
+    bottom: 0px;
+}
+
+.grid-pecas-aside {
     width: 75%;
 }
 
-.link-pecas-header #pecas-header
-{
+.link-pecas-header #pecas-header {
     height: 39%;
     width: 100%;
     border: 1px solid black;
     margin-bottom: 12px;
 }
 
-.grid-pecas-footer
-{
+.grid-pecas-footer {
     display: flex;
     height: 59%;
     gap: 12px;
 
 }
 
-.link-pecas-footer
-{
+.link-pecas-footer {
     width: 50%;
     height: 100%;
-    border: 1px solid black;
+    position: relative;
 }
 
+.link-pecas-footer img {
+    position: absolute;
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    bottom: 0;
+}
 
-#peca-footer
-{
+.link-pecas-footer .direita {
+    right: 0;
+
+}
+
+#peca-footer {
     margin-top: 12px;
     width: 100%;
     height: 20%;
     border: 1px solid black;
+}
+
+
+.link-pecas:hover {
+    background-color: #fdcce6;
+    transition: .4s ease;
+}
+
+.link-pecas .titulo {
+    margin: 50px 0px 0px 70px;
+
+}
+
+
+.titulo-esquerda {
+    margin: 90px 0px 0px 350px;
+
 }
