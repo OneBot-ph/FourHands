@@ -1,7 +1,6 @@
 .card-vitrine {
     margin: 0%;
     padding: 0;
-
 }
 
 .place-vitrine {
@@ -19,14 +18,11 @@
 }
 
 .grid-footer-vitrine {
-
-    background-color: #9381ff;
-    border-radius: 0 0 24px 24px;
-
-
     color: #fbf7ff;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
+
 
 .grid-footer-vitrine h3 {
     font-size: 25px;
@@ -72,6 +68,7 @@
     border-radius: 16px;
     border: none;
     padding: 4px;
+    border: 2px solid #4B1F6F;
 }
 
 .tamanho {
@@ -88,12 +85,13 @@
     text-align: center;
     border-radius: 8px;
     border: none;
-
+    border: 2px solid #4B1F6F;
 }
 
 .grid-adicionar-carrinho button {
     cursor: pointer;
     margin-bottom: 16px;
+        border: 2px solid #4B1F6F;
 }
 
 #favoritar {
@@ -119,4 +117,6 @@
 
 }
 
-#adicionar-carrinho:hover {}
+#adicionar-carrinho:hover {
+
+}
