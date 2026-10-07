@@ -1,13 +1,13 @@
-let input = document.getElementById("quantidade");
+let qtdInput = document.getElementsByClassName("quantidade");
 
-input.addEventListener('input', validacaoQuantidade);
+qtdInput[0].addEventListener('input', validacaoQuantidade);
 
-function validacaoQuantidade(){
-    let valor = Number(input.value);
+function validacaoQuantidade() {
+    let valor = Number(qtdInput[0].value);
 
-    if(valor < 0){
-        input.value = -1 * input.value;
-    }else{
+    if (valor < 0) {
+        qtdInput[0].value = -1 * qtdInput[0].value;
+    } else {
         return;
     }
 }

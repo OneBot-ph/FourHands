@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Esboço de Vitrine</title>
     <script src="../javaScript/validacaoQuantidade.js" async></script>
+    <script src="../javaScript/carrinho.js" defer></script>
 
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/carrinho.css">
     <link rel="stylesheet" href="../css/vitr-banner-promocao.css">
     <link rel="stylesheet" href="../css/vitr-desc-e-filtro.css">
     <link rel="stylesheet" href="../css/vitr-place-vitrine.css">
@@ -40,10 +42,20 @@
                         <!-- Pesquisar-->
                     </datalist>
                 </form>
-                <a href="#carrinho"><img src="imagens/carrinho2.png " alt=""></a>
+                <button id="nav-carrinho"><img src="../imagens/carrinho2.png " alt=""></button>
             </div>
         </nav>
     </header>
+
+    <section class="carrinho-compras">
+        <h1>Carrinho</h1>
+
+        <div class="grid-total">
+            <h3>Total: </h3>
+            <p id="totalCarrinho">R$0,00</p>
+        </div>
+        <button id="enviarCarrinho" type="submit">Enviar Pedido</button>
+    </section>
 
     <!-- promoção banner -->
     <section class="container banner-promocao">
@@ -66,27 +78,26 @@
 
     <!-- Vitrine horizontal 1 -->
     <section class="place-vitrine">
+        
         <!-- card 1 -->
         <section class="card-vitrine">
-            <a href="">
 
-                <img src="../imagens/modelo3.jpeg" alt="">
-                <div class="grid-adicionar-carrinho">
-                    <div class="tamanho">
-                        <button>P</button>
-                        <button>M</button>
-                        <button>G</button>
-                    </div>
-                    <button id="adicionar-carrinho">Adicionar ao Carrinho</button>
+            <img class="produtoimg" src="../imagens/modelo3.jpeg" alt="">
+            <div class="grid-adicionar-carrinho">
+                <div class="tamanho">
+                    <button>P</button>
+                    <button>M</button>
+                    <button>G</button>
                 </div>
-            </a>
+                <button class="adicionar-carrinho">Adicionar ao Carrinho</button>
+            </div>
 
             <footer class="grid-footer-vitrine">
-                <h3>Nome da peça</h3>
+                <h3 class="nomePeca">Nome da peça</h3>
                 <main class="desc-footer-vitrine">
                     <div class="produto">
-                        <p id="preco">R$ 20,90</p>
-                        <input type="number" id="quantidade" value="1">
+                        <p class="preco">R$ 20,90</p>
+                        <input type="number" class="quantidade" value="1">
                     </div>
 
                 </main>
@@ -94,50 +105,50 @@
             </footer>
         </section>
 
+        <!-- card 1 -->
         <section class="card-vitrine">
-                <img src="../imagens/modelo3.jpeg" alt="">
-                <div class="grid-adicionar-carrinho">
-                    <div class="tamanho">
-                        <button>P</button>
-                        <button>M</button>
-                        <button>G</button>
-                    </div>
-                    <button id="adicionar-carrinho">Adicionar ao Carrinho</button>
+
+            <img class="produtoimg" src="../imagens/modelo3.jpeg" alt="">
+            <div class="grid-adicionar-carrinho">
+                <div class="tamanho">
+                    <button>P</button>
+                    <button>M</button>
+                    <button>G</button>
                 </div>
+                <button class="adicionar-carrinho">Adicionar ao Carrinho</button>
+            </div>
 
             <footer class="grid-footer-vitrine">
-                <h3>Nome da peça</h3>
+                <h3 class="nomePeca">Nome da peça</h3>
                 <main class="desc-footer-vitrine">
                     <div class="produto">
-                        <p id="preco">R$ 20,90</p>
-                        <input type="number" id="quantidade" value="1">
+                        <p class="preco">R$ 20,90</p>
+                        <input type="number" class="quantidade" value="1">
                     </div>
 
                 </main>
 
             </footer>
         </section>
+        <!-- card 1 -->
+        <section class="card-vitrine">
 
-                <section class="card-vitrine">
-            <a href="">
-
-                <img src="../imagens/modelo3.jpeg" alt="">
-                <div class="grid-adicionar-carrinho">
-                    <div class="tamanho">
-                        <button>P</button>
-                        <button>M</button>
-                        <button>G</button>
-                    </div>
-                    <button id="adicionar-carrinho">Adicionar ao Carrinho</button>
+            <img class="produtoimg" src="../imagens/modelo3.jpeg" alt="">
+            <div class="grid-adicionar-carrinho">
+                <div class="tamanho">
+                    <button>P</button>
+                    <button>M</button>
+                    <button>G</button>
                 </div>
-            </a>
+                <button class="adicionar-carrinho">Adicionar ao Carrinho</button>
+            </div>
 
             <footer class="grid-footer-vitrine">
-                <h3>Nome da peça</h3>
+                <h3 class="nomePeca">Nome da peça</h3>
                 <main class="desc-footer-vitrine">
                     <div class="produto">
-                        <p id="preco">R$ 20,90</p>
-                        <input type="number" id="quantidade" value="1">
+                        <p class="preco">R$ 20,90</p>
+                        <input type="number" class="quantidade" value="1">
                     </div>
 
                 </main>
@@ -147,11 +158,44 @@
 
 
     </section>
+    <!-- Fim Vitrine horizontal 1 -->
 
+    <!-- Vitrine horizontal 2 -->
 
+    <!-- Fim Vitrine horizontal 2 -->
 
     <footer class="footer">
+        <h1>Four Hands</h3>
 
+            <div class="grid-contato">
+
+                <div class="">
+                    <a class="card-contato">
+                        <img src="../imagens/instagram.jfif" alt="">
+                        <p>Claudiana</p>
+                    </a>
+                    <a class="card-contato">
+                        <img src="../imagens/instagram.jfif" alt="">
+                        <p>fundadora 2</p>
+                    </a>
+                </div>
+
+                <div class="">
+                    <a class="card-contato">
+                        <img src="../imagens/Whatsapp.jfif" alt="">
+                        <p>(11) 90000-000</p>
+                    </a>
+                    <a class="card-contato">
+
+                        <img src="../imagens/e-mail.jfif" alt="">
+                        <p>fourhands@gmail.com.br</p>
+                    </a>
+
+                </div>
+            </div>
+            <a href="">
+                <p>Desenvolvido por Toca doBesouro</p>
+            </a>
     </footer>
 
 </body>

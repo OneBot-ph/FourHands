@@ -57,4 +57,3 @@ function MostrarForm(valor) {
 
 }
 MostrarForm(0);
-

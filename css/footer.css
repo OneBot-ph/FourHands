@@ -1,5 +1,36 @@
-.footer
-{
+.footer {
     height: 200px;
-    background-color: #fdcce6;
+    background-color: #3a2118;
+    text-align: center;
+    color: #ffff;
+    padding: 24px 0;
+}
+
+.footer a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #ffff;
+}
+
+.footer .grid-contato {
+    display: flex;
+    justify-content: space-between;
+    margin-inline: 100px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+
+}
+
+.footer .card-contato {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.footer .card-contato img {
+    object-fit: cover;
+    object-position: center;
+    height: 20px;
+    border-radius: 5px;
 }

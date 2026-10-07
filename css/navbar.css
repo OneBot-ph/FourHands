@@ -1,4 +1,4 @@
-.place-navbar{
+.place-navbar {
     position: fixed;
     z-index: 5;
     width: 100%;
@@ -16,26 +16,15 @@
 .src a {
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
-    color: #845cbc;
+    color: #4B1F6F;
     text-align: center;
     transition: color .3 ease;
 
-    transition: .5s ease-in;
     padding: 8px;
     margin: 0 24px 8px 24px;
 }
 
-.navbar a img {
-    object-fit: cover;
-    object-position: center;
-}
 
-.src img {
-    width: 55px;
-    height: 45px;
-    display: flex;
-    align-items: center;
-}
 
 .src input {
     height: 30px;
@@ -61,30 +50,53 @@
     border-radius: 64px;
 }
 
-.src{
+.src {
     width: 100%;
     justify-content: space-between;
 }
 
-#logo{
+#logo {
     padding-top: 24px;
     padding-bottom: 24px;
     text-align: justify;
 }
 
-.paginas{
+.paginas {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px;
 }
 
-.paginas a{
+.paginas a {
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
     width: 100px;
-    color: #845cbc;
+    color: #4B1F6F;
     text-align: center;
-    margin-inline:12px;
+    margin-inline: 12px;
+}
+
+#nav-carrinho {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+#nav-carrinho img {
+    object-fit: cover;
+    object-position: center;
+    width: 55px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    transition: .3s ease;
+}
+
+
+#nav-carrinho:hover img {
+    height: 48px;
+    width: 57px;
 }

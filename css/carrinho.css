@@ -1,0 +1,129 @@
+.carrinho-compras {
+    position: fixed;
+    right: 0;
+    top: 8.3%;
+    z-index: 6;
+    height: 100vh;
+    width: 600px;
+    background-color: #fcfcfc;
+    transform: translateX(600px);
+    transition: .4s ease;
+    display: flexbox;
+    overflow: scroll;
+}
+
+
+
+.carrinho-compras h1 {
+    padding: 12px 0;
+    text-align: center;
+    color: #fff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #3a2118;
+    margin-bottom: 12px;
+}
+
+.carrinho-compras .grid-total{
+    position: absolute;
+    bottom: 18%;
+    width: 100%;
+    padding-inline: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+    border-bottom: 3px solid #fdcce6 ;
+}
+
+.card-compra {
+    margin: 12px;
+    padding: 12px;
+    border: 1px solid #000;
+    color: #4a1f6b;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    height: 200px;
+    background-color: #fff;
+}
+
+.desc-card-compra {
+    text-align: center;
+    width: 100%;
+}
+
+.card-compra img {
+    border-radius: 10px;
+}
+
+.desc-card-compra h3 {
+    margin-bottom: 30px;
+}
+
+.desc-card-compra .desc-p {
+    text-align: left;
+    margin-left: 22px;
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.desc-card-compra .grid {
+    display: flex;
+    align-items: center;
+    margin-left: 24px;
+    gap: 50px;
+}
+
+.desc-card-compra .produto {
+    display: flex;
+    gap: 20px;
+}
+
+.desc-card-compra input {
+    width: 50px;
+    border-radius: 8px;
+    padding: 4px;
+    border: 1px solid #4a1f6b;
+    text-align: center;
+}
+
+.desc-card-compra .tamanho button {
+    cursor: pointer;
+    width: 35px;
+    height: 30px;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 8px;
+    border: none;
+    border: 1px solid #4B1F6F;
+    color: #fff;
+    background-color: none;
+    background-color: #4B1F6F;
+}
+
+.removerCarrinho{
+    cursor: pointer;
+    border: none;
+    width: 150px;
+    height: 40px;
+    border-radius: 12px;
+    margin-top: 12px;
+    margin-left: 280px;
+    background-color: #960018;
+    color: #fff;
+    font-size: 14px;
+}
+
+.carrinho-compras #enviarCarrinho{
+    position: absolute;
+    bottom: 10%;
+    left: 33%;
+    padding: 12px;
+    width: 40%;
+    background-color: #c1d591;
+    color: white;
+    border: none;
+    border-radius: 14px;
+    font-size: 18px;
+    cursor: pointer;
+}
