@@ -1,777 +1,92 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Four Hands</title>
-
-    <script type="text/javascript" src="javaScript/CarrosselServicos.js" async></script>
-    <script src="javaScript/anexo.js" async></script>
-    <script src="javaScript/apiWhast.js" defer></script>
-    <script src="javaScript/FormPedidos.js" defer></script>
-    <script src="javaScript/ConfirmacaoPedido.js" async></script>
-    <script src="javaScript/validacaoQuantidade.js" async></script>
-
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/ind-min-servicos.css">
-    <link rel="stylesheet" href="css/ind-banner.css">
-    <link rel="stylesheet" href="css/ind-carrosel-servicos.css">
-    <link rel="stylesheet" href="css/pedidos.css">
-    <link rel="stylesheet" href="css/ind-vitr-moldes.css">
-    <link rel="stylesheet" href="css/footer.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BESOURO | O site para sua marca</title>
+  <link rel="stylesheet" href="[stylle.css">
 </head>
-
 <body>
 
-    <!-- cabeçalho -->
-    <header class="place-navbar">
-        <nav class="navbar">
-
-            <div class="grid-navbar">
-                <a id="logo" href="index.html">
-                    <h3>Four<br>Hands</h2>
-                </a>
-                <div class="paginas">
-                    <a href="html/servicos.html">
-                        Serviços
-                    </a>
-                    <a href="html/quemSomos.html">
-                        Quem Somos?
-                    </a>
-                </div>
-            </div>
-            <div class="src">
-                <form>
-                    <input type="text" list="pesquisa">
-                    <datalist id="pesquisa">
-                        <!-- Pesquisar-->
-                    </datalist>
-                </form>
-                <button id="nav-carrinho"><img src="../imagens/carrinho2.png " alt=""></button>
-            </div>
-        </nav>
-    </header>
-
-    <!-- banner topo -->
-    <section class="container banner-ind">
-        <div class="place-cards">
-            <div class="grid-card">
-                <img id="moca" src="imagens/roupas2.png" alt="">
-                <div class="background-moca"></div>
-                <p id="roupas">roupas</p>
-                <p id="e">&</p>
-                <p id="conjuntos">conjuntos</p>
-            </div>
-
-            <div class="grid-card">
-                <img id="personalizado" src="imagens/pecasPersonalizadas 3.png" alt="">
-                <p id="peca-psz">Peças</p>
-                <p id="personalizadas">Personalizadas</p>
-                <div id="bloco1"></div>
-                <div id="bloco2"></div>
-            </div>
-            <div class="grid-card">
-                <img id="moldes" src="imagens/moldes.png" alt="">
-                <div id="background-moldes"></div>
-                <div id="bloco3"></div>
-                <div id="bloco4"></div>
-                <p id="p-conh">Conheça</p>
-                <p id="p-nossos">Nossos</p>
-                <p id="p-moldes">Moldes</p>
-            </div>
-        </div>
-
-
-
-        <div class="place-semi-circulos">
-            <div class="semi-circulos">
-                <div class="semi-circulos-fundo">
-                    <div class="circulo"></div>
-                </div>
-                <div class="semi-circulos-topo">
-                    <div class="circulo"></div>
-                </div>
-            </div>
-            <div class="semi-circulos">
-                <div class="semi-circulos-fundo">
-                    <div class="circulo"></div>
-                </div>
-                <div class="semi-circulos-topo">
-                    <div class="circulo"></div>
-                </div>
-            </div>
-            <div class="semi-circulos">
-                <div class="semi-circulos-fundo">
-                    <div class="circulo"></div>
-                </div>
-                <div class="semi-circulos-topo">
-                    <div class="circulo"></div>
-                </div>
-            </div>
-            <div class="semi-circulos">
-                <div class="semi-circulos-fundo">
-                    <div class="circulo"></div>
-                </div>
-                <div class="semi-circulos-topo">
-                    <div class="circulo"></div>
-                </div>
-            </div>
-        </div>
-        </div>
-    </section>
-
-    <section class="mini-servicos">
-        <div class="grid-mini-servicos mini-molde">
-            <img src="imagens/molde2.png" style="padding: 12px;" alt="">
-            <div class="grid-mini-text">
-                <p>Nossos Moldes</p>
-                <p>Oferecemos moldes desenvolvidos para você colocar suas ideias em prática</p>
-            </div>
-            <div id="quadrado1-mini-molde"></div>
-            <div id="quadrado2-mini-molde"></div>
-            <div id="quadrado3-mini-molde"></div>
-
-        </div>
-        <div class="grid-mini-servicos mini-moca">
-            <img src="imagens/pessoa de costa.png" alt="" style="padding: 12px;">
-            <div class="grid-mini-text">
-                <p>conjuntos</p>
-                <p>Temos conjuntos e peças prontas para quem busca praticidade, conforto e um toque especial no vestir.
-                </p>
-            </div>
-            <div id="quadrado-mini-moca"></div>
-        </div>
-        <div class="grid-mini-servicos mini-personalizado">
-            <img src="imagens/pecaspersonalizadas4.png" alt="">
-            <div class="grid-mini-text">
-                <p>Peças personalizadas</p>
-                <p>Criamos peças pensadas especialmente para você, respeitando seu estilo, suas preferências e suas
-                    necessidades.</p>
-            </div>
-            <div id="quadrado-mini-personalizado1"></div>
-            <div id="quadrado-mini-personalizado2"></div>
-
-        </div>
-    </section>
-
-    <!-- carrossel "Nossos Serviços" -->
-    <section class="container carrossel-container">
-        <div class="carrossel-img-servicos fade">
-            <img class="img-servico" src="imagens/servico1.svg" alt="">
-        </div>
-
-        <div class="carrossel-img-servicos fade">
-            <img class="img-servico" src="imagens/servico2.svg" alt="">
-        </div>
-
-        <div class="carrossel-img-servicos fade">
-            <img class="img-servico" src="imagens/servico3.svg" alt="">
-        </div>
-
-        <div class="btn-srv">
-            <button class="proximo" onclick="proximoSlide(1)">&rarr;</button>
-            <button class="anterior" onclick="proximoSlide(-1)">
-                &larr;<button>
-        </div>
-    </section>
-
-    <!-- vitrine de moldes -->
-    <section class="place-moldes">
-        <h1>Explore nossos moldes</h1>
-        <p></p>
-        <div class="grid-moldes">
-            <div class="card-moldes">
-                <img src="imagens/moldevitr.jpeg" alt="">
-
-                <div class="desc-moldes">
-                    <h3>nome do molde</h3>
-                    <div class="grid-valor-moldes">
-                        <strong class="preco">R$ 35,30</strong>
-                        <input id="quantidade" type="number" value="1" min="0">
-                    </div>
-                    <button>adicionar no carrinho</button>
-                </div>
-
-            </div>
-            <div class="card-moldes">
-                <img src="imagens/moldevitr.jpeg" alt="">
-
-                <div class="desc-moldes">
-                    <h3>nome do molde</h3>
-                    <div class="grid-valor-moldes">
-                        <strong class="preco">R$ 35,30</strong>
-                        <input id="quantidade" type="number" value="1" min="0">
-                    </div>
-                    <button>adicionar no carrinho</button>
-                </div>
-
-            </div>
-            <div class="card-moldes">
-                <img src="imagens/moldevitr.jpeg" alt="">
-
-                <div class="desc-moldes">
-                    <h3>nome do molde</h3>
-                    <div class="grid-valor-moldes">
-                        <strong class="preco">R$ 35,30</strong>
-                        <input id="quantidade" type="number" value="1" min="0">
-                    </div>
-                    <button>adicionar no carrinho</button>
-                </div>
-
-            </div>
-            <div class="card-moldes">
-                <img src="imagens/moldevitr.jpeg" alt="">
-
-                <div class="desc-moldes">
-                    <h3>nome do molde</h3>
-                    <div class="grid-valor-moldes">
-                        <strong class="preco">R$ 35,30</strong>
-                        <input id="quantidade" type="number" value="1" min="0">
-                    </div>
-                    <button>adicionar no carrinho</button>
-                </div>
-
-            </div>
-            <div class="card-moldes">
-                <img src="imagens/moldevitr.jpeg" alt="">
-
-                <div class="desc-moldes">
-                    <h3>nome do molde</h3>
-                    <div class="grid-valor-moldes">
-                        <strong class="preco">R$ 35,30</strong>
-                        <input id="quantidade" type="number" value="1" min="0">
-                    </div>
-                    <button>adicionar no carrinho</button>
-                </div>
-
-            </div>
-            <div class="card-moldes">
-                <img src="imagens/moldevitr.jpeg" alt="">
-
-                <div class="desc-moldes">
-                    <h3>nome do molde</h3>
-                    <div class="grid-valor-moldes">
-                        <strong class="preco">R$ 35,30</strong>
-                        <input id="quantidade" type="number" value="1" min="0">
-                    </div>
-                    <button>adicionar no carrinho</button>
-                </div>
-
-            </div>
-        </div>
-        <div class="grid-moldes">
-            <div class="card-moldes">
-                <img src="imagens/moldevitr.jpeg" alt="">
-
-                <div class="desc-moldes">
-                    <h3>nome do molde</h3>
-                    <div class="grid-valor-moldes">
-                        <strong class="preco">R$ 35,30</strong>
-                        <input id="quantidade" type="number" value="1" min="0">
-                    </div>
-                    <button>adicionar no carrinho</button>
-                </div>
-
-            </div>
-            <div class="card-moldes">
-                <img src="imagens/moldevitr.jpeg" alt="">
-
-                <div class="desc-moldes">
-                    <h3>nome do molde</h3>
-                    <div class="grid-valor-moldes">
-                        <strong class="preco">R$ 35,30</strong>
-                        <input id="quantidade" type="number" value="1" min="0">
-                    </div>
-                    <button>adicionar no carrinho</button>
-                </div>
-
-            </div>
-            <div class="card-moldes">
-                <img src="imagens/moldevitr.jpeg" alt="">
-
-                <div class="desc-moldes">
-                    <h3>nome do molde</h3>
-                    <div class="grid-valor-moldes">
-                        <strong class="preco">R$ 35,30</strong>
-                        <input id="quantidade" type="number" value="1" min="0">
-                    </div>
-                    <button>adicionar no carrinho</button>
-                </div>
-
-            </div>
-            <div class="card-moldes">
-                <img src="imagens/moldevitr.jpeg" alt="">
-
-                <div class="desc-moldes">
-                    <h3>nome do molde</h3>
-                    <div class="grid-valor-moldes">
-                        <strong class="preco">R$ 35,30</strong>
-                        <input id="quantidade" type="number" value="1" min="0">
-                    </div>
-                    <button>adicionar no carrinho</button>
-                </div>
-
-            </div>
-            <div class="card-moldes">
-                <img src="imagens/moldevitr.jpeg" alt="">
-
-                <div class="desc-moldes">
-                    <h3>nome do molde</h3>
-                    <div class="grid-valor-moldes">
-                        <strong class="preco">R$ 35,30</strong>
-                        <input id="quantidade" type="number" value="1" min="0">
-                    </div>
-                    <button>adicionar no carrinho</button>
-                </div>
-
-            </div>
-            <div class="card-moldes">
-                <img src="imagens/moldevitr.jpeg" alt="">
-
-                <div class="desc-moldes">
-                    <h3>nome do molde</h3>
-                    <div class="grid-valor-moldes">
-                        <strong class="preco">R$ 35,30</strong>
-                        <input id="quantidade" type="number" value="1" min="0">
-                    </div>
-                    <button>adicionar no carrinho</button>
-                </div>
-
-            </div>
-        </div>
-        <div class="grid-moldes">
-            <div class="card-moldes">
-                <img src="imagens/moldevitr.jpeg" alt="">
-
-                <div class="desc-moldes">
-                    <h3>nome do molde</h3>
-                    <div class="grid-valor-moldes">
-                        <strong class="preco">R$ 35,30</strong>
-                        <input id="quantidade" type="number" value="1" min="0">
-                    </div>
-                    <button>adicionar no carrinho</button>
-                </div>
-
-            </div>
-            <div class="card-moldes">
-                <img src="imagens/moldevitr.jpeg" alt="">
-
-                <div class="desc-moldes">
-                    <h3>nome do molde</h3>
-                    <div class="grid-valor-moldes">
-                        <strong class="preco">R$ 35,30</strong>
-                        <input id="quantidade" type="number" value="1" min="0">
-                    </div>
-                    <button>adicionar no carrinho</button>
-                </div>
-
-            </div>
-            <div class="card-moldes">
-                <img src="imagens/moldevitr.jpeg" alt="">
-
-                <div class="desc-moldes">
-                    <h3>nome do molde</h3>
-                    <div class="grid-valor-moldes">
-                        <strong class="preco">R$ 35,30</strong>
-                        <input id="quantidade" type="number" value="1" min="0">
-                    </div>
-                    <button>adicionar no carrinho</button>
-                </div>
-
-            </div>
-            <div class="card-moldes">
-                <img src="imagens/moldevitr.jpeg" alt="">
-
-                <div class="desc-moldes">
-                    <h3>nome do molde</h3>
-                    <div class="grid-valor-moldes">
-                        <strong class="preco">R$ 35,30</strong>
-                        <input id="quantidade" type="number" value="1" min="0">
-                    </div>
-                    <button>adicionar no carrinho</button>
-                </div>
-
-            </div>
-            <div class="card-moldes">
-                <img src="imagens/moldevitr.jpeg" alt="">
-
-                <div class="desc-moldes">
-                    <h3>nome do molde</h3>
-                    <div class="grid-valor-moldes">
-                        <strong class="preco">R$ 35,30</strong>
-                        <input id="quantidade" type="number" value="1" min="0">
-                    </div>
-                    <button>adicionar no carrinho</button>
-                </div>
-
-            </div>
-            <div class="card-moldes">
-                <img src="imagens/moldevitr.jpeg" alt="">
-
-                <div class="desc-moldes">
-                    <h3>nome do molde</h3>
-                    <div class="grid-valor-moldes">
-                        <strong class="preco">R$ 35,30</strong>
-                        <input id="quantidade" type="number" value="1" min="0">
-                    </div>
-                    <button>adicionar no carrinho</button>
-                </div>
-
-            </div>
-        </div>
-        <p></p>
-    </section>
-
-
-    <!-- Pedidos de peças personalizadas -->
-    <section id="place-pedido">
-
-        <section class="desc-pedido">
-            <h1>Crie sua Roupa Personalizada</h1>
-
-            <div class="grid-acompanhar">
-                <div class="circulo-acompanhar"></div>
-                <p>Seus Dados</p>
-            </div>
-            <div class="grid-acompanhar">
-                <div class="circulo-acompanhar"></div>
-                <p>Nos conte um pouco mais sobre a peça</p>
-            </div>
-
-            <div class="grid-acompanhar">
-                <div class="circulo-acompanhar"></div>
-                <p>Caracteristicas da roupa</p>
-            </div>
-            <div class="grid-acompanhar">
-                <div class="circulo-acompanhar"></div>
-                <p>Aviamentos</p>
-            </div>
-            <div class="grid-acompanhar">
-                <div class="circulo-acompanhar"></div>
-                <p>Nos conte mais</p>
-            </div>
-            <div class="grid-acompanhar">
-                <div class="circulo-acompanhar"></div>
-                <p>Confirmar pedido</p>
-            </div>
-        </section>
-        <form class="info" id="pedido">
-
-            <div id="track">
-
-                <div class="grid-pedido">
-                    <div class="orderPedido">
-                        <h1>Seus Dados</h1>
-                        <input id="nome" name="nome" type="text" placeholder="Digite seu nome completo" required>
-                        <input id="email" name="email" type="email" placeholder="Digite o seu e-mail" required>
-                        <input id="numero" name="telefone" type="tel" placeholder="(11) 90000-000" required>
-                    </div>
-                </div>
-
-                <div class="grid-pedido">
-                    <div class="orderPedido">
-                        <h1>Nos conte um pouco mais sobre a peça</h1>
-                        <div class="grid-questoes">
-
-                            <p>Para quem será feita essa peça?</p>
-
-                            <div class="segmento-caracteristicas categorias">
-
-                                <input type="radio" name="genero" id="Feminino" value="Feminino" checked>
-                                <label for="Feminino">Feminino</label>
-
-                                <input type="radio" name="genero" id="Masculino" value="Masculino" checked>
-                                <label for="Masculino">Masculino</label>
-
-                                <input type="radio" name="genero" id="Unissex" value="Unissex" checked>
-                                <label for="Unissex">Unissex</label>
-                            </div>
-
-                            <p>Qual peça deseja?</p>
-                            <div class="grid-opcoes">
-                                <div class="categorias opcao">
-                                    <input type="radio" name="categoria" id="camisa" value="camisa" checked>
-                                    <label for="camisa">camisa</label>
-
-                                    <input type="radio" name="categoria" id="blusa" value="blusa" checked>
-                                    <label for="blusa">blusa</label>
-
-                                    <input type="radio" name="categoria" id="regata" value="regata" checked>
-                                    <label for="regata">regata</label>
-
-                                    <input type="radio" name="categoria" id="Vestido" value="Vestido" checked>
-                                    <label for="Vestido">Vestido</label>
-
-                                    <input type="radio" name="categoria" id="saia" value="saia" checked>
-                                    <label for="saia">saia</label>
-
-                                </div>
-                                <div class="categorias opcao">
-                                    <input type="radio" name="categoria" id="calça" value="calça" checked>
-                                    <label for="calça">calça</label>
-                                    <input type="radio" name="categoria" id="short" value="short" checked>
-                                    <label for="short">short</label>
-
-                                    <input type="radio" name="categoria" id="bermuda" value="bermuda" checked>
-                                    <label for="bermuda">bermuda</label>
-
-                                    <input type="radio" name="categoria" id="jaqueta" value="jaqueta" checked>
-                                    <label for="jaqueta">jaqueta</label>
-
-                                    <input type="radio" name="categoria" id="casaco" value="casaco" checked>
-                                    <label for="casaco">casaco</label>
-                                </div>
-                            </div>
-
-                            <p>Tamanho da roupa</p>
-                            <div class="segmento categorias">
-
-                                <input type="radio" name="tamanho" id="PP" value="PP" checked>
-                                <label for="PP">PP</label>
-
-                                <input type="radio" name="tamanho" id="P" value="P" checked>
-                                <label for="P">P</label>
-
-                                <input type="radio" name="tamanho" id="M" value="M" checked>
-                                <label for="M">M</label>
-
-                                <input type="radio" name="tamanho" id="G" value="G" checked>
-                                <label for="G">G</label>
-
-                            </div>
-
-                            <p>Quantidade</p>
-                            <input type="number" placeholder="Quantidade" name="quantidade" class="quantidade">
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="grid-pedido">
-                    <div class="ordem-pedido">
-
-                        <h1>Caracteristicas</h1>
-
-                        <p>Como você gostaria que a peça ficasse no seu corpo?</p>
-                        <div class="segmento-caracteristicas categorias">
-
-                            <input type="radio" name="caimento" id="justa" value="justa" checked>
-                            <label for="justa">justa</label>
-
-                            <input type="radio" name="caimento" id="Normal" value="Normal" checked>
-                            <label for="Normal">Normal</label>
-
-                            <input type="radio" name="caimento" id="Solta" value="Solta" checked>
-                            <label for="Solta">Solta</label>
-
-                        </div>
-
-                        <p>Como você gostaria que fosse o comprimento?</p>
-                        <div class="segmento-caracteristicas categorias">
-
-                            <input type="radio" name="comprimento" id="curto" value="curto" checked>
-                            <label for="curto">curto</label>
-
-                            <input type="radio" name="comprimento" id="Médio" value="Médio" checked>
-                            <label for="Médio">Médio</label>
-
-                            <input type="radio" name="comprimento" id="Longo" value="Longo" checked>
-                            <label for="Longo">Longo</label>
-                        </div>
-
-                        <p>Qual será a cor principal da Peça</p>
-                        <input type="text" name="cores" list="Cores" placeholder="Cor da peça">
-
-                        <p>Você já possui preferência pelo tecido?</p>
-                        <input id="tecidoPe" type="text" name="tecido" list="tecidos"
-                            placeholder="Escolha o seu tecido">
-                        <datalist id="tecidos">
-                            <option value="Algodão"></option>
-                            <option value="Malha"></option>
-                            <option value="Linho"></option>
-                            <option value="Viscose"></option>
-                            <option value="Sarja"></option>
-                            <option value="Moletom"></option>
-                            <option value="Cetim"></option>
-                            <option value="Renda"></option>
-                            <option value="Veludo"></option>
-                            <option value="Tecido espotivo"></option>
-                        </datalist>
-                    </div>
-                </div>
-
-                <div class="grid-pedido">
-                    <div class="ordem-pedido">
-
-                        <h1>Aviamentos</h1>
-                        <p>Deseja ter aviamentos?</p>
-                        <div class="grid-perguntas" id="avimentoPe" class="grid-aviamentos">
-
-                            <input type="text" name="fechamento" list="fechamento" placeholder="Fechamento da peça">
-                            <datalist id="fechamento">
-                                <option value="Ziper"></option>
-                                <option value="Botões"></option>
-                                <option value="Colchetes"></option>
-                                <option value="Amarrão"></option>
-                                <option value="Velcro"></option>
-                                <option value="Elástico"></option>
-                                <option value="Sem Fechamento"></option>
-                            </datalist>
-
-                            <div>
-                                <p>Onde ficará o fechamento?</p>
-                                <div class="segmento-aviamentos categorias">
-
-                                    <input type="radio" name="locFechamento" id="Frente" value="Frente" checked>
-                                    <label for="Frente">Frente</label>
-
-                                    <input type="radio" name="locFechamento" id="Costas" value="Costas" checked>
-                                    <label for="Costas">Costas</label>
-
-                                    <input type="radio" name="locFechamento" id="Lateral" value="Lateral" checked>
-                                    <label for="Lateral">Lateral</label>
-
-                                    <input type="radio" name="locFechamento" id="Manga" value="Manga" checked>
-                                    <label for="Manga">Manga</label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="grid-perguntas" class="botoesPe">
-                            <input type="text" name="Botões" id="btnPe-estilo" list="Botões"
-                                placeholder="Deseja utilizar botões?">
-                            <datalist id="Botões">
-                                <option value="Plástico"></option>
-                                <option value="Metal"></option>
-                                <option value="Madeira"></option>
-                                <option value="Botão forrado com tecido"></option>
-                            </datalist>
-
-                            <input type="number" name="qtdBotão" placeholder="Quantidade de botões">
-
-                        </div>
-
-                        <div class="grid-perguntas" id="avimentoPe">
-                            <input type="text" name="elastico" list="elastico" placeholder="Utilizará Elásticos?">
-                            <datalist id="elastico">
-                                <option value="Cintura"></option>
-                                <option value="Barra"></option>
-                                <option value="Manga"></option>
-                                <option value="Punho"></option>
-                                <option value="Decote"></option>
-                            </datalist>
-
-                            <div>
-                                <p>Como deseja o ajuste?</p>
-                                <div class="segmento-aviamentos categorias">
-
-                                    <input type="radio" name="ajusteElastico" id="Cintura" value="Cintura" checked>
-                                    <label for="Cintura">Cintura</label>
-
-                                    <input type="radio" name="ajusteElastico" id="Barra" value="Barra" checked>
-                                    <label for="Barra">Barra</label>
-
-                                    <input type="radio" name="ajusteElastico" id="Manga" value="Manga" checked>
-                                    <label for="Manga">Manga</label>
-
-                                    <input type="radio" name="ajusteElastico" id="Punho" value="Punho" checked>
-                                    <label for="Punho">Punho</label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="grid-perguntas" id="bolsoPe">
-                            <input type="text" name="bolsos" list="bolsos" placeholder="Deseja bolsos na peça?">
-                            <datalist id="bolsos">
-                                <option value="bolso lateral"></option>
-                                <option value="bolso frontal"></option>
-                                <option value="bolso traseiro"></option>
-                                <option value="bolso interno"></option>
-                                <option value="bolso embutido"></option>
-                                <option value="bolso com ziper"></option>
-                                <option value="bolso com aba"></option>
-                            </datalist>
-
-                            <input type="number" name="qtdBolsos" placeholder="Quantidade de bolsos">
-
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="grid-pedido">
-                    <div class="ordem-pedido">
-                        <h1>Descreva o seu pedido</h1>
-                        <textarea name="descricaoLivre" id="desc-form"
-                            placeholder="Escreva sobre o seu pedido:"></textarea>
-
-                        <div class="place-anexo">
-
-                            <label id="anexo" for="arquivo">
-                                <h3>Envie um arquivo de Exemplo</h3>
-                                <input type="file" id="arquivo">
-                                <img class="img">
-                            </label>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="grid-pedido">
-                    <div class="ordem-pedido">
-                        <h1>Confira seu pedido</h1>
-                        <dl class="resumo" id="resumo"></dl>
-                    </div>
-                </div>
-            </div>
-
-            <div class="botoes-pedido">
-                <button id="anteriorForm" type="button">Voltar</button>
-                <button id="proximoForm" type="button">Próximo</button>
-                <button id="enviar" type="submit">Enviar mensagem</button>
-            </div>
-        </form>
-
-
-    </section>
-
-    <!-- footer -->
-    <footer class="footer">
-        <h1>Four Hands</h3>
-
-            <div class="grid-contato">
-
-                <div class="">
-                    <a class="card-contato">
-                        <img src="imagens/instagram.jfif" alt="">
-                        <p>Claudiana</p>
-                    </a>
-                    <a class="card-contato">
-                        <img src="imagens/instagram.jfif" alt="">
-                        <p>fundadora 2</p>
-                    </a>
-                </div>
-
-                <div class="">
-                    <a class="card-contato">
-                        <img src="imagens/Whatsapp.jfif" alt="">
-                        <p>(11) 90000-000</p>
-                    </a>
-                    <a class="card-contato">
-
-                        <img src="imagens/e-mail.jfif" alt="">
-                        <p>fourhands@gmail.com.br</p>
-                    </a>
-
-                </div>
-            </div>
-            <a href="">
-                <p>Desenvolvido por Toca Besouro</p>
-            </a>
-    </footer>
-
+<header>
+  <div class="navbar">
+    <a class="logo" href="#topo"><i aria-hidden="true"></i>besouro</a>
+    <nav aria-label="Principal">
+      <ul>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#processo">Processo</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="topo">
+  <section class="hero" id="hero">
+    <div class="glow" id="glow" aria-hidden="true"></div>
+    <div class="wrap">
+      <h1>Pequeno no nome. Gigante no IMPACTO.</h1>
+      <p class="lead">Criamos sites que não passam despercebidos.
+Design com personalidade. Tecnologia com propósito.
+Resultados que fazem a sua marca ir além.</p>
+      <div class="actions">
+        <a class="btn btn-claro" href="mailto:ola@vagalume.exemplo">Pedir orçamento</a>
+        <a class="btn btn-borda" href="#servicos">Ver serviços</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="servicos" id="servicos">
+    <div class="wrap duas">
+      <h2>Menos enfeite. Mais clareza.</h2>
+      <div class="lista">
+        <details name="servico" open>
+          <summary>Landing pages</summary>
+          <p>Uma página, um objetivo: levar a pessoa a falar com você. Texto direto, layout leve e botão no lugar certo.</p>
+        </details>
+        <details name="servico">
+          <summary>Sites institucionais</summary>
+          <p>Apresente sua empresa, seus serviços e sua equipe em poucas páginas, fáceis de navegar no celular.</p>
+        </details>
+        <details name="servico">
+          <summary>Lojas virtuais</summary>
+          <p>Catálogo, carrinho e pagamento sem complicação, com fotos que carregam rápido e um checkout curto.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="processo" id="processo">
+    <div class="wrap">
+      <h2>Do primeiro papo ao site no ar</h2>
+      <ol>
+        <li><strong>Conversa</strong><span>Entendemos sua marca, seu público e o que o site precisa resolver.</span></li>
+        <li><strong>Protótipo</strong><span>Você vê e comenta a estrutura antes de qualquer detalhe visual.</span></li>
+        <li><strong>Publicação</strong><span>Ajustamos, testamos em vários aparelhos e colocamos o site no ar.</span></li>
+        <li><strong>Acompanhamento</strong><span>Ficamos por perto para corrigir e evoluir o que for preciso.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="chamada" id="contato">
+    <div class="wrap">
+      <div class="bloco">
+        <h2>Vamos acender o seu site?</h2>
+        <p>Conte em poucas linhas o que você precisa. Respondemos em até dois dias úteis.</p>
+        <a class="btn btn-escuro" href="mailto:ola@vagalume.exemplo">Falar com o estúdio</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+<footer>
+  <div class="wrap rodape">
+    <p> &copy; <p id="ano"> 2026 </p> BESOURO Estúdio</p>
+    <a href="mailto:ola@vagalume.exemplo">ola@vagalume.exemplo</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
-
 </html>
