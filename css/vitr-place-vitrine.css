@@ -1,31 +1,37 @@
-.card-vitrine {
-    margin: 0%;
-    padding: 0;
-}
-
 .place-vitrine {
     margin: 24px 5px 100px 5px;
     padding: 0;
-    gap: 10px;
+    gap: 30px;
     display: flex;
+    justify-content: center;
+}
+
+
+.card-vitrine {
+    margin: 0%;
+    padding: 0;
+    height: 700px;
+    width: 460px;
+    position: relative;
 }
 
 .card-vitrine img {
     display: flex;
-    width: 100%;
     object-fit: cover;
     object-position: center;
+    height: 100%;
+    width: 100%;
 }
 
 .grid-footer-vitrine {
-    color: #fbf7ff;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #000;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 
 
 .grid-footer-vitrine h3 {
-    font-size: 25px;
+    font-size: 18px;
 }
 
 .grid-footer-vitrine h3,
@@ -37,44 +43,44 @@
 .desc-footer-vitrine {
     display: flex;
     align-items: center;
-
-    gap: 5px;
+    justify-content: center;
+    
 }
 
 .desc-footer-vitrine .produto {
     display: flex;
-    margin: 2% 0 2% 15%;
-    gap: 5px;
+    justify-content: center;
+    gap: 20px;
     height: 30px;
     font-size: 15px;
     align-items: center;
-
 }
 
 /* ---------------- */
 
 .produto p {
     font-size: 20px;
-    margin-right: 10px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Times New Roman', Times, serif;
     color: #000;
 }
 
 .produto input {
-    width: 30%;
+    width: 20%;
     height: 30px;
     font-size: 15px;
     text-align: center;
     border-radius: 16px;
     border: none;
     padding: 4px;
-    border: 2px solid #4B1F6F;
+    border: 1px solid #4B1F6F;
 }
 
 .tamanho {
+    bottom: 4%;
+    right: -5%;
     display: flex;
-    margin-right: 10%;
-    gap: 20px;
+    justify-content: center;
+    gap: 5px;
 }
 
 .tamanho button {
@@ -85,38 +91,38 @@
     text-align: center;
     border-radius: 8px;
     border: none;
-    border: 2px solid #4B1F6F;
+    border: 1px solid #4B1F6F;
+    color: #fff;
+    background-color: none;
+    background-color: #4B1F6F;
 }
 
-.grid-adicionar-carrinho button {
+#adicionar-carrinho{
     cursor: pointer;
-    margin-bottom: 16px;
-        border: 2px solid #4B1F6F;
-}
-
-#favoritar {
-    width: 50px;
+    padding-inline: 12px;
+    margin-top: 16px;
+    background-color: #000;
+    color: #fff;
+    width: 100%;
     height: 40px;
     border-radius: 16px;
-    font-size: 30px;
-    border-radius: 16px;
-    border: none;
-    background: none;
-    object-fit: cover;
-    object-position: center;
-}
-
-#adicionar-carrinho {
-    width: 70%;
-    height: 40px;
-    border-radius: 16px;
-    font-size: 24px;
+    font-size: 18px;
     text-align: center;
-    border-radius: 16px;
+    border-radius: 8px;
     border: none;
-
+    
 }
 
-#adicionar-carrinho:hover {
+.grid-adicionar-carrinho{
+    position: absolute;
+    bottom: 2%;
+    right: 25%;
+    background-color: aliceblue;
+    padding: 12px;
+    border-radius: 16px;
+    opacity: .85;
+}
 
+.card-vitrine:hover{
+    background-size: 50%;
 }
