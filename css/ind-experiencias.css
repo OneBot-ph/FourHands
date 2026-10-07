@@ -21,10 +21,10 @@
 .background-qms {
     margin: auto;
     width: 80%;
-    background-color: #4B1F6F;
-    color: white;
+    background-color: #f6a6bb;
+    color: #4B1F6F;
     padding: 32px;
-    border-radius: 24px;
+    border-radius: 12px;
     text-align: justify;
     font-size: 18px;
 }
@@ -33,7 +33,6 @@
     margin-top: 150px;
     display: flex;
     position: relative;
-    background-color: #4B1F6F;
     font-size: 18px;
     font-family: monospace;
 }
@@ -41,10 +40,10 @@
 .grid-ex-fundadoras p {
     margin: 24px auto;
     width: 70%;
-    background-color: #c1d591;
+    background-color: #f6a6bb;
     color: #4B1F6F;
     padding: 32px;
-    border-radius: 24px;
+    border-radius: 12px;
     text-align: justify;
 }
 
@@ -79,7 +78,7 @@
     position: absolute;
 
     border-radius: 16px;
-    background-color: #c1d591;
+    background-color: #f6a6bb;
     z-index: 1;
 }
 
