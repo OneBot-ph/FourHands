@@ -8,8 +8,6 @@
     background-color: #fcfcfc;
     transform: translateX(600px);
     transition: .4s ease;
-    display: flexbox;
-
 }
 
 .track{
@@ -41,7 +39,7 @@
 .card-compra {
     margin: 12px;
     padding: 12px;
-    border: 1px solid #000;
+    border: 1px solid #4a1f6b;
     color: #4a1f6b;
     border-radius: 12px;
     overflow: hidden;
@@ -120,6 +118,7 @@
 .carrinho-compras #enviarCarrinho{
     padding: 12px;
     width: 40%;
+    margin: 4px 0  0 30%;
     background-color: #c1d591;
     color: white;
     border: none;

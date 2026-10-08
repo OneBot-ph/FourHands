@@ -130,15 +130,13 @@ function NumeroParatxt(numero) {
 
 function RemoverCarrinho(evento) {
     evento.target.parentElement.parentElement.remove();
-    AtualizacaoTotal();
+    cardCompra
 }
 
 function AtualizacaoTotal() {
-
     for (let i = 0; i < cardCompra.length; i++) {
         const produtoPreco = txtParaNumero(cardCompra[i].getElementsByClassName("preco")[0].innerHTML);
         const produtoQuantidade = cardCompra[i].getElementsByClassName("quantidade")[0].value;
-
         valorTotal += produtoPreco * produtoQuantidade;
     }
 
