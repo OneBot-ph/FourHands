@@ -6,7 +6,7 @@ if (document.readyState === "loading") {
 
 function ready() {
 
-    let totalCarrinho = document.querySelector("#totalCarrinho");
+
     let btncarrinho = document.getElementById("nav-carrinho");
 
     btncarrinho.addEventListener('click', MostrarCarrinho);
@@ -31,6 +31,8 @@ function ready() {
     btnEnviarCarrinho.addEventListener("click", AtualizarEnviar)
 }
 
+let totalCarrinho = document.querySelector("#totalCarrinho");
+let trackCompras = document.getElementsByClassName("track");
 let cardCompra = document.getElementsByClassName("card-compra");
 let carrinho = document.getElementsByClassName("carrinho-compras");
 let abrirPag = 0;
@@ -41,16 +43,21 @@ function AtualizarEnviar() {
         alert("Seu carrinho esta vazio!")
     } else {
         alert(
-        `Obrigado pela sua compra!
+            `Obrigado pela sua compra!
         Valor do pedido R$${valorTotal}
         Volte Sempre`
         )
+
+        for (let i = 0; i < cardCompra.length; i++) {
+            cardCompra[i].innerHTML = " ";
+            cardCompra[i].style.display = "none"
+        }
+
+        totalCarrinho.innerHTML = "R$0,00"
+
     }
-    carrinho.innerHTML = "";
-    AtualizacaoTotal();
+
 }
-
-
 
 function addProduto(evento) {
     const btn = evento.target;
@@ -89,7 +96,7 @@ function addProduto(evento) {
         <button class="removerCarrinho">Remover</button>
         `
 
-    carrinho[0].append(novoCardProduto);
+    carrinho[0].getElementsByClassName("track")[0].append(novoCardProduto);
     AtualizacaoTotal();
 
     novoCardProduto.getElementsByClassName("quantidade")[0].addEventListener("change", AtualizacaoTotal);

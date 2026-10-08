@@ -9,9 +9,14 @@
     transform: translateX(600px);
     transition: .4s ease;
     display: flexbox;
-    overflow: scroll;
+
 }
 
+.track{
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 72%;
+}
 
 
 .carrinho-compras h1 {
@@ -24,8 +29,6 @@
 }
 
 .carrinho-compras .grid-total{
-    position: absolute;
-    bottom: 18%;
     width: 100%;
     padding-inline: 12px;
     display: flex;
@@ -115,9 +118,6 @@
 }
 
 .carrinho-compras #enviarCarrinho{
-    position: absolute;
-    bottom: 10%;
-    left: 33%;
     padding: 12px;
     width: 40%;
     background-color: #c1d591;
