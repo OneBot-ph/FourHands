@@ -8,11 +8,16 @@
 
 
     <script type="text/javascript" src="../javaScript/CarrosselInsta.js" defer></script>
+    <script src="../javaScript/validacaoQuantidade.js" async></script>
+    <script src="../javaScript/carrinho.js" defer></script>
+    <script src="../javaScript/apiWhast.js" defer></script>
+
 
 
     <link rel="stylesheet" href="../css/ind-experiencias.css">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/carrinho.css">
     <link rel="stylesheet" href="../css/qms-apresetacao.css">
     <link rel="stylesheet" href="../css/qms-historia.css">
     <link rel="stylesheet" href="../css/qms-fundadoras.css">
@@ -44,10 +49,24 @@
                         <!-- Pesquisar-->
                     </datalist>
                 </form>
-                <button id="nav-carrinho"><img src="../imagens/carrinho2.png " alt=""></button>
+                <button id="nav-carrinho"><img src="../imagens/carrinho.png " alt=""></button>
             </div>
         </nav>
     </header>
+
+
+    <form class="carrinho-compras formularioEnvio" data-tipo="carrinho">
+        <h1>Carrinho</h1>
+        <div class="track">
+
+        </div>
+
+        <div class="grid-total">
+            <h3>Total: </h3>
+            <p id="totalCarrinho">R$0,00</p>
+        </div>
+        <button id="enviarCarrinho" class="enviar" type="submit">Enviar Pedido</button>
+    </form>
 
 
     <!-- Apresentação -->

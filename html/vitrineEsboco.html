@@ -7,6 +7,7 @@
     <title>Esboço de Vitrine</title>
     <script src="../javaScript/validacaoQuantidade.js" async></script>
     <script src="../javaScript/carrinho.js" defer></script>
+    <script src="../javaScript/apiWhast.js" defer></script>
 
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/navbar.css">
@@ -42,12 +43,12 @@
                         <!-- Pesquisar-->
                     </datalist>
                 </form>
-                <button id="nav-carrinho"><img src="../imagens/carrinho2.png " alt=""></button>
+                <button id="nav-carrinho"><img src="../imagens/carrinho.png" alt=""></button>
             </div>
         </nav>
     </header>
 
-    <section class="carrinho-compras">
+    <form class="carrinho-compras formularioEnvio" data-tipo="carrinho">
         <h1>Carrinho</h1>
         <div class="track">
 
@@ -57,31 +58,23 @@
             <h3>Total: </h3>
             <p id="totalCarrinho">R$0,00</p>
         </div>
-        <button id="enviarCarrinho" type="submit">Enviar Pedido</button>
-    </section>
-
-    <!-- promoção banner -->
-    <section class="container banner-promocao">
-        <img src="" alt="">
-    </section>
+        <button id="enviarCarrinho" class="enviar" type="submit">Enviar Pedido</button>
+    </form>
 
     <!-- Nome da categoria && Filtro-->
     <section class="container desc">
 
-        <p>Nome da categoria da roupa</p>
+        <div>
+            <h2>Nome da categoria de roupa</h2>
 
-        <form class="foms-filtro-roupas">
-            <input id="pesquisa-roupas" type="text" list="filtro-roupas">
+            <input id="pesquisa-roupas" type="text" list="filtro-roupas" src="">
 
-            <datalist id="filtro-roupas">
-                <option value="Quem somos"></option>
-            </datalist>
-        </form>
+        </div>
     </section>
 
     <!-- Vitrine horizontal 1 -->
     <section class="place-vitrine">
-        
+
         <!-- card 1 -->
         <section class="card-vitrine">
 

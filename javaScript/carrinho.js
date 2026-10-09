@@ -1,8 +1,10 @@
-if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", ready);
-} else {
-    ready();
-}
+let totalCarrinho = document.querySelector("#totalCarrinho");
+let trackCompras = document.getElementsByClassName("track");
+let cardCompra = document.getElementsByClassName("card-compra");
+let carrinho = document.getElementsByClassName("carrinho-compras");
+let abrirPag = 0;
+let valorTotal = 0;
+
 
 function ready() {
     let btncarrinho = document.getElementById("nav-carrinho");
@@ -25,14 +27,20 @@ function ready() {
         btnAddCarrinho[i].addEventListener("click", addProduto);
     }
 
+    RestaurarCarrinho()
+
 }
 
-let totalCarrinho = document.querySelector("#totalCarrinho");
-let trackCompras = document.getElementsByClassName("track");
-let cardCompra = document.getElementsByClassName("card-compra");
-let carrinho = document.getElementsByClassName("carrinho-compras");
-let abrirPag = 0;
-let valorTotal = 0;
+function RestaurarCarrinho() {
+    const track = document.getElementsByClassName("track")[0];
+    if (!track) {
+        return;
+    }
+
+    LerCarrinho().forEach((item) => track.append(CriarCard(item)));
+    AtualizacaoTotal();
+}
+
 
 function AtualizarEnviar() {
     document.getElementsByClassName("track")[0].innerHTML = "";
@@ -44,8 +52,9 @@ function addProduto(evento) {
     const btn = evento.target;
     const produtoInfo = evento.target.parentElement.parentElement;
     const produtoImg = produtoInfo.querySelector(".produtoimg").src;
-    const produtoTitulo = produtoInfo.getElementsByClassName("nomePeca")[0].innerHTML;
+    const produtoTitulo = produtoInfo.querySelector(".nomePeca").innerHTML;
     const produtoPreco = produtoInfo.querySelector(".preco").innerHTML;
+    const produtoQuantidade = produtoInfo.querySelector(".quantidade").value;
 
     const produtoCard = document.getElementsByClassName("nomePecaCard");
     const produtoCardTitulo = document.getElementsByClassName("nomePeca");
@@ -58,40 +67,50 @@ function addProduto(evento) {
         }
     }
 
+    const novoCard = CriarCard({
+        img: produtoImg,
+        titulo: produtoTitulo,
+        preco: produtoPreco,
+        quantidade: produtoQuantidade,
+    })
+
+    document.getElementsByClassName("track")[0].append(novoCard);
+    AtualizacaoTotal();
+}
+
+function CriarCard({ img, titulo, preco, quantidade }) {
+
     let novoCardProduto = document.createElement("div");
     novoCardProduto.classList.add("card-compra");
 
     novoCardProduto.innerHTML =
         `
-        <img src="${produtoImg}" alt="${produtoTitulo}">
+        <img src="${img}" alt="${titulo}">
         <div class="desc-card-compra">
-            <h3 class="nomePecaCard">${produtoTitulo}</h3>
+            <h3 class="nomePecaCard">${titulo}</h3>
             <p class="desc-p">Descrição da peça:</p>
             <div class="grid">
                 <div class="produto">
-                    <p class="preco">${produtoPreco}</p>
-                    <input type="number" class="quantidade" value="1" min="0">
+                    <p class="preco">${preco}</p>
+                    <input type="number" class="quantidade" value="${quantidade}" min="0">
                 </div>
                     <div class="tamanho">
                         <button type="button">P</button>
                 </div>
         </div>
         <button class="removerCarrinho" type="button">Remover</button>
-        `
+        `;
 
-    document.getElementsByClassName("track")[0].append(novoCardProduto);
-    AtualizacaoTotal();
 
     novoCardProduto.getElementsByClassName("quantidade")[0].addEventListener("change", AtualizacaoTotal);
-
     novoCardProduto.getElementsByClassName("removerCarrinho")[0].addEventListener('click', RemoverCarrinho);
 
+    return novoCardProduto;
 }
 
 
-
 function RemoverCarrinho(evento) {
-    evento.target.parentElement.parentElement.remove();
+    evento.target.closest(".card-compra").remove();
     AtualizacaoTotal();
 }
 
@@ -111,6 +130,8 @@ function AtualizacaoTotal() {
     }
     valorTotal = subTotal;
     totalCarrinho.innerHTML = NumeroParatxt(valorTotal);
+
+    SalvarCarrinho();
 }
 
 //conversão de valores
@@ -137,4 +158,36 @@ function MostrarCarrinho() {
         carrinho[0].style.transform = "translateX(600px)";
         abrirPag = 0;
     }
+}
+
+
+// Teste Salvar Carrinho
+
+const chave_carrinho = "carrinhoFourHands";
+
+function LerCarrinho() {
+    try {
+        return JSON.parse(localStorage.getItem(chave_carrinho)) || []
+    } catch {
+        return [];
+    }
+}
+
+function SalvarCarrinho() {
+    const itens = Array.from(cardCompra).map((card) =>
+    ({
+        img: card.querySelector("img").src,
+        titulo: card.querySelector(".nomePecaCard").textContent.trim(),
+        preco: card.querySelector(".preco").textContent.trim(),
+        quantidade: card.querySelector(".quantidade").value,
+    })
+    );
+    localStorage.setItem(chave_carrinho, JSON.stringify(itens));
+}
+
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", ready);
+} else {
+    ready();
 }

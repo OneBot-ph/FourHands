@@ -52,7 +52,7 @@ formularios.forEach((form) => {
         form.reset();
 
         if (form.dataset.tipo === "carrinho") {
-            limparCarrinho();
+            AtualizarEnviar();
             alert(`Obrigado pela sua compra!\nValor do pedido: ${NumeroParatxt(lista.total)}`);
         }
 
@@ -84,3 +84,5 @@ function coletarItensCarrinho(form) {
         })
         .filter((item) => item.quantidade > 0);
 }
+
+

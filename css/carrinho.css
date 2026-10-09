@@ -39,7 +39,7 @@
 .card-compra {
     margin: 12px;
     padding: 12px;
-    border: 1px solid #4a1f6b;
+    border: 2px solid #fdcce6;
     color: #4a1f6b;
     border-radius: 12px;
     overflow: hidden;
@@ -84,7 +84,8 @@
     width: 50px;
     border-radius: 8px;
     padding: 4px;
-    border: 1px solid #4a1f6b;
+    border: none;
+    border-bottom: 1px solid #4a1f6b;
     text-align: center;
 }
 

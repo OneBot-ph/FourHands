@@ -3,7 +3,7 @@
     z-index: 5;
     width: 100%;
     font-family: monospace;
-    background-color: #fdcce6;
+    background-color: white;
 }
 
 .navbar {
@@ -32,9 +32,14 @@
     margin-left: 180px;
     text-align: center;
     font-size: 16px;
-
     border: none;
+    border-bottom: 2px solid #f7b6dc;
     border-radius: 24px;
+    padding: 4px 45px 4px 4px;
+    background-image: url("../imagens/lupa.jpeg");
+    background-repeat: no-repeat;
+    background-position: 350px center;
+    background-size: 40px;
 
 }
 
@@ -88,8 +93,8 @@
 #nav-carrinho img {
     object-fit: cover;
     object-position: center;
-    width: 55px;
-    height: 45px;
+    width: 80px;
+    height: 100%;
     display: flex;
     align-items: center;
     transition: .3s ease;
@@ -97,6 +102,5 @@
 
 
 #nav-carrinho:hover img {
-    height: 48px;
-    width: 57px;
+    width: 85px;
 }

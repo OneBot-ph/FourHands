@@ -1,16 +1,38 @@
-.desc
-{
-    margin-top: 24px;
-    display: flex;
-    justify-content: center;
-    border-bottom: 1px solid black;
-    gap: 50px;
+.desc {
+    padding-top: 120px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid #4B1F6F;
 }
 
-#pesquisa-roupas
-{
+.desc div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    gap: 50px;
     padding: 4px;
+    position: relative;
+}
+
+.desc div h2 {
+    color: #4B1F6F;
+    font-family: Cormorant Garamond;
+    text-align: center;
+}
+
+#pesquisa-roupas {
+    position: absolute;
+    right: 5%;
+    padding: 4px 40px 4px 4px;
     gap: 4px;
-    border-radius: 8px;
+    border-radius: 12px;
+    border: none;
+    border-bottom: 2px solid #f7b6dc;
     width: 150px;
+    text-align: center;
+    background-image: url("../imagens/lupa.jpeg");
+    background-repeat: no-repeat;
+    background-position: 100px center;
+    background-size: 40px;
 }
