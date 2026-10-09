@@ -1,3 +1,5 @@
+let form = document.getElementById("pedido");
+
 function Confirmacao() {
     const lista = new FormData(form);
 

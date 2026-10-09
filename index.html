@@ -12,9 +12,11 @@
     <script src="javaScript/FormPedidos.js" defer></script>
     <script src="javaScript/ConfirmacaoPedido.js" async></script>
     <script src="javaScript/validacaoQuantidade.js" async></script>
+    <script src="javaScript/carrinho.js" async></script>
 
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="./css/carrinho.css">
     <link rel="stylesheet" href="css/ind-min-servicos.css">
     <link rel="stylesheet" href="css/ind-banner.css">
     <link rel="stylesheet" href="css/ind-carrosel-servicos.css">
@@ -53,6 +55,19 @@
             </div>
         </nav>
     </header>
+
+    <form class="carrinho-compras formularioEnvio" data-tipo="carrinho">
+        <h1>Carrinho</h1>
+        <div class="track">
+
+        </div>
+
+        <div class="grid-total">
+            <h3>Total: </h3>
+            <p id="totalCarrinho">R$0,00</p>
+        </div>
+        <button id="enviarCarrinho" class="enviar" type="submit">Enviar Pedido</button>
+    </form>
 
     <!-- banner topo -->
     <section class="container banner-ind">
@@ -183,240 +198,240 @@
         <p></p>
         <div class="grid-moldes">
             <div class="card-moldes">
-                <img src="imagens/moldevitr.jpeg" alt="">
+                <img class="produtoimg" src="imagens/moldevitr.jpeg" alt="">
 
                 <div class="desc-moldes">
-                    <h3>nome do molde</h3>
+                    <h3 class="nomePeca" >nome do molde</h3>
                     <div class="grid-valor-moldes">
                         <strong class="preco">R$ 35,30</strong>
-                        <input id="quantidade" type="number" value="1" min="0">
+                        <input class="quantidade" type="number" value="1" min="0">
                     </div>
-                    <button>adicionar no carrinho</button>
+                    <button class="adicionar-carrinho">adicionar no carrinho</button>
                 </div>
 
             </div>
             <div class="card-moldes">
-                <img src="imagens/moldevitr.jpeg" alt="">
+                <img class="produtoimg" src="imagens/moldevitr.jpeg" alt="">
 
                 <div class="desc-moldes">
-                    <h3>nome do molde</h3>
+                    <h3 class="nomePeca" >nome do molde</h3>
                     <div class="grid-valor-moldes">
                         <strong class="preco">R$ 35,30</strong>
-                        <input id="quantidade" type="number" value="1" min="0">
+                        <input class="quantidade" type="number" value="1" min="0">
                     </div>
-                    <button>adicionar no carrinho</button>
+                    <button class="adicionar-carrinho">adicionar no carrinho</button>
                 </div>
 
             </div>
             <div class="card-moldes">
-                <img src="imagens/moldevitr.jpeg" alt="">
+                <img class="produtoimg" src="imagens/moldevitr.jpeg" alt="">
 
                 <div class="desc-moldes">
-                    <h3>nome do molde</h3>
+                    <h3 class="nomePeca" >nome do molde</h3>
                     <div class="grid-valor-moldes">
                         <strong class="preco">R$ 35,30</strong>
-                        <input id="quantidade" type="number" value="1" min="0">
+                        <input class="quantidade" type="number" value="1" min="0">
                     </div>
-                    <button>adicionar no carrinho</button>
+                    <button class="adicionar-carrinho">adicionar no carrinho</button>
                 </div>
 
             </div>
             <div class="card-moldes">
-                <img src="imagens/moldevitr.jpeg" alt="">
+                <img class="produtoimg" src="imagens/moldevitr.jpeg" alt="">
 
                 <div class="desc-moldes">
-                    <h3>nome do molde</h3>
+                    <h3 class="nomePeca" >nome do molde</h3>
                     <div class="grid-valor-moldes">
                         <strong class="preco">R$ 35,30</strong>
-                        <input id="quantidade" type="number" value="1" min="0">
+                        <input class="quantidade" type="number" value="1" min="0">
                     </div>
-                    <button>adicionar no carrinho</button>
+                    <button class="adicionar-carrinho">adicionar no carrinho</button>
                 </div>
 
             </div>
             <div class="card-moldes">
-                <img src="imagens/moldevitr.jpeg" alt="">
+                <img class="produtoimg" src="imagens/moldevitr.jpeg" alt="">
 
                 <div class="desc-moldes">
-                    <h3>nome do molde</h3>
+                    <h3 class="nomePeca" >nome do molde</h3>
                     <div class="grid-valor-moldes">
                         <strong class="preco">R$ 35,30</strong>
-                        <input id="quantidade" type="number" value="1" min="0">
+                        <input class="quantidade" type="number" value="1" min="0">
                     </div>
-                    <button>adicionar no carrinho</button>
+                    <button class="adicionar-carrinho">adicionar no carrinho</button>
                 </div>
 
             </div>
             <div class="card-moldes">
-                <img src="imagens/moldevitr.jpeg" alt="">
+                <img class="produtoimg" src="imagens/moldevitr.jpeg" alt="">
 
                 <div class="desc-moldes">
-                    <h3>nome do molde</h3>
+                    <h3 class="nomePeca" >nome do molde</h3>
                     <div class="grid-valor-moldes">
                         <strong class="preco">R$ 35,30</strong>
-                        <input id="quantidade" type="number" value="1" min="0">
+                        <input class="quantidade" type="number" value="1" min="0">
                     </div>
-                    <button>adicionar no carrinho</button>
-                </div>
-
-            </div>
-        </div>
-        <div class="grid-moldes">
-            <div class="card-moldes">
-                <img src="imagens/moldevitr.jpeg" alt="">
-
-                <div class="desc-moldes">
-                    <h3>nome do molde</h3>
-                    <div class="grid-valor-moldes">
-                        <strong class="preco">R$ 35,30</strong>
-                        <input id="quantidade" type="number" value="1" min="0">
-                    </div>
-                    <button>adicionar no carrinho</button>
-                </div>
-
-            </div>
-            <div class="card-moldes">
-                <img src="imagens/moldevitr.jpeg" alt="">
-
-                <div class="desc-moldes">
-                    <h3>nome do molde</h3>
-                    <div class="grid-valor-moldes">
-                        <strong class="preco">R$ 35,30</strong>
-                        <input id="quantidade" type="number" value="1" min="0">
-                    </div>
-                    <button>adicionar no carrinho</button>
-                </div>
-
-            </div>
-            <div class="card-moldes">
-                <img src="imagens/moldevitr.jpeg" alt="">
-
-                <div class="desc-moldes">
-                    <h3>nome do molde</h3>
-                    <div class="grid-valor-moldes">
-                        <strong class="preco">R$ 35,30</strong>
-                        <input id="quantidade" type="number" value="1" min="0">
-                    </div>
-                    <button>adicionar no carrinho</button>
-                </div>
-
-            </div>
-            <div class="card-moldes">
-                <img src="imagens/moldevitr.jpeg" alt="">
-
-                <div class="desc-moldes">
-                    <h3>nome do molde</h3>
-                    <div class="grid-valor-moldes">
-                        <strong class="preco">R$ 35,30</strong>
-                        <input id="quantidade" type="number" value="1" min="0">
-                    </div>
-                    <button>adicionar no carrinho</button>
-                </div>
-
-            </div>
-            <div class="card-moldes">
-                <img src="imagens/moldevitr.jpeg" alt="">
-
-                <div class="desc-moldes">
-                    <h3>nome do molde</h3>
-                    <div class="grid-valor-moldes">
-                        <strong class="preco">R$ 35,30</strong>
-                        <input id="quantidade" type="number" value="1" min="0">
-                    </div>
-                    <button>adicionar no carrinho</button>
-                </div>
-
-            </div>
-            <div class="card-moldes">
-                <img src="imagens/moldevitr.jpeg" alt="">
-
-                <div class="desc-moldes">
-                    <h3>nome do molde</h3>
-                    <div class="grid-valor-moldes">
-                        <strong class="preco">R$ 35,30</strong>
-                        <input id="quantidade" type="number" value="1" min="0">
-                    </div>
-                    <button>adicionar no carrinho</button>
+                    <button class="adicionar-carrinho">adicionar no carrinho</button>
                 </div>
 
             </div>
         </div>
         <div class="grid-moldes">
             <div class="card-moldes">
-                <img src="imagens/moldevitr.jpeg" alt="">
+                <img class="produtoimg" src="imagens/moldevitr.jpeg" alt="">
 
                 <div class="desc-moldes">
-                    <h3>nome do molde</h3>
+                    <h3 class="nomePeca" >nome do molde</h3>
                     <div class="grid-valor-moldes">
                         <strong class="preco">R$ 35,30</strong>
-                        <input id="quantidade" type="number" value="1" min="0">
+                        <input class="quantidade" type="number" value="1" min="0">
                     </div>
-                    <button>adicionar no carrinho</button>
+                    <button class="adicionar-carrinho">adicionar no carrinho</button>
                 </div>
 
             </div>
             <div class="card-moldes">
-                <img src="imagens/moldevitr.jpeg" alt="">
+                <img class="produtoimg" src="imagens/moldevitr.jpeg" alt="">
 
                 <div class="desc-moldes">
-                    <h3>nome do molde</h3>
+                    <h3 class="nomePeca" >nome do molde</h3>
                     <div class="grid-valor-moldes">
                         <strong class="preco">R$ 35,30</strong>
-                        <input id="quantidade" type="number" value="1" min="0">
+                        <input class="quantidade" type="number" value="1" min="0">
                     </div>
-                    <button>adicionar no carrinho</button>
+                    <button class="adicionar-carrinho">adicionar no carrinho</button>
                 </div>
 
             </div>
             <div class="card-moldes">
-                <img src="imagens/moldevitr.jpeg" alt="">
+                <img class="produtoimg" src="imagens/moldevitr.jpeg" alt="">
 
                 <div class="desc-moldes">
-                    <h3>nome do molde</h3>
+                    <h3 class="nomePeca" >nome do molde</h3>
                     <div class="grid-valor-moldes">
                         <strong class="preco">R$ 35,30</strong>
-                        <input id="quantidade" type="number" value="1" min="0">
+                        <input class="quantidade" type="number" value="1" min="0">
                     </div>
-                    <button>adicionar no carrinho</button>
+                    <button class="adicionar-carrinho">adicionar no carrinho</button>
                 </div>
 
             </div>
             <div class="card-moldes">
-                <img src="imagens/moldevitr.jpeg" alt="">
+                <img class="produtoimg" src="imagens/moldevitr.jpeg" alt="">
 
                 <div class="desc-moldes">
-                    <h3>nome do molde</h3>
+                    <h3 class="nomePeca" >nome do molde</h3>
                     <div class="grid-valor-moldes">
                         <strong class="preco">R$ 35,30</strong>
-                        <input id="quantidade" type="number" value="1" min="0">
+                        <input class="quantidade" type="number" value="1" min="0">
                     </div>
-                    <button>adicionar no carrinho</button>
+                    <button class="adicionar-carrinho">adicionar no carrinho</button>
                 </div>
 
             </div>
             <div class="card-moldes">
-                <img src="imagens/moldevitr.jpeg" alt="">
+                <img class="produtoimg" src="imagens/moldevitr.jpeg" alt="">
 
                 <div class="desc-moldes">
-                    <h3>nome do molde</h3>
+                    <h3 class="nomePeca" >nome do molde</h3>
                     <div class="grid-valor-moldes">
                         <strong class="preco">R$ 35,30</strong>
-                        <input id="quantidade" type="number" value="1" min="0">
+                        <input class="quantidade" type="number" value="1" min="0">
                     </div>
-                    <button>adicionar no carrinho</button>
+                    <button class="adicionar-carrinho">adicionar no carrinho</button>
                 </div>
 
             </div>
             <div class="card-moldes">
-                <img src="imagens/moldevitr.jpeg" alt="">
+                <img class="produtoimg" src="imagens/moldevitr.jpeg" alt="">
 
                 <div class="desc-moldes">
-                    <h3>nome do molde</h3>
+                    <h3 class="nomePeca" >nome do molde</h3>
                     <div class="grid-valor-moldes">
                         <strong class="preco">R$ 35,30</strong>
-                        <input id="quantidade" type="number" value="1" min="0">
+                        <input class="quantidade" type="number" value="1" min="0">
                     </div>
-                    <button>adicionar no carrinho</button>
+                    <button class="adicionar-carrinho">adicionar no carrinho</button>
+                </div>
+
+            </div>
+        </div>
+        <div class="grid-moldes">
+            <div class="card-moldes">
+                <img class="produtoimg" src="imagens/moldevitr.jpeg" alt="">
+
+                <div class="desc-moldes">
+                    <h3 class="nomePeca" >nome do molde</h3>
+                    <div class="grid-valor-moldes">
+                        <strong class="preco">R$ 35,30</strong>
+                        <input class="quantidade" type="number" value="1" min="0">
+                    </div>
+                    <button class="adicionar-carrinho">adicionar no carrinho</button>
+                </div>
+
+            </div>
+            <div class="card-moldes">
+                <img class="produtoimg" src="imagens/moldevitr.jpeg" alt="">
+
+                <div class="desc-moldes">
+                    <h3 class="nomePeca" >nome do molde</h3>
+                    <div class="grid-valor-moldes">
+                        <strong class="preco">R$ 35,30</strong>
+                        <input class="quantidade" type="number" value="1" min="0">
+                    </div>
+                    <button class="adicionar-carrinho">adicionar no carrinho</button>
+                </div>
+
+            </div>
+            <div class="card-moldes">
+                <img class="produtoimg" src="imagens/moldevitr.jpeg" alt="">
+
+                <div class="desc-moldes">
+                    <h3 class="nomePeca" >nome do molde</h3>
+                    <div class="grid-valor-moldes">
+                        <strong class="preco">R$ 35,30</strong>
+                        <input class="quantidade" type="number" value="1" min="0">
+                    </div>
+                    <button class="adicionar-carrinho">adicionar no carrinho</button>
+                </div>
+
+            </div>
+            <div class="card-moldes">
+                <img class="produtoimg" src="imagens/moldevitr.jpeg" alt="">
+
+                <div class="desc-moldes">
+                    <h3 class="nomePeca" >nome do molde</h3>
+                    <div class="grid-valor-moldes">
+                        <strong class="preco">R$ 35,30</strong>
+                        <input class="quantidade" type="number" value="1" min="0">
+                    </div>
+                    <button class="adicionar-carrinho">adicionar no carrinho</button>
+                </div>
+
+            </div>
+            <div class="card-moldes">
+                <img class="produtoimg" src="imagens/moldevitr.jpeg" alt="">
+
+                <div class="desc-moldes">
+                    <h3 class="nomePeca" >nome do molde</h3>
+                    <div class="grid-valor-moldes">
+                        <strong class="preco">R$ 35,30</strong>
+                        <input class="quantidade" type="number" value="1" min="0">
+                    </div>
+                    <button class="adicionar-carrinho">adicionar no carrinho</button>
+                </div>
+
+            </div>
+            <div class="card-moldes">
+                <img class="produtoimg" src="imagens/moldevitr.jpeg" alt="">
+
+                <div class="desc-moldes">
+                    <h3 class="nomePeca" >nome do molde</h3>
+                    <div class="grid-valor-moldes">
+                        <strong class="preco">R$ 35,30</strong>
+                        <input class="quantidade" type="number" value="1" min="0">
+                    </div>
+                    <button class="adicionar-carrinho">adicionar no carrinho</button>
                 </div>
 
             </div>
@@ -457,7 +472,7 @@
                 <p>Confirmar pedido</p>
             </div>
         </section>
-        <form class="info" id="pedido">
+        <form class="info formularioEnvio" id="pedido" data-tipo="personalizado">
 
             <div id="track">
 
@@ -730,7 +745,7 @@
             <div class="botoes-pedido">
                 <button id="anteriorForm" type="button">Voltar</button>
                 <button id="proximoForm" type="button">Próximo</button>
-                <button id="enviar" type="submit">Enviar mensagem</button>
+                <button id="enviar" class="enviar" type="submit">Enviar mensagem</button>
             </div>
         </form>
 

@@ -5,8 +5,6 @@ if (document.readyState === "loading") {
 }
 
 function ready() {
-
-
     let btncarrinho = document.getElementById("nav-carrinho");
 
     btncarrinho.addEventListener('click', MostrarCarrinho);
@@ -27,8 +25,6 @@ function ready() {
         btnAddCarrinho[i].addEventListener("click", addProduto);
     }
 
-    const btnEnviarCarrinho = document.getElementById("enviarCarrinho");
-    btnEnviarCarrinho.addEventListener("click", AtualizarEnviar)
 }
 
 let totalCarrinho = document.querySelector("#totalCarrinho");
@@ -39,23 +35,8 @@ let abrirPag = 0;
 let valorTotal = 0;
 
 function AtualizarEnviar() {
-    if (valorTotal === "R$0,00") {
-        alert("Seu carrinho esta vazio!")
-    } else {
-        alert(
-            `Obrigado pela sua compra!
-        Valor do pedido R$${valorTotal}
-        Volte Sempre`
-        )
-
-        for (let i = 0; i < cardCompra.length; i++) {
-            cardCompra[i].innerHTML = " ";
-            cardCompra[i].style.display = "none"
-        }
-
-        totalCarrinho.innerHTML = "R$0,00"
-
-    }
+    document.getElementsByClassName("track")[0].innerHTML = "";
+    AtualizacaoTotal();
 
 }
 
@@ -64,16 +45,18 @@ function addProduto(evento) {
     const produtoInfo = evento.target.parentElement.parentElement;
     const produtoImg = produtoInfo.querySelector(".produtoimg").src;
     const produtoTitulo = produtoInfo.getElementsByClassName("nomePeca")[0].innerHTML;
-    const produtoPreco = document.querySelector(".preco").innerHTML;
+    const produtoPreco = produtoInfo.querySelector(".preco").innerHTML;
 
-    const produtoCardNome = document.getElementsByClassName("nomePeca");
+    const produtoCard = document.getElementsByClassName("nomePecaCard");
+    const produtoCardTitulo = document.getElementsByClassName("nomePeca");
 
-    // for (let i = 0; i < produtoCardNome.length; i++) {
-    //     if (produtoCardNome[i].innerHTML == produtoTitulo) {
-    //         produtoCardNome[i].parentElement.parentElement.getElementsByClassName("quantidade")[0].value;
-    //         return;
-    //     }
-    // }
+    for (let i = 0; i < produtoCard.length; i++) {
+        if (produtoCard[i].innerHTML === produtoTitulo) {
+            produtoCard[i].parentElement.getElementsByClassName("quantidade")[0].value++;
+            AtualizacaoTotal();
+            return;
+        }
+    }
 
     let novoCardProduto = document.createElement("div");
     novoCardProduto.classList.add("card-compra");
@@ -82,21 +65,21 @@ function addProduto(evento) {
         `
         <img src="${produtoImg}" alt="${produtoTitulo}">
         <div class="desc-card-compra">
-            <h3>${produtoTitulo}</h3>
+            <h3 class="nomePecaCard">${produtoTitulo}</h3>
             <p class="desc-p">Descrição da peça:</p>
             <div class="grid">
                 <div class="produto">
                     <p class="preco">${produtoPreco}</p>
-                    <input type="number" class="quantidade" value="1">
+                    <input type="number" class="quantidade" value="1" min="0">
                 </div>
                     <div class="tamanho">
-                        <button>P</button>
+                        <button type="button">P</button>
                 </div>
         </div>
-        <button class="removerCarrinho">Remover</button>
+        <button class="removerCarrinho" type="button">Remover</button>
         `
 
-    carrinho[0].getElementsByClassName("track")[0].append(novoCardProduto);
+    document.getElementsByClassName("track")[0].append(novoCardProduto);
     AtualizacaoTotal();
 
     novoCardProduto.getElementsByClassName("quantidade")[0].addEventListener("change", AtualizacaoTotal);
@@ -105,16 +88,32 @@ function addProduto(evento) {
 
 }
 
-function MostrarCarrinho() {
-    if (abrirPag == 0) {
-        carrinho[0].style.transform = "translateX(0px)";
-        abrirPag = 1;
-    } else {
-        carrinho[0].style.transform = "translateX(600px)";
-        abrirPag = 0;
-    }
+
+
+function RemoverCarrinho(evento) {
+    evento.target.parentElement.parentElement.remove();
+    AtualizacaoTotal();
 }
 
+function AtualizacaoTotal() {
+    let subTotal = 0;
+    for (let i = 0; i < cardCompra.length; i++) {
+        const produtoPreco = txtParaNumero(cardCompra[i].getElementsByClassName("preco")[0].innerHTML);
+        const campoQuantidade = cardCompra[i].getElementsByClassName("quantidade")[0];
+        let produtoQuantidade = Number(campoQuantidade.value);
+
+        if (produtoQuantidade < 0) {
+            produtoQuantidade = Math.abs(produtoQuantidade);
+            campoQuantidade.value = produtoQuantidade; // campo e cálculo concordam
+        }
+
+        subTotal += produtoPreco * produtoQuantidade;
+    }
+    valorTotal = subTotal;
+    totalCarrinho.innerHTML = NumeroParatxt(valorTotal);
+}
+
+//conversão de valores
 
 function txtParaNumero(txt) {
     let numero = txt.replace("R$", "").replace(",", ".");
@@ -128,18 +127,14 @@ function NumeroParatxt(numero) {
     return txt;
 }
 
-function RemoverCarrinho(evento) {
-    evento.target.parentElement.parentElement.remove();
-    cardCompra
-}
+// abrir Carrinho
 
-function AtualizacaoTotal() {
-    for (let i = 0; i < cardCompra.length; i++) {
-        const produtoPreco = txtParaNumero(cardCompra[i].getElementsByClassName("preco")[0].innerHTML);
-        const produtoQuantidade = cardCompra[i].getElementsByClassName("quantidade")[0].value;
-        valorTotal += produtoPreco * produtoQuantidade;
+function MostrarCarrinho() {
+    if (abrirPag == 0) {
+        carrinho[0].style.transform = "translateX(0px)";
+        abrirPag = 1;
+    } else {
+        carrinho[0].style.transform = "translateX(600px)";
+        abrirPag = 0;
     }
-
-    totalCarrinho.innerHTML = NumeroParatxt(valorTotal);
-
 }
