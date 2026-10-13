@@ -48,13 +48,39 @@ function AtualizarEnviar() {
 
 }
 
+const listTamanho = document.querySelectorAll(".btn-tamanho");
+listTamanho.forEach(btn => {
+    btn.addEventListener('click', evento => {
+        const tagTamanho = evento.target.parentElement
+
+        tagTamanho.querySelectorAll(".btn-tamanho").forEach(b => b.classList.remove('selecionado'));
+
+        evento.target.classList.add('selecionado');
+    })
+})
+
+
 function addProduto(evento) {
     const btn = evento.target;
     const produtoInfo = evento.target.parentElement.parentElement;
     const produtoImg = produtoInfo.querySelector(".produtoimg").src;
     const produtoTitulo = produtoInfo.querySelector(".nomePeca").innerHTML;
     const produtoPreco = produtoInfo.querySelector(".preco").innerHTML;
-    const produtoQuantidade = produtoInfo.querySelector(".quantidade").value;
+    const produtoQuantidade = produtoInfo.querySelector(".quantidade").value
+
+    const tamanhoSelecionado = produtoInfo.querySelector('.btn-tamanho.selecionado');
+
+    if (!document.getElementsByClassName("selecionado")) {
+        console.log("A")
+        if (!tamanhoSelecionado) {
+            alert('Selecione um tamanho antes de adicionar ao carrinho.');
+            return;
+        }
+    }
+
+
+    const produtoTamanho = tamanhoSelecionado.innerText;
+
 
     const produtoCard = document.getElementsByClassName("nomePecaCard");
     const produtoCardTitulo = document.getElementsByClassName("nomePeca");
@@ -72,13 +98,14 @@ function addProduto(evento) {
         titulo: produtoTitulo,
         preco: produtoPreco,
         quantidade: produtoQuantidade,
+        tamanho: produtoTamanho,
     })
 
     document.getElementsByClassName("track")[0].append(novoCard);
     AtualizacaoTotal();
 }
 
-function CriarCard({ img, titulo, preco, quantidade }) {
+function CriarCard({ img, titulo, preco, quantidade, tamanho }) {
 
     let novoCardProduto = document.createElement("div");
     novoCardProduto.classList.add("card-compra");
@@ -95,7 +122,7 @@ function CriarCard({ img, titulo, preco, quantidade }) {
                     <input type="number" class="quantidade" value="${quantidade}" min="0">
                 </div>
                     <div class="tamanho">
-                        <button type="button">P</button>
+                        <button type="button">${tamanho}</button>
                 </div>
         </div>
         <button class="removerCarrinho" type="button">Remover</button>
@@ -115,6 +142,8 @@ function RemoverCarrinho(evento) {
 }
 
 function AtualizacaoTotal() {
+
+
     let subTotal = 0;
     for (let i = 0; i < cardCompra.length; i++) {
         const produtoPreco = txtParaNumero(cardCompra[i].getElementsByClassName("preco")[0].innerHTML);
@@ -124,6 +153,8 @@ function AtualizacaoTotal() {
         if (produtoQuantidade < 0) {
             produtoQuantidade = Math.abs(produtoQuantidade);
             campoQuantidade.value = produtoQuantidade; // campo e cálculo concordam
+        } else if (produtoQuantidade === 0) {
+            cardCompra[i].remove();
         }
 
         subTotal += produtoPreco * produtoQuantidade;

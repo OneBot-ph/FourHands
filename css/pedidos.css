@@ -149,6 +149,7 @@
     border: none;
     border-radius: 16px;
     background-color: white;
+    border-bottom: 1px solid #4a1f6b;
 
     font-size: 18px;
     padding: 12px;

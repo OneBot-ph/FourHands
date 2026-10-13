@@ -8,9 +8,8 @@
 
 .grid-mini-servicos {
     padding-bottom: 24px;
-    text-align: center;
     display: flex;
-    border-radius:24px;
+    border-radius: 24px;
 }
 
 .grid-mini-servicos img {
@@ -20,24 +19,40 @@
     z-index: 2;
 }
 
-.grid-mini-text p{
-    font-size: 16px;
+
+.grid-mini-text {
     text-align: center;
-    width: 200px;
     margin-left: 24px;
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+.grid-mini-text h3 {
+    padding-top: 20px;
+    font-family: 'Cormorant Garamond', serif;
+    letter-spacing: 0.12em;
+
+    color: #4B1F6F;
+}
+
+
+.grid-mini-text p {
+    font-size: 16px;
+    width: 200px;
     margin-top: 24px;
     margin-bottom: 10px;
     padding: 12px;
-
+    text-align: justify;
     background-color: aliceblue;
     border-radius: 16px;
 }
 
-.mini-moca{
+.mini-moca {
     position: relative;
 }
 
-#quadrado-mini-moca{
+#quadrado-mini-moca {
     position: absolute;
     bottom: 4.7%;
     left: 23px;
@@ -47,11 +62,11 @@
     background-color: #4B1F6F;
 }
 
-.mini-molde{
+.mini-molde {
     position: relative;
 }
 
-#quadrado1-mini-molde{
+#quadrado1-mini-molde {
     position: absolute;
     top: 2%;
     left: 30px;
@@ -60,7 +75,8 @@
     width: 60px;
     background-color: #4B1F6F;
 }
-#quadrado2-mini-molde{
+
+#quadrado2-mini-molde {
     position: absolute;
     top: 50%;
     left: 90px;
@@ -70,7 +86,7 @@
     background-color: #4B1F6F;
 }
 
-#quadrado3-mini-molde{
+#quadrado3-mini-molde {
     position: absolute;
     bottom: 0%;
     left: -2%;
@@ -80,12 +96,12 @@
     background-color: #4B1F6F;
 }
 
-.mini-personalizado{
+.mini-personalizado {
     position: relative;
 }
 
 
-#quadrado-mini-personalizado1{
+#quadrado-mini-personalizado1 {
     position: absolute;
     bottom: 10%;
     right: 85%;
@@ -95,7 +111,7 @@
     background-color: #4B1F6F;
 }
 
-#quadrado-mini-personalizado2{
+#quadrado-mini-personalizado2 {
     position: absolute;
     bottom: 65%;
     right: 65%;
@@ -110,21 +126,23 @@
 #quadrado-mini-moca,
 #quadrado1-mini-molde,
 #quadrado2-mini-molde,
-#quadrado3-mini-molde{
+#quadrado3-mini-molde {
     animation-name: movimentacao;
     animation-duration: 4s;
     animation-iteration-count: infinite;
 }
 
 @keyframes movimentacao {
-    25%{
-        transform:  translateY(5px);
+    25% {
+        transform: translateY(5px);
     }
-    50%{
-        transform: translateX(10px) ;
+
+    50% {
+        transform: translateX(10px);
     }
-    75%{
-        transform:  translateY(10px);
+
+    75% {
+        transform: translateY(10px);
     }
 
 }

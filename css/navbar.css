@@ -29,18 +29,22 @@
 .src input {
     height: 30px;
     width: 400px;
-    margin-left: 180px;
-    text-align: center;
+    right: 56%;
+    position: absolute;
     font-size: 16px;
     border: none;
     border-bottom: 2px solid #f7b6dc;
     border-radius: 24px;
-    padding: 4px 45px 4px 4px;
+    padding: 4px 45px 4px 12px;
     background-image: url("../imagens/lupa.jpeg");
     background-repeat: no-repeat;
     background-position: 350px center;
     background-size: 40px;
 
+}
+
+.src{
+    position: relative;
 }
 
 .grid-navbar,
@@ -55,25 +59,25 @@
     border-radius: 64px;
 }
 
-.src {
+.place-navbar .src {
     width: 100%;
     justify-content: space-between;
 }
 
-#logo {
+.place-navbar #logo {
     padding-top: 24px;
     padding-bottom: 24px;
     text-align: justify;
 }
 
-.paginas {
+.place-navbar .paginas {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px;
 }
 
-.paginas a {
+.place-navbar .paginas a {
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;

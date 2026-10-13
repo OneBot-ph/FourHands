@@ -10,6 +10,25 @@
 
 /*---------------*/
 
+.frase-hero {
+    position: absolute;
+    width: 500px;
+    text-align: center;
+    top: 20%;
+    right: 38%;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.frase-hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+
 /*---------------*/
 .grid-card img {
     object-fit: cover;
@@ -29,8 +48,13 @@
 
 
 @keyframes movimentacaoMoca {
-    0% {bottom: 0%;}
-    100% {bottom: 15%;}
+    0% {
+        bottom: 0%;
+    }
+
+    100% {
+        bottom: 15%;
+    }
 }
 
 .background-moca {
@@ -51,7 +75,7 @@
 .grid-card p {
     z-index: 1;
     color: #4B1F6F;
-    font-family: monospace;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 24px;
 }
 
@@ -89,9 +113,13 @@
 }
 
 @keyframes OpacidadeP {
-    0% {opacity: 0;}
+    0% {
+        opacity: 0;
+    }
 
-    39% {transform: translateY(40px);}
+    39% {
+        transform: translateY(40px);
+    }
 }
 
 
@@ -114,9 +142,13 @@
 }
 
 @keyframes MovimentacaoPersonalizado {
-    0% {bottom: -2%;}
+    0% {
+        bottom: -2%;
+    }
 
-    100% {bottom: 8%;}
+    100% {
+        bottom: 8%;
+    }
 }
 
 
@@ -149,7 +181,7 @@
     position: absolute;
     z-index: 4;
     font-size: 24px;
-    font-family: monospace;
+    font-family: 'Cormorant Garamond', serif;
     animation-name: Movimentacao;
     animation-duration: 3s;
 
@@ -232,7 +264,7 @@
     color: #4B1F6F;
     position: absolute;
     z-index: 4;
-    font-family: monospace;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 22px;
     background-size: 20%;
     padding: 2px 0 0 8px;
@@ -260,7 +292,7 @@
 
 /*---------*/
 
-.place-semi-circulos{
+.place-semi-circulos {
     width: 100%;
     display: flex;
     position: relative;
@@ -272,6 +304,7 @@
     height: 120px;
     z-index: 0;
     position: relative;
+    left: -30%;
     display: flex;
 
 }
@@ -282,7 +315,7 @@
     height: 600px;
     border-radius: 50%;
     z-index: 3;
-    background-color: #f6a6bb;
+    background-color: #b68fe7;
     animation: Onda 5s ease-in-out infinite;
 }
 
@@ -290,20 +323,16 @@
     width: 600px;
     height: 600px;
     border-radius: 50%;
-    z-index: 1;
-
     position: absolute;
-    left: -50%;
-    background-color: #fdcce6;
+    right: -50%;
+    background-color: #4B1F6F;
     animation: Onda 5s ease-in-out infinite;
     animation-delay: -1s;
 }
 
-
-
 @keyframes Onda {
     25% {
-        transform: translateY(15%);
+        transform: translateY(5%);
     }
 
     50% {
@@ -311,6 +340,6 @@
     }
 
     75% {
-        transform: translateY(15%);
+        transform: translateY(5%);
     }
 }

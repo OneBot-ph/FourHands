@@ -57,7 +57,7 @@ formularios.forEach((form) => {
         }
 
         setTimeout(() => {
-            botao.textContent = textoOriginal;
+            botao.textContent = textOriginal;
             botao.disabled = false;
             botao.style.backgroundColor = "";
         }, 3000);
