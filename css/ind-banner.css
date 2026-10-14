@@ -121,7 +121,7 @@
 #personalizado {
     height: 350px;
     position: absolute;
-    right: 16%;
+    right: 20%;
     bottom: 8%;
     z-index: 3;
     animation-name: MovimentacaoPersonalizado;
