@@ -1,15 +1,20 @@
 .mini-servicos {
     width: 100%;
-    height: 250px;
-    background-color: #fdcce6;
+    height: 300px;
+    padding-top: 4px;
+    background-color: #4B1F6F;
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
 .grid-mini-servicos {
-    padding-bottom: 24px;
     display: flex;
-    border-radius: 24px;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 800px;
+    height: 100%;
+
 }
 
 .grid-mini-servicos img {
@@ -22,127 +27,33 @@
 
 .grid-mini-text {
     text-align: center;
-    margin-left: 24px;
+
 
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 .grid-mini-text h3 {
-    padding-top: 20px;
     font-family: 'Cormorant Garamond', serif;
     letter-spacing: 0.12em;
-
+    background-color: white;
     color: #4B1F6F;
 }
 
 
 .grid-mini-text p {
     font-size: 16px;
-    width: 200px;
-    margin-top: 24px;
+    max-width: 300px;
     margin-bottom: 10px;
-    padding: 12px;
+    border-radius: 0 0 4px 4px;
+    padding: 24px;
     text-align: justify;
-    background-color: aliceblue;
-    border-radius: 16px;
+    color: white;
+    border:1px solid #fdcce6;
+    font-family: 'Times New Roman', Times, serif;
 }
 
-.mini-moca {
-    position: relative;
+.mini-molde img{
+    transform: rotate(19deg);
 }
 
-#quadrado-mini-moca {
-    position: absolute;
-    bottom: 4.7%;
-    left: 23px;
-    border-radius: 16px;
-    height: 80px;
-    width: 130px;
-    background-color: #4B1F6F;
-}
-
-.mini-molde {
-    position: relative;
-}
-
-#quadrado1-mini-molde {
-    position: absolute;
-    top: 2%;
-    left: 30px;
-    border-radius: 16px;
-    height: 60px;
-    width: 60px;
-    background-color: #4B1F6F;
-}
-
-#quadrado2-mini-molde {
-    position: absolute;
-    top: 50%;
-    left: 90px;
-    border-radius: 16px;
-    height: 60px;
-    width: 60px;
-    background-color: #4B1F6F;
-}
-
-#quadrado3-mini-molde {
-    position: absolute;
-    bottom: 0%;
-    left: -2%;
-    border-radius: 16px;
-    height: 60px;
-    width: 60px;
-    background-color: #4B1F6F;
-}
-
-.mini-personalizado {
-    position: relative;
-}
-
-
-#quadrado-mini-personalizado1 {
-    position: absolute;
-    bottom: 10%;
-    right: 85%;
-    border-radius: 100%;
-    height: 60px;
-    width: 60px;
-    background-color: #4B1F6F;
-}
-
-#quadrado-mini-personalizado2 {
-    position: absolute;
-    bottom: 65%;
-    right: 65%;
-    border-radius: 100%;
-    height: 60px;
-    width: 60px;
-    background-color: #4B1F6F;
-}
-
-#quadrado-mini-personalizado1,
-#quadrado-mini-personalizado2,
-#quadrado-mini-moca,
-#quadrado1-mini-molde,
-#quadrado2-mini-molde,
-#quadrado3-mini-molde {
-    animation-name: movimentacao;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-}
-
-@keyframes movimentacao {
-    25% {
-        transform: translateY(5px);
-    }
-
-    50% {
-        transform: translateX(10px);
-    }
-
-    75% {
-        transform: translateY(10px);
-    }
-
-}

@@ -13,16 +13,19 @@
     <script src="javaScript/ConfirmacaoPedido.js" async></script>
     <script src="javaScript/validacaoQuantidade.js" async></script>
     <script src="javaScript/carrinho.js" async></script>
+    <script src="javaScript/MostrarServicos.js" async></script>
 
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/carrinho.css">
     <link rel="stylesheet" href="css/ind-min-servicos.css">
     <link rel="stylesheet" href="css/ind-banner.css">
+    <link rel="stylesheet" href="css/qms-apresetacao.css">
     <link rel="stylesheet" href="css/ind-carrosel-servicos.css">
     <link rel="stylesheet" href="css/pedidos.css">
     <link rel="stylesheet" href="css/ind-vitr-moldes.css">
     <link rel="stylesheet" href="css/srv-grid-pecas.css">
+
     <link rel="stylesheet" href="css/footer.css">
 </head>
 
@@ -34,14 +37,19 @@
 
             <div class="grid-navbar">
                 <a id="logo" href="index.html">
-                    <h3>Four<br>Hands</h2>
+                    <h2>Four Hands</h2>
                 </a>
                 <div class="paginas">
-                    <a href="html/servicos.html">
-                        Serviços
+                    <a>
+                        <button id="mostrarSrv">Servicos</button>
                     </a>
+                    <div class="servicos">
+                        <a href="#acesso-vitrRoupas">Roupas & Conjuntos</a>
+                        <a href="#vitr-moldes">Nossos Moldes</a>
+                        <a href="#place-pedido">Pedidos Personalizados</a>
+                    </div>
                     <a href="html/quemSomos.html">
-                        Quem Somos?
+                        <p>Quem Somos?</p>
                     </a>
                 </div>
             </div>
@@ -57,6 +65,7 @@
         </nav>
     </header>
 
+    <!-- carrinho-->
     <form class="carrinho-compras formularioEnvio" data-tipo="carrinho">
         <h1>Carrinho</h1>
         <div class="track">
@@ -86,30 +95,28 @@
             <div class="grid-card">
                 <img id="moca" src="imagens/roupas2.png" alt="">
                 <div class="background-moca"></div>
-                <p id="roupas">roupas</p>
-                <p id="e">&</p>
-                <p id="conjuntos">conjuntos</p>
+                <h2 id="roupas">roupas</h2>
+                <h2 id="e">&</h2>
+                <h2 id="conjuntos">conjuntos</h2>
             </div>
 
             <div class="grid-card">
                 <img id="personalizado" src="imagens/pecasPersonalizadas 3.png" alt="">
-                <p id="peca-psz">Peças</p>
-                <p id="personalizadas">Personalizadas</p>
+                <h1 id="peca-psz">Pedidos</h1>
+                <h1 id="personalizadas">Personalizadas</h1>
                 <div id="bloco1"></div>
                 <div id="bloco2"></div>
             </div>
             <div class="grid-card">
-                <img id="moldes" src="imagens/moldes.png" alt="">
+                <img id="moldes" src="imagens/molde3.png" alt="">
                 <div id="background-moldes"></div>
                 <div id="bloco3"></div>
                 <div id="bloco4"></div>
-                <p id="p-conh">Conheça</p>
-                <p id="p-nossos">Nossos</p>
-                <p id="p-moldes">Moldes</p>
+                <h1 id="p-conh">Conheça</h1>
+                <h1 id="p-nossos">Nossos</h1>
+                <h1 id="p-moldes">Moldes</h1>
             </div>
         </div>
-
-
 
         <div class="place-semi-circulos">
             <div class="semi-circulos">
@@ -146,16 +153,15 @@
             </div>
     </section>
 
+    <!-- mini-Serviços -->
     <section class="mini-servicos">
         <div class="grid-mini-servicos mini-molde">
-            <img src="imagens/molde2.png" style="padding: 12px;" alt="">
+            <img src="imagens/moldes.png" style="height: 250px;" alt="">
             <div class="grid-mini-text">
                 <h3>Nossos Moldes</h3>
                 <p>Oferecemos moldes desenvolvidos para você colocar suas ideias em prática</p>
             </div>
-            <div id="quadrado1-mini-molde"></div>
-            <div id="quadrado2-mini-molde"></div>
-            <div id="quadrado3-mini-molde"></div>
+
 
         </div>
         <div class="grid-mini-servicos mini-moca">
@@ -165,7 +171,7 @@
                 <p>Temos conjuntos e peças prontas para quem busca praticidade, conforto e um toque especial no vestir.
                 </p>
             </div>
-            <div id="quadrado-mini-moca"></div>
+
         </div>
         <div class="grid-mini-servicos mini-personalizado">
             <img src="imagens/pecaspersonalizadas4.png" alt="">
@@ -174,8 +180,6 @@
                 <p>Criamos peças pensadas especialmente para você, respeitando seu estilo, suas preferências e suas
                     necessidades.</p>
             </div>
-            <div id="quadrado-mini-personalizado1"></div>
-            <div id="quadrado-mini-personalizado2"></div>
 
         </div>
     </section>
@@ -201,17 +205,21 @@
         </div>
     </section>
 
-
-
     <!-- vitrine de moldes -->
-    <section class="place-moldes">
+    <section class="place-moldes" id="vitr-moldes">
         <h1>Explore nossos moldes</h1>
         <p></p>
 
         <div class="grid-moldes">
             <div class="card-moldes">
                 <img class="produtoimg" src="imagens/moldevitr.jpeg" alt="">
-
+                <div class="grid-adicionar-carrinho">
+                    <div class="tamanho">
+                        <button class="btn-tamanho">P</button>
+                        <button class="btn-tamanho">M</button>
+                        <button class="btn-tamanho">G</button>
+                    </div>
+                </div>
                 <div class="desc-moldes">
                     <h3 class="nomePeca">molde A</h3>
                     <div class="grid-valor-moldes">
@@ -224,7 +232,13 @@
 
             <div class="card-moldes">
                 <img class="produtoimg" src="imagens/molde2.png" alt="">
-
+                <div class="grid-adicionar-carrinho">
+                    <div class="tamanho">
+                        <button class="btn-tamanho">P</button>
+                        <button class="btn-tamanho">M</button>
+                        <button class="btn-tamanho">G</button>
+                    </div>
+                </div>
                 <div class="desc-moldes">
                     <h3 class="nomePeca">molde B</h3>
                     <div class="grid-valor-moldes">
@@ -238,7 +252,13 @@
 
             <div class="card-moldes">
                 <img class="produtoimg" src="imagens/moldes.png" alt="">
-
+                <div class="grid-adicionar-carrinho">
+                    <div class="tamanho">
+                        <button class="btn-tamanho">P</button>
+                        <button class="btn-tamanho">M</button>
+                        <button class="btn-tamanho">G</button>
+                    </div>
+                </div>
                 <div class="desc-moldes">
                     <h3 class="nomePeca">molde C</h3>
                     <div class="grid-valor-moldes">
@@ -252,7 +272,13 @@
 
             <div class="card-moldes">
                 <img class="produtoimg" src="imagens/moldevitr.jpeg" alt="">
-
+                <div class="grid-adicionar-carrinho">
+                    <div class="tamanho">
+                        <button class="btn-tamanho">P</button>
+                        <button class="btn-tamanho">M</button>
+                        <button class="btn-tamanho">G</button>
+                    </div>
+                </div>
                 <div class="desc-moldes">
                     <h3 class="nomePeca">molde A</h3>
                     <div class="grid-valor-moldes">
@@ -266,7 +292,13 @@
 
             <div class="card-moldes">
                 <img class="produtoimg" src="imagens/molde2.png" alt="">
-
+                <div class="grid-adicionar-carrinho">
+                    <div class="tamanho">
+                        <button class="btn-tamanho">P</button>
+                        <button class="btn-tamanho">M</button>
+                        <button class="btn-tamanho">G</button>
+                    </div>
+                </div>
                 <div class="desc-moldes">
                     <h3 class="nomePeca">molde B</h3>
                     <div class="grid-valor-moldes">
@@ -280,93 +312,13 @@
 
             <div class="card-moldes">
                 <img class="produtoimg" src="imagens/moldes.png" alt="">
-
-                <div class="desc-moldes">
-                    <h3 class="nomePeca">molde C</h3>
-                    <div class="grid-valor-moldes">
-                        <strong class="preco">R$ 30,00</strong>
-                        <input class="quantidade" type="number" value="1" min="0">
+                <div class="grid-adicionar-carrinho">
+                    <div class="tamanho">
+                        <button class="btn-tamanho">P</button>
+                        <button class="btn-tamanho">M</button>
+                        <button class="btn-tamanho">G</button>
                     </div>
-                    <button class="adicionar-carrinho">adicionar no carrinho</button>
                 </div>
-
-            </div>
-
-        </div>
-
-        <div class="grid-moldes">
-            <div class="card-moldes">
-                <img class="produtoimg" src="imagens/moldevitr.jpeg" alt="">
-
-                <div class="desc-moldes">
-                    <h3 class="nomePeca">molde A</h3>
-                    <div class="grid-valor-moldes">
-                        <strong class="preco">R$ 10,00</strong>
-                        <input class="quantidade" type="number" value="1" min="0">
-                    </div>
-                    <button class="adicionar-carrinho">adicionar no carrinho</button>
-                </div>
-            </div>
-
-            <div class="card-moldes">
-                <img class="produtoimg" src="imagens/molde2.png" alt="">
-
-                <div class="desc-moldes">
-                    <h3 class="nomePeca">molde B</h3>
-                    <div class="grid-valor-moldes">
-                        <strong class="preco">R$ 20,00</strong>
-                        <input class="quantidade" type="number" value="1" min="0">
-                    </div>
-                    <button class="adicionar-carrinho">adicionar no carrinho</button>
-                </div>
-
-            </div>
-
-            <div class="card-moldes">
-                <img class="produtoimg" src="imagens/moldes.png" alt="">
-
-                <div class="desc-moldes">
-                    <h3 class="nomePeca">molde C</h3>
-                    <div class="grid-valor-moldes">
-                        <strong class="preco">R$ 30,00</strong>
-                        <input class="quantidade" type="number" value="1" min="0">
-                    </div>
-                    <button class="adicionar-carrinho">adicionar no carrinho</button>
-                </div>
-
-            </div>
-
-            <div class="card-moldes">
-                <img class="produtoimg" src="imagens/moldevitr.jpeg" alt="">
-
-                <div class="desc-moldes">
-                    <h3 class="nomePeca">molde A</h3>
-                    <div class="grid-valor-moldes">
-                        <strong class="preco">R$ 10,00</strong>
-                        <input class="quantidade" type="number" value="1" min="0">
-                    </div>
-                    <button class="adicionar-carrinho">adicionar no carrinho</button>
-                </div>
-
-            </div>
-
-            <div class="card-moldes">
-                <img class="produtoimg" src="imagens/molde2.png" alt="">
-
-                <div class="desc-moldes">
-                    <h3 class="nomePeca">molde B</h3>
-                    <div class="grid-valor-moldes">
-                        <strong class="preco">R$ 20,00</strong>
-                        <input class="quantidade" type="number" value="1" min="0">
-                    </div>
-                    <button class="adicionar-carrinho">adicionar no carrinho</button>
-                </div>
-
-            </div>
-
-            <div class="card-moldes">
-                <img class="produtoimg" src="imagens/moldes.png" alt="">
-
                 <div class="desc-moldes">
                     <h3 class="nomePeca">molde C</h3>
                     <div class="grid-valor-moldes">
@@ -383,7 +335,13 @@
         <div class="grid-moldes">
             <div class="card-moldes">
                 <img class="produtoimg" src="imagens/moldevitr.jpeg" alt="">
-
+                <div class="grid-adicionar-carrinho">
+                    <div class="tamanho">
+                        <button class="btn-tamanho">P</button>
+                        <button class="btn-tamanho">M</button>
+                        <button class="btn-tamanho">G</button>
+                    </div>
+                </div>
                 <div class="desc-moldes">
                     <h3 class="nomePeca">molde A</h3>
                     <div class="grid-valor-moldes">
@@ -396,7 +354,13 @@
 
             <div class="card-moldes">
                 <img class="produtoimg" src="imagens/molde2.png" alt="">
-
+                <div class="grid-adicionar-carrinho">
+                    <div class="tamanho">
+                        <button class="btn-tamanho">P</button>
+                        <button class="btn-tamanho">M</button>
+                        <button class="btn-tamanho">G</button>
+                    </div>
+                </div>
                 <div class="desc-moldes">
                     <h3 class="nomePeca">molde B</h3>
                     <div class="grid-valor-moldes">
@@ -410,7 +374,13 @@
 
             <div class="card-moldes">
                 <img class="produtoimg" src="imagens/moldes.png" alt="">
-
+                <div class="grid-adicionar-carrinho">
+                    <div class="tamanho">
+                        <button class="btn-tamanho">P</button>
+                        <button class="btn-tamanho">M</button>
+                        <button class="btn-tamanho">G</button>
+                    </div>
+                </div>
                 <div class="desc-moldes">
                     <h3 class="nomePeca">molde C</h3>
                     <div class="grid-valor-moldes">
@@ -424,7 +394,13 @@
 
             <div class="card-moldes">
                 <img class="produtoimg" src="imagens/moldevitr.jpeg" alt="">
-
+                <div class="grid-adicionar-carrinho">
+                    <div class="tamanho">
+                        <button class="btn-tamanho">P</button>
+                        <button class="btn-tamanho">M</button>
+                        <button class="btn-tamanho">G</button>
+                    </div>
+                </div>
                 <div class="desc-moldes">
                     <h3 class="nomePeca">molde A</h3>
                     <div class="grid-valor-moldes">
@@ -438,7 +414,13 @@
 
             <div class="card-moldes">
                 <img class="produtoimg" src="imagens/molde2.png" alt="">
-
+                <div class="grid-adicionar-carrinho">
+                    <div class="tamanho">
+                        <button class="btn-tamanho">P</button>
+                        <button class="btn-tamanho">M</button>
+                        <button class="btn-tamanho">G</button>
+                    </div>
+                </div>
                 <div class="desc-moldes">
                     <h3 class="nomePeca">molde B</h3>
                     <div class="grid-valor-moldes">
@@ -452,7 +434,13 @@
 
             <div class="card-moldes">
                 <img class="produtoimg" src="imagens/moldes.png" alt="">
-
+                <div class="grid-adicionar-carrinho">
+                    <div class="tamanho">
+                        <button class="btn-tamanho">P</button>
+                        <button class="btn-tamanho">M</button>
+                        <button class="btn-tamanho">G</button>
+                    </div>
+                </div>
                 <div class="desc-moldes">
                     <h3 class="nomePeca">molde C</h3>
                     <div class="grid-valor-moldes">
@@ -470,45 +458,158 @@
         <p></p>
     </section>
 
+    <!-- Apresentação -->
+    <section class="container apresentacao">
+        <h1>Novos Conjuntos</h1>
+        <div class="container-img">
+            <div>
+                <div class="img-interativo">
+                    <img src="imagens/vitrExtraA.jpeg" alt="" class="img-roupa produtoimg">
+                    <div class="overlay">
+                        <img src="imagens/vitrExtraA.a.webp" alt="" class="img-roupa img-overlay">
+                    </div>
+                    <div class="grid-adicionar-carrinho">
+                        <div class="tamanho">
+                            <button class="btn-tamanho">P</button>
+                            <button class="btn-tamanho">M</button>
+                            <button class="btn-tamanho">G</button>
+                        </div>
+                        <button class="adicionar-carrinho">Adicionar ao Carrinho</button>
+                    </div>
+                    <footer class="grid-footer-vitrine">
+                        <h3 class="nomePeca">Conjunto A</h3>
+                        <main class="desc-footer-vitrine">
+                            <div class="produto">
+                                <p class="preco">R$ 20,90</p>
+                                <input type="number" class="quantidade" value="1" min="0">
+                            </div>
+
+                        </main>
+                    </footer>
+                </div>
+
+            </div>
+            <div>
+                <div class="img-interativo">
+                    <img src="imagens/vitrExtraB.jpeg" alt="" class="img-roupa produtoimg">
+                    <div class="overlay">
+                        <img src="imagens/vitrExtraB.a.webp" alt="" class="img-roupa img-overlay">
+                    </div>
+                    <div class="grid-adicionar-carrinho">
+                        <div class="tamanho">
+                            <button class="btn-tamanho">P</button>
+                            <button class="btn-tamanho">M</button>
+                            <button class="btn-tamanho">G</button>
+                        </div>
+                        <button class="adicionar-carrinho">Adicionar ao Carrinho</button>
+                    </div>
+                    <footer class="grid-footer-vitrine">
+                        <h3 class="nomePeca">Conjunto B</h3>
+                        <main class="desc-footer-vitrine">
+                            <div class="produto">
+                                <p class="preco">R$ 20,90</p>
+                                <input type="number" class="quantidade" value="1" min="0">
+                            </div>
+                        </main>
+                    </footer>
+                </div>
+
+            </div>
+            <div>
+                <div class="img-interativo">
+                    <img src="imagens/vitrExtraC.jpeg" alt="" class="img-roupa produtoimg">
+                    <div class="overlay">
+                        <img src="imagens/vitrExtraC.a.webp" alt="" class="img-roupa img-overlay">
+                    </div>
+                    <div class="grid-adicionar-carrinho">
+                        <div class="tamanho">
+                            <button class="btn-tamanho">P</button>
+                            <button class="btn-tamanho">M</button>
+                            <button class="btn-tamanho">G</button>
+                        </div>
+                        <button class="adicionar-carrinho">Adicionar ao Carrinho</button>
+                    </div>
+                    <footer class="grid-footer-vitrine">
+                        <h3 class="nomePeca">Conjunto C</h3>
+                        <main class="desc-footer-vitrine">
+                            <div class="produto">
+                                <p class="preco">R$ 20,90</p>
+                                <input type="number" class="quantidade" value="1" min="0">
+                            </div>
+                        </main>
+                    </footer>
+                </div>
+
+            </div>
+            <div>
+                <div class="img-interativo">
+                    <img src="imagens/vitrExtraD.jpeg" alt="" class="img-roupa produtoimg">
+                    <div class="overlay">
+                        <img src="imagens/vitrExtraD.a.webp" alt="" class="img-roupa img-overlay">
+                    </div>
+                    <div class="grid-adicionar-carrinho">
+                        <div class="tamanho">
+                            <button class="btn-tamanho">P</button>
+                            <button class="btn-tamanho">M</button>
+                            <button class="btn-tamanho">G</button>
+                        </div>
+                        <button class="adicionar-carrinho">Adicionar ao Carrinho</button>
+                    </div>
+                    <footer class="grid-footer-vitrine">
+                        <h3 class="nomePeca">Conjunto D</h3>
+                        <main class="desc-footer-vitrine">
+                            <div class="produto">
+                                <p class="preco">R$ 20,90</p>
+                                <input type="number" class="quantidade" value="1" min="0">
+                            </div>
+                        </main>
+                    </footer>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
     <!--Vitrine de roupas femininas-->
-    <section class="place-pecas">
-        <h2>Nossos Conjuntos</h2>
+    <section class="place-pecas" id="acesso-vitrRoupas">
+
         <div class="grid-pecas">
-            <a id="pecas-aside-esquerda" class="link-pecas" href="vitrineEsboco.html">
+            <a id="pecas-aside-esquerda" class="link-pecas" href="html/vitrineEsboco.html">
                 <div class="titulo">
                     <h1>Conheça</h1>
                     <h1 id="subTitulo-srv">Nossos Vestidos</h1>
                 </div>
-                <img src="../imagens/vestido.png" alt="">
+                <img src="imagens/vestido.png" alt="">
             </a>
             <aside class="grid-pecas-aside">
                 <header class="grid-pecas-header">
-                    <a class="link-pecas-header link-pecas" href="vitrineEsboco.html">
+                    <a class="link-pecas-header link-pecas" href="html/vitrineEsboco.html">
                         <div class="titulo-esquerda">
                             <h1 id="subTitulo-srv">Conjuntos</h1>
                         </div>
-                        <img id="conjuntosSrv" src="../imagens/conjuntos.png" alt="">
+                        <img id="conjuntosSrv" src="imagens/conjuntos.png" alt="">
                     </a>
-                    <a class="link-pecas-header link-pecas" href="vitrineEsboco.html">
+                    <a class="link-pecas-header link-pecas" href="html/vitrineEsboco.html">
                         <div class="titulo">
                             <h1 id="subTitulo-srv">Casaquetos</h1>
                         </div>
-                        <img class="direita" src="../imagens/casaqueto.png" alt="">
+                        <img class="direita" src="/imagens/casaqueto.png" alt="">
                     </a>
                 </header>
 
                 <footer class="grid-pecas-footer">
-                    <a class="link-pecas-footer link-pecas" href="vitrineEsboco.html">
+                    <a class="link-pecas-footer link-pecas" href="html/vitrineEsboco.html">
                         <div class="titulo-esquerda">
                             <h1 id="subTitulo-srv">Camisas</h1>
                         </div>
-                        <img src="../imagens/camisaSrv.png" alt="">
+                        <img src="/imagens/camisaSrv.png" alt="">
                     </a>
-                    <a class="link-pecas-footer link-pecas" href="vitrineEsboco.html">
+                    <a class="link-pecas-footer link-pecas" href="html/vitrineEsboco.html">
                         <div class="titulo">
                             <h1 id="subTitulo-srv">Short's</h1>
                         </div>
-                        <img class="direita" src="../imagens/shortsSrvpng" alt="">
+                        <img class="direita" src="/imagens/shortsSrvpng" alt="">
                     </a>
                 </footer>
             </aside>

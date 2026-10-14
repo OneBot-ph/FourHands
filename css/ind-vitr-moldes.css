@@ -1,5 +1,30 @@
 .place-moldes {
-    margin-bottom: 100px;
+    margin-bottom: 140px;
+}
+
+.card-moldes{
+    position: relative;
+}
+
+.card-moldes .tamanho{
+    position: absolute;
+    bottom: 43%;
+    left: 20%;
+    opacity: 0;
+    width: 120px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 4px;
+    transition: .3s ease;
+}
+
+.card-moldes .tamanho button{
+    font-size: 14px;
+    height: 30px;
+}
+
+.card-moldes:hover .tamanho{
+    opacity: .85;
 }
 
 .place-moldes h1 {

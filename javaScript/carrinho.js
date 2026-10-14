@@ -2,6 +2,7 @@ let totalCarrinho = document.querySelector("#totalCarrinho");
 let trackCompras = document.getElementsByClassName("track");
 let cardCompra = document.getElementsByClassName("card-compra");
 let carrinho = document.getElementsByClassName("carrinho-compras");
+const listTamanho = document.querySelectorAll(".btn-tamanho");
 let abrirPag = 0;
 let valorTotal = 0;
 
@@ -37,7 +38,9 @@ function RestaurarCarrinho() {
         return;
     }
 
-    LerCarrinho().forEach((item) => track.append(CriarCard(item)));
+    LerCarrinho().forEach((item) =>
+        track.append(CriarCard(item))
+    );
     AtualizacaoTotal();
 }
 
@@ -48,17 +51,15 @@ function AtualizarEnviar() {
 
 }
 
-const listTamanho = document.querySelectorAll(".btn-tamanho");
 listTamanho.forEach(btn => {
     btn.addEventListener('click', evento => {
-        const tagTamanho = evento.target.parentElement
+        const tagTamanho = evento.target.parentElement;
 
         tagTamanho.querySelectorAll(".btn-tamanho").forEach(b => b.classList.remove('selecionado'));
 
         evento.target.classList.add('selecionado');
     })
 })
-
 
 function addProduto(evento) {
     const btn = evento.target;
@@ -69,21 +70,14 @@ function addProduto(evento) {
     const produtoQuantidade = produtoInfo.querySelector(".quantidade").value
 
     const tamanhoSelecionado = produtoInfo.querySelector('.btn-tamanho.selecionado');
-
-    if (!document.getElementsByClassName("selecionado")) {
-        console.log("A")
-        if (!tamanhoSelecionado) {
-            alert('Selecione um tamanho antes de adicionar ao carrinho.');
-            return;
-        }
+    let produtoTamanho = "";
+    if (!tamanhoSelecionado) {
+        alert('Selecione um tamanho antes de adicionar ao carrinho.');
+        return;
     }
-
-
-    const produtoTamanho = tamanhoSelecionado.innerText;
-
+        produtoTamanho = tamanhoSelecionado.innerHTML;
 
     const produtoCard = document.getElementsByClassName("nomePecaCard");
-    const produtoCardTitulo = document.getElementsByClassName("nomePeca");
 
     for (let i = 0; i < produtoCard.length; i++) {
         if (produtoCard[i].innerHTML === produtoTitulo) {
@@ -93,15 +87,17 @@ function addProduto(evento) {
         }
     }
 
-    const novoCard = CriarCard({
-        img: produtoImg,
-        titulo: produtoTitulo,
-        preco: produtoPreco,
-        quantidade: produtoQuantidade,
-        tamanho: produtoTamanho,
-    })
 
-    document.getElementsByClassName("track")[0].append(novoCard);
+        const novoCard = CriarCard({
+            img: produtoImg,
+            titulo: produtoTitulo,
+            preco: produtoPreco,
+            quantidade: produtoQuantidade,
+            tamanho: produtoTamanho,
+        })
+
+        document.getElementsByClassName("track")[0].append(novoCard);
+
     AtualizacaoTotal();
 }
 
@@ -122,7 +118,7 @@ function CriarCard({ img, titulo, preco, quantidade, tamanho }) {
                     <input type="number" class="quantidade" value="${quantidade}" min="0">
                 </div>
                     <div class="tamanho">
-                        <button type="button">${tamanho}</button>
+                        <button class="btn-tamanho-card" type="button">${tamanho}</button>
                 </div>
         </div>
         <button class="removerCarrinho" type="button">Remover</button>
@@ -134,7 +130,6 @@ function CriarCard({ img, titulo, preco, quantidade, tamanho }) {
 
     return novoCardProduto;
 }
-
 
 function RemoverCarrinho(evento) {
     evento.target.closest(".card-compra").remove();
@@ -211,6 +206,7 @@ function SalvarCarrinho() {
         titulo: card.querySelector(".nomePecaCard").textContent.trim(),
         preco: card.querySelector(".preco").textContent.trim(),
         quantidade: card.querySelector(".quantidade").value,
+        tamanho: card.querySelector(".btn-tamanho-card").innerHTML,
     })
     );
     localStorage.setItem(chave_carrinho, JSON.stringify(itens));

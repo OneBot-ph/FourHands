@@ -15,8 +15,7 @@
 .grid-navbar a,
 .src a {
     text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #4B1F6F;
+    color: #000;
     text-align: center;
     transition: color .3 ease;
 
@@ -43,7 +42,7 @@
 
 }
 
-.src{
+.src {
     position: relative;
 }
 
@@ -68,13 +67,15 @@
     padding-top: 24px;
     padding-bottom: 24px;
     text-align: justify;
+    color: #000;
+    line-height: 18px;
 }
 
 .place-navbar .paginas {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+
 }
 
 .place-navbar .paginas a {
@@ -82,9 +83,30 @@
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
     width: 100px;
-    color: #4B1F6F;
+
     text-align: center;
     margin-inline: 12px;
+    transition: .3s ease;
+}
+
+.place-navbar .paginas button {
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    width: 84px;
+    color: #000;
+    text-align: center;
+
+    border: none;
+    background: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.place-navbar .paginas a:hover {
+    background-color: #ffd1eb;
+    color: #4a1f6b;
+    border-radius: 4px;
 }
 
 #nav-carrinho {
@@ -107,4 +129,23 @@
 
 #nav-carrinho:hover img {
     width: 85px;
+}
+
+.navbar .paginas .servicos {
+    position: absolute;
+    height: 150px;
+    width: 120px;
+    background-color: #f7b6dc;
+    border-radius: 4px;
+    top: 70%;
+    left: 9%;
+    display: grid;
+}
+
+.navbar .paginas .servicos a {
+    width: auto;
+    padding: 4px;
+    margin: 4px;
+    text-align: left;
+    color:#000;;
 }
