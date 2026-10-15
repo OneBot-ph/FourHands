@@ -1,0 +1,1175 @@
+/* =====================================================================
+   responsivo.css  —  Four Hands
+   Carregar SEMPRE por último (depois de todos os outros CSS).
+
+   Breakpoints:
+     até 1024px  -> tablet e abaixo (menu hambúrguer, layouts em grade)
+     até 767px   -> celular (colunas únicas / 2 colunas, textos menores)
+     até 480px   -> celulares pequenos (ajustes finos)
+
+   Acima de 1024px nada muda: o desktop continua como estava.
+   ===================================================================== */
+
+
+/* =====================================================================
+   1) REGRAS GLOBAIS (valem em qualquer largura)
+   ===================================================================== */
+
+/* Botão hambúrguer: escondido no desktop */
+.menu-toggle {
+    display: none;
+}
+
+/* Menu "Serviços": agora abre/fecha pela classe .aberto (antes era style inline) */
+.navbar .paginas .servicos {
+    display: none;
+}
+
+.navbar .paginas .servicos.aberto {
+    display: grid;
+}
+
+/* Carrinho: abre/fecha pela classe .aberto (antes era style inline) */
+.carrinho-compras.aberto {
+    transform: translateX(0);
+}
+
+/* Tamanho escolhido (o JS já adiciona .selecionado, mas não havia estilo) */
+button.btn-tamanho.selecionado {
+    background-color: #f7b6dc;
+    color: #4B1F6F;
+    border-color: #4B1F6F;
+    font-weight: 700;
+}
+
+/* Estilos que estavam inline no index.html */
+.mini-moca img {
+    padding: 12px;
+}
+
+
+/* =====================================================================
+   2) TABLET E ABAIXO  (até 1024px)
+   ===================================================================== */
+@media (max-width: 1024px) {
+
+    html {
+        scroll-padding-top: 72px;
+    }
+
+    body {
+        padding-top: 64px;
+        /* espaço da navbar fixa */
+        overflow-x: hidden;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    /* ---------- NAVBAR ---------- */
+    .place-navbar {
+        top: 0;
+        left: 0;
+        max-height: 100vh;
+        max-height: 100dvh;
+        overflow-y: auto;
+    }
+
+    .navbar {
+        display: grid;
+        grid-template-columns: 1fr auto auto;
+        grid-template-rows: 64px auto auto;
+        grid-template-areas:
+            "logo cart toggle"
+            "search search search"
+            "menu menu menu";
+        align-content: start;
+        align-items: center;
+        gap: 0 8px;
+        padding: 0 12px;
+    }
+
+    /* "dissolve" os wrappers para posicionar os filhos direto na grade */
+    .grid-navbar,
+    .src {
+        display: contents;
+    }
+
+    .place-navbar #logo {
+        grid-area: logo;
+        margin: 0;
+        padding: 8px 0;
+        line-height: 1;
+    }
+
+    .place-navbar #logo h2 {
+        font-size: 22px;
+    }
+
+    #nav-carrinho {
+        grid-area: cart;
+        width: 48px;
+        height: 48px;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #nav-carrinho img,
+    #nav-carrinho:hover img {
+        width: 36px;
+        height: auto;
+    }
+
+    .menu-toggle {
+        grid-area: toggle;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        width: 44px;
+        height: 44px;
+        padding: 11px 10px;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .menu-toggle span {
+        display: block;
+        height: 2px;
+        border-radius: 2px;
+        background: #4B1F6F;
+        transition: transform .3s ease, opacity .3s ease;
+    }
+
+    .place-navbar.menu-aberto .menu-toggle span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .place-navbar.menu-aberto .menu-toggle span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .place-navbar.menu-aberto .menu-toggle span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* busca e links ficam escondidos até abrir o menu */
+    .place-navbar .src form {
+        display: none;
+        grid-area: search;
+        padding: 4px 4px 12px;
+    }
+
+    .place-navbar .paginas {
+        display: none;
+        grid-area: menu;
+    }
+
+    .place-navbar.menu-aberto .src form {
+        display: block;
+    }
+
+    .place-navbar.menu-aberto .paginas {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        padding: 0 0 12px;
+    }
+
+    .place-navbar .src input {
+        position: static;
+        width: 100%;
+        height: 44px;
+        font-size: 16px;
+        padding: 4px 48px 4px 14px;
+        background-position: calc(100% - 6px) center;
+        background-size: 36px;
+    }
+
+    .place-navbar .paginas a {
+        width: auto;
+        margin: 0;
+        padding: 12px 8px;
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .place-navbar .paginas button {
+        width: 100%;
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .navbar .paginas .servicos {
+        position: static;
+        width: auto;
+        height: auto;
+        margin: 0 8px 8px;
+        padding: 4px;
+    }
+
+    .navbar .paginas .servicos a {
+        margin: 0;
+        padding: 10px 8px;
+        font-size: 15px;
+    }
+
+    /* ---------- CARRINHO (painel lateral) ---------- */
+    .carrinho-compras {
+        top: 64px;
+        height: calc(100vh - 64px);
+        height: calc(100dvh - 64px);
+        width: min(600px, 100%);
+        display: flex;
+        flex-direction: column;
+        transform: translateX(100%);
+        visibility: hidden;
+        transition: transform .4s ease, visibility 0s linear .4s;
+    }
+
+    .carrinho-compras.aberto {
+        visibility: visible;
+        transition: transform .4s ease, visibility 0s;
+    }
+
+    .carrinho-compras h1 {
+        flex: 0 0 auto;
+        font-size: 28px;
+    }
+
+    .track {
+        flex: 1 1 auto;
+        min-height: 0;
+        height: auto;
+        padding-bottom: 12px;
+        overflow-y: auto;
+    }
+
+    .place-desc {
+        position: static;
+        flex: 0 0 auto;
+        border-top: 1px solid #eee;
+    }
+
+    .place-desc input {
+        display: block;
+        width: calc(100% - 24px);
+        font-size: 16px;
+    }
+
+    .carrinho-compras .grid-total {
+        font-size: 22px;
+        padding-block: 6px;
+    }
+
+    .carrinho-compras #enviarCarrinho {
+        width: calc(100% - 24px);
+        margin: 10px 12px 14px;
+    }
+
+    /* ---------- BANNER DA HOME ----------
+       O banner original é uma colagem posicionada em % da tela, que
+       não funciona em telas menores. Aqui vira 3 cartões empilhados. */
+    .banner-ind {
+        display: block;
+        height: auto;
+        min-height: 0;
+        padding: 24px 16px 32px;
+        overflow: visible;
+    }
+
+    .frase-hero {
+        position: static;
+        width: 100%;
+        margin: 0 auto 24px;
+        text-align: center;
+    }
+
+    .frase-hero h1 {
+        font-size: clamp(26px, 6vw, 42px);
+        line-height: 1.2;
+    }
+
+    .place-cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+    }
+
+    .grid-card {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: flex-end;
+        column-gap: .35em;
+        min-height: 280px;
+        padding: 16px;
+        border-radius: 16px;
+        background: #fdcce6;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    .grid-card #moca,
+    .grid-card #personalizado,
+    .grid-card #moldes {
+        position: static;
+        flex: 0 0 100%;
+        width: 100%;
+        height: 200px;
+        margin-bottom: 8px;
+        object-fit: contain;
+        animation: none;
+        z-index: auto;
+    }
+
+    .grid-card .background-moca,
+    .grid-card #bloco1,
+    .grid-card #bloco2,
+    .grid-card #bloco3,
+    .grid-card #bloco4,
+    .grid-card #background-moldes {
+        display: none;
+    }
+
+    .grid-card #roupas,
+    .grid-card #e,
+    .grid-card #conjuntos,
+    .grid-card #peca-psz,
+    .grid-card #personalizadas,
+    .grid-card #p-conh,
+    .grid-card #p-nossos,
+    .grid-card #p-moldes {
+        position: static;
+        z-index: auto;
+        padding: 0;
+        background: none;
+        animation: none;
+        font-size: clamp(20px, 5vw, 24px);
+        line-height: 1.2;
+        color: #4B1F6F;
+    }
+
+    /* ---------- MINI SERVIÇOS (faixa roxa) ---------- */
+    .mini-servicos {
+        height: auto;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 24px;
+        padding: 24px 16px;
+    }
+
+    .grid-mini-servicos {
+        width: 100%;
+        max-width: 640px;
+        height: auto;
+        gap: 16px;
+        justify-content: center;
+    }
+
+    .grid-mini-servicos img {
+        flex: 0 1 auto;
+        height: 200px;
+        max-width: 45%;
+        object-fit: contain;
+    }
+
+    .mini-molde img {
+        margin-right: 0;
+    }
+
+    .grid-mini-text {
+        flex: 1 1 0;
+        min-width: 0;
+    }
+
+    .grid-mini-text p {
+        max-width: none;
+        padding: 16px;
+        font-size: 15px;
+    }
+
+    /* ---------- CARROSSEL DE SERVIÇOS ---------- */
+    .carrossel-container {
+        margin-top: 16px;
+    }
+
+    .proximo,
+    .anterior {
+        width: 44px;
+        height: 44px;
+        margin-top: -22px;
+        padding: 0;
+        font-size: 18px;
+    }
+
+    /* ---------- VITRINE DE MOLDES ---------- */
+    .place-moldes {
+        margin-bottom: 48px;
+    }
+
+    .place-moldes h1 {
+        padding: 0 12px;
+        font-size: clamp(30px, 7vw, 48px);
+    }
+
+    .place-moldes p {
+        width: 90%;
+    }
+
+    .grid-moldes {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        padding: 0 16px;
+        margin-bottom: 24px;
+    }
+
+    .card-moldes {
+        min-width: 0;
+    }
+
+    /* em toque não existe hover: os tamanhos ficam sempre visíveis */
+    .card-moldes .tamanho,
+    .card-moldes:hover .tamanho {
+        position: static;
+        width: auto;
+        padding: 8px 0 0;
+        opacity: 1;
+        background: none;
+        justify-content: center;
+    }
+
+    .grid-moldes .grid-valor-moldes {
+        font-size: 16px;
+        gap: 6px;
+    }
+
+    .grid-moldes .grid-valor-moldes input {
+        width: 52px;
+        font-size: 16px;
+    }
+
+    .grid-moldes .desc-moldes button {
+        height: auto;
+        padding: 8px 12px;
+        font-size: 14px;
+        line-height: 1.2;
+        text-align: center;
+    }
+
+    /* ---------- NOVOS CONJUNTOS (apresentação) ---------- */
+    .apresentacao h1 {
+        width: 92%;
+        height: auto;
+        margin: 0 auto 16px;
+        padding-bottom: 12px;
+        font-size: clamp(22px, 5vw, 32px);
+    }
+
+    .container-img {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        padding: 0 16px;
+    }
+
+    .container-img>div {
+        min-width: 0;
+    }
+
+    .img-roupa {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        aspect-ratio: 3 / 4;
+    }
+
+    .img-interativo {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .img-interativo .overlay {
+        display: none;
+    }
+
+    .grid-footer-vitrine {
+        order: 2;
+    }
+
+    .apresentacao .grid-adicionar-carrinho,
+    .img-interativo:hover .grid-adicionar-carrinho {
+        position: static;
+        order: 3;
+        width: 100%;
+        margin-top: 8px;
+        padding: 8px;
+        opacity: 1;
+        transform: none;
+    }
+
+    .desc-footer-vitrine .produto {
+        gap: 12px;
+    }
+
+    .desc-footer-vitrine .produto input {
+        width: 52px;
+        font-size: 16px;
+    }
+
+    /* ---------- VITRINE DE ROUPAS (mosaico "Conheça nossos...") ---------- */
+    .place-pecas {
+        width: 92%;
+        height: auto;
+        margin: 40px auto;
+    }
+
+    .grid-pecas {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        height: auto;
+    }
+
+    .grid-pecas-aside,
+    .grid-pecas-header,
+    .grid-pecas-footer {
+        display: contents;
+    }
+
+    .place-pecas .link-pecas {
+        position: relative;
+        display: block;
+        width: auto;
+        height: 240px;
+        margin: 0;
+        overflow: hidden;
+        border-radius: 12px;
+    }
+
+    .place-pecas #pecas-aside-esquerda {
+        grid-column: 1 / -1;
+        width: auto;
+        height: 300px;
+    }
+
+    .place-pecas .link-pecas .titulo,
+    .place-pecas .link-pecas .titulo-esquerda,
+    .place-pecas #pecas-aside-esquerda .titulo {
+        position: relative;
+        right: auto;
+        z-index: 2;
+        margin: 14px 0 0 14px;
+    }
+
+    .place-pecas #pecas-aside-esquerda #subTitulo-srv {
+        margin-left: 0;
+    }
+
+    .place-pecas .link-pecas h1 {
+        font-size: clamp(18px, 4.5vw, 28px);
+        line-height: 1.2;
+    }
+
+    .place-pecas .link-pecas img,
+    .place-pecas #conjuntosSrv,
+    .place-pecas #pecas-aside-esquerda img {
+        position: absolute;
+        left: auto;
+        right: 0;
+        bottom: 0;
+        width: auto;
+        height: 78%;
+        max-width: 75%;
+        object-fit: contain;
+        object-position: bottom right;
+    }
+
+    .place-pecas #pecas-aside-esquerda img {
+        height: 88%;
+        right: 8px;
+    }
+
+    /* ---------- PEDIDO PERSONALIZADO (formulário em etapas) ---------- */
+    #place-pedido {
+        flex-direction: column;
+        padding: 0 16px 24px;
+    }
+
+    .desc-pedido {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 8px 14px;
+        width: 100%;
+        padding: 8px 16px 16px;
+        border-radius: 12px 12px 0 0;
+    }
+
+    .desc-pedido h1 {
+        flex: 0 0 100%;
+        padding: 16px 8px 8px;
+        font-size: clamp(22px, 5vw, 30px);
+    }
+
+    /* a lista vira só uma fileira de bolinhas de progresso */
+    .grid-acompanhar {
+        width: auto;
+        margin: 0;
+    }
+
+    .grid-acompanhar p {
+        display: none;
+    }
+
+    .info {
+        width: 100%;
+        border-radius: 0 0 12px 12px;
+    }
+
+    .info .grid-pedido {
+        padding: 20px 16px;
+    }
+
+    .info .grid-pedido>div {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .info h1 {
+        margin-bottom: 16px;
+        font-size: clamp(22px, 5vw, 28px);
+    }
+
+    .info input:not([type="radio"]):not([type="file"]),
+    .info #tecidoPe {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .grid-perguntas {
+        flex-direction: column;
+        align-items: stretch;
+        height: auto;
+        gap: 12px;
+        margin-bottom: 16px;
+    }
+
+    .info .grid-perguntas input:not([type="radio"]) {
+        margin-bottom: 0;
+    }
+
+    #avimentoPe p {
+        margin-top: 0;
+    }
+
+    /* radios ficam invisíveis; saem do fluxo para não criar espaços */
+    .categorias {
+        position: relative;
+    }
+
+    .categorias input {
+        position: absolute;
+    }
+
+    .segmento,
+    .segmento-caracteristicas,
+    .segmento-aviamentos {
+        width: 100%;
+        max-width: 380px;
+    }
+
+    .opcao {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 12px 0;
+    }
+
+    .opcao label {
+        padding: 10px 16px;
+    }
+
+    #desc-form {
+        width: 100%;
+        height: 200px;
+        font-size: 16px;
+    }
+
+    #anexo {
+        height: auto;
+        min-height: 200px;
+    }
+
+    .botoes-pedido {
+        height: 72px;
+        padding-inline: 12px;
+        gap: 8px;
+        border-radius: 0 0 12px 12px;
+    }
+
+    .info .botoes-pedido #anteriorForm,
+    .info .botoes-pedido #proximoForm,
+    .info .botoes-pedido #enviar {
+        flex: 1 1 0;
+        width: auto;
+        height: 48px;
+        margin: 0;
+        font-size: 16px;
+    }
+
+    .ordem-pedido .resumo {
+        width: 100%;
+        padding: 8px;
+    }
+
+    .resumo div {
+        flex-wrap: wrap;
+        gap: 8px 12px;
+        margin: 8px;
+        font-size: 16px;
+    }
+
+    .resumo dt {
+        min-width: 96px;
+        font-weight: 700;
+    }
+
+    /* ---------- QUEM SOMOS ---------- */
+    .container-experiencias {
+        height: auto;
+        padding: 24px 0 48px;
+        font-size: 16px;
+    }
+
+    .place-experiencias {
+        width: 100%;
+        height: auto;
+        padding: 0 16px;
+    }
+
+    .background-experiencias {
+        height: 220px;
+        margin-bottom: 16px;
+    }
+
+    .background-qms {
+        width: 100%;
+        padding: 8px 0;
+        text-align: left;
+    }
+
+    .grid-ex-fundadoras {
+        display: flex;
+        flex-direction: column;
+        margin-top: 32px;
+        font-size: 16px;
+    }
+
+    /* os <p> passam a ser itens diretos da coluna, intercalados com as fotos */
+    .grid-ex-fundadoras>div {
+        display: contents;
+    }
+
+    .quadradoA,
+    .quadradoB {
+        display: none;
+    }
+
+    .grid-ex-fundadoras img {
+        position: static;
+        width: 100%;
+        max-width: 320px;
+        height: 240px;
+        margin: 0 auto 12px;
+        object-fit: contain;
+    }
+
+    .grid-ex-fundadoras #fundadoraA {
+        order: 1;
+        animation: none;
+    }
+
+    .grid-ex-fundadoras .fundadoraA-txt {
+        order: 2;
+    }
+
+    .grid-ex-fundadoras #fundadoraB {
+        order: 3;
+        animation: none;
+    }
+
+    .grid-ex-fundadoras .fundadoraB-txt {
+        order: 4;
+    }
+
+    .grid-ex-fundadoras p {
+        width: 100%;
+        margin: 0 0 28px;
+        padding: 20px;
+        text-align: left;
+    }
+
+    .place-DuasIdeias p {
+        width: 100%;
+        margin-top: 8px;
+    }
+
+    .instagram-fundadoras {
+        display: block;
+        margin-top: 40px;
+    }
+
+    .instagram-fundadoras .card-fundadoras {
+        position: relative;
+        width: 100%;
+    }
+
+    .instagram-fundadoras .card-fundadoras>img {
+        display: block;
+        width: 100%;
+        height: 200px;
+    }
+
+    .instagram-fundadoras .card-fundadoras a img {
+        right: auto;
+        left: 16px;
+        bottom: 12px;
+        width: 72px;
+        height: 72px;
+    }
+
+    .instagram-fundadoras .card-fundadoras .background {
+        position: static;
+        width: 100%;
+        height: 64px;
+    }
+
+    .proximoA,
+    .anteriorB {
+        top: 78px;
+        width: 44px;
+        height: 44px;
+        margin-top: 0;
+        font-size: 20px;
+    }
+
+    /* ---------- PÁGINA DA VITRINE ---------- */
+    .desc {
+        padding-top: 24px;
+    }
+
+    .desc div {
+        flex-direction: column;
+        gap: 12px;
+        padding: 12px 16px;
+    }
+
+    #pesquisa-roupas {
+        position: static;
+        width: 100%;
+        max-width: 320px;
+        padding: 6px 44px 6px 12px;
+        font-size: 16px;
+        background-position: calc(100% - 4px) center;
+    }
+
+    .place-vitrine {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        margin: 16px 16px 48px;
+    }
+
+    .card-vitrine {
+        width: auto;
+        height: auto;
+        min-width: 0;
+    }
+
+    .card-vitrine img,
+    .card-vitrine img:hover {
+        display: block;
+        height: auto;
+        aspect-ratio: 3 / 4;
+    }
+
+    .card-vitrine .grid-adicionar-carrinho,
+    .card-vitrine:hover .grid-adicionar-carrinho {
+        position: static;
+        margin-top: 8px;
+        padding: 8px;
+        opacity: 1;
+        transform: none;
+    }
+
+    /* ---------- FOOTER ---------- */
+    .footer {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 24px 48px;
+        max-height: none;
+        padding: 40px 24px;
+    }
+
+    .footer .grid-texto {
+        margin-left: 0;
+    }
+
+    .footer .place-contato {
+        margin-right: 0;
+    }
+}
+
+
+/* =====================================================================
+   3) CELULAR  (até 767px)
+   ===================================================================== */
+@media (max-width: 767px) {
+
+    input,
+    textarea,
+    select {
+        font-size: 16px;
+        /* evita o zoom automático do iOS ao focar */
+    }
+
+    /* ---------- Banner ---------- */
+    .place-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-card {
+        min-height: 260px;
+    }
+
+    /* ---------- Mini serviços ---------- */
+    .grid-mini-servicos {
+        flex-direction: column;
+    }
+
+    .grid-mini-servicos img {
+        max-width: 100%;
+        height: 180px;
+    }
+
+    .grid-mini-text {
+        width: 100%;
+        flex: 0 0 auto;
+    }
+
+    /* ---------- Carrossel ---------- */
+    .proximo,
+    .anterior {
+        width: 40px;
+        height: 40px;
+        margin-top: -20px;
+        font-size: 16px;
+    }
+
+    /* ---------- Moldes ---------- */
+    .grid-moldes {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        padding: 0 12px;
+    }
+
+    .grid-moldes img {
+        height: 160px;
+    }
+
+    .grid-moldes .desc-moldes {
+        padding: 8px 4px;
+    }
+
+    /* ---------- Apresentação ---------- */
+    .container-img {
+        gap: 12px;
+        padding: 0 12px;
+    }
+
+    .apresentacao .adicionar-carrinho {
+        height: 36px;
+        font-size: 14px;
+    }
+
+    .grid-adicionar-carrinho .tamanho button {
+        width: 34px;
+        height: 32px;
+    }
+
+    .desc-footer-vitrine .produto p {
+        font-size: 17px;
+    }
+
+    /* ---------- Mosaico de peças ---------- */
+    .place-pecas .link-pecas {
+        height: 200px;
+    }
+
+    .place-pecas #pecas-aside-esquerda {
+        height: 260px;
+    }
+
+    /* ---------- Vitrine ---------- */
+    .place-vitrine {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        margin: 12px 12px 40px;
+    }
+
+    .grid-footer-vitrine h3 {
+        font-size: 16px;
+    }
+
+    /* ---------- Quem somos ---------- */
+    .background-experiencias {
+        height: 180px;
+    }
+
+    .instagram-fundadoras .card-fundadoras>img {
+        height: 180px;
+    }
+
+    .proximoA,
+    .anteriorB {
+        top: 68px;
+    }
+
+    /* ---------- Carrinho: cards compactos ---------- */
+    .card-compra {
+        height: auto;
+        min-height: 140px;
+        margin: 10px;
+        padding: 10px 10px 52px;
+        gap: 10px;
+    }
+
+    .card-compra img {
+        align-self: flex-start;
+        width: 84px;
+        max-width: 84px;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .desc-card-compra {
+        text-align: left;
+    }
+
+    .desc-card-compra .nomePecaCard {
+        font-size: 16px;
+    }
+
+    .desc-card-compra .desc-p {
+        margin: 0 0 6px;
+        font-size: 14px;
+    }
+
+    .desc-card-compra .grid {
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-left: 0;
+    }
+
+    .desc-card-compra .produto {
+        align-items: center;
+        gap: 10px;
+    }
+
+    .desc-card-compra input {
+        font-size: 16px;
+    }
+
+    .removerCarrinho {
+        right: 10px;
+        bottom: 10px;
+        width: 110px;
+        height: 34px;
+    }
+
+    /* ---------- Footer ---------- */
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        padding: 32px 16px;
+        text-align: center;
+    }
+
+    .footer .grid-texto {
+        text-align: center;
+    }
+
+    .footer .navbar-footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4px 24px;
+        margin-bottom: 0;
+        text-align: center;
+    }
+
+    .footer .navbar-footer h3 {
+        font-size: 16px;
+    }
+
+    .footer .place-contato {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .footer .card-contato {
+        justify-content: center;
+        margin-bottom: 14px;
+        overflow-wrap: anywhere;
+    }
+
+    .place-contato .flor {
+        width: 80px;
+        height: 120px;
+    }
+}
+
+
+/* =====================================================================
+   4) CELULARES PEQUENOS  (até 480px)
+   ===================================================================== */
+@media (max-width: 480px) {
+
+    .place-navbar #logo h2 {
+        font-size: 20px;
+    }
+
+    .grid-moldes img {
+        height: 140px;
+    }
+
+    .grid-moldes .grid-valor-moldes {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .info .grid-pedido {
+        padding: 16px 12px;
+    }
+
+    .segmento-caracteristicas label,
+    .segmento-aviamentos label {
+        font-size: 14px;
+    }
+
+    .place-pecas .link-pecas h1 {
+        font-size: 17px;
+        letter-spacing: .06em;
+    }
+}
