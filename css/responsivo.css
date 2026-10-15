@@ -48,6 +48,8 @@ button.btn-tamanho.selecionado {
 }
 
 
+
+
 /* =====================================================================
    2) TABLET E ABAIXO  (até 1024px)
    ===================================================================== */
@@ -275,7 +277,13 @@ button.btn-tamanho.selecionado {
     /* ---------- BANNER DA HOME ----------
        O banner original é uma colagem posicionada em % da tela, que
        não funciona em telas menores. Aqui vira 3 cartões empilhados. */
-    .banner-ind {
+    .desktopBanner, .mini-servicos {
+        display: none;
+    }
+
+
+
+    .bannerCelular{
         display: block;
         height: auto;
         min-height: 0;
@@ -399,6 +407,7 @@ button.btn-tamanho.selecionado {
 
     /* ---------- CARROSSEL DE SERVIÇOS ---------- */
     .carrossel-container {
+        display: none;
         margin-top: 16px;
     }
 
@@ -596,6 +605,7 @@ button.btn-tamanho.selecionado {
 
     .place-pecas #conjuntosSrv {
         left: 25%;
+        bottom: 0;
     }
 
     .place-pecas #pecas-aside-esquerda img {
@@ -615,6 +625,7 @@ button.btn-tamanho.selecionado {
     .place-pecas .link-pecas-footer .direita {
         position: absolute;
         left: 15%;
+        bottom: -6%;
     }
 
     /* ---------- PEDIDO PERSONALIZADO (formulário em etapas) ---------- */
@@ -987,12 +998,12 @@ button.btn-tamanho.selecionado {
     }
 
     /* ---------- Carrossel ---------- */
-    .carrossel-img-servicos{
+    .carrossel-img-servicos {
         padding-inline: 12px;
         object-fit: cover;
         object-position: center;
     }
-    
+
     .proximo,
     .anterior {
         width: 20px;
@@ -1036,7 +1047,7 @@ button.btn-tamanho.selecionado {
         font-size: 16px;
     }
 
-    .produto .quantidade{
+    .produto .quantidade {
         border: none;
         border-bottom: 1px solid #4B1F6F;
     }

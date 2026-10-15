@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esboço de Vitrine</title>
+    <script src="../javaScript/validacaoQuantidade.js" async></script>
+    <script src="../javaScript/carrinho.js" defer></script>
+    <script src="../javaScript/apiWhast.js" defer></script>
+    <script src="../javaScript/MostrarServicos.js" async></script>
+
+
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/carrinho.css">
+    <link rel="stylesheet" href="../css/vitr-banner-promocao.css">
+    <link rel="stylesheet" href="../css/vitr-desc-e-filtro.css">
+    <link rel="stylesheet" href="../css/vitr-place-vitrine.css">
+    <link rel="stylesheet" href="../css/responsivo.css">
+</head>
+
+<body>
+    <!-- cabeçalho -->
+    <header class="place-navbar">
+        <nav class="navbar">
+
+            <div class="grid-navbar">
+                <a id="logo" href="../index.html">
+                    <h2>Four Hands</h2>
+                </a>
+                <div class="paginas">
+                    <a>
+                        <button id="mostrarSrv">Servicos</button>
+                    </a>
+                    <div class="servicos">
+                        <a href="../index.html#acesso-vitrRoupas">Roupas & Conjuntos</a>
+                        <a href="../index.html#vitr-moldes">Nossos Moldes</a>
+                        <a href="../index.html#place-pedido">Pedidos Personalizados</a>
+                    </div>
+                    <a href="quemSomos.html">
+                        <p>Quem Somos?</p>
+                    </a>
+                </div>
+            </div>
+            <div class="src">
+                <form>
+                    <input type="text" list="pesquisa">
+                    <datalist id="pesquisa">
+                        <!-- Pesquisar-->
+                    </datalist>
+                </form>
+                <button id="nav-carrinho"><img src="../imagens/carrinho.png " alt=""></button>
+            </div>
+            <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+    </header>
+
+
+    <form class="carrinho-compras formularioEnvio" data-tipo="carrinho">
+        <h1>Carrinho</h1>
+        <div class="track">
+
+        </div>
+
+        <div class="grid-total">
+            <h3>Total: </h3>
+            <p id="totalCarrinho">R$0,00</p>
+        </div>
+        <button id="enviarCarrinho" class="enviar" type="submit">Enviar Pedido</button>
+    </form>
+
+    <!-- Nome da categoria && Filtro-->
+    <section class="container desc">
+
+        <div>
+            <h2>Casaquetos</h2>
+
+            <input id="pesquisa-roupas" type="text" list="filtro-roupas" src="">
+
+        </div>
+    </section>
+
+    <!-- Vitrine horizontal 1 -->
+    <section class="place-vitrine">
+
+        <!-- card 1 -->
+        <section class="card-vitrine">
+
+            <img class="produtoimg" src="../imagens/casaqueto_em_tricot.webp" alt="">
+            <div class="grid-adicionar-carrinho">
+                <div class="tamanho">
+                    <button class="btn-tamanho">P</button>
+                    <button class="btn-tamanho">M</button>
+                    <button class="btn-tamanho">G</button>
+                </div>
+                <button class="adicionar-carrinho">Adicionar ao Carrinho</button>
+            </div>
+
+            <footer class="grid-footer-vitrine">
+                <h3 class="nomePeca">Casaqueto em Tricot Liana</h3>
+                <main class="desc-footer-vitrine">
+                    <div class="produto">
+                        <p class="preco">R$ 269,50</p>
+                        <input type="number" class="quantidade" value="1" min="0">
+                    </div>
+
+                </main>
+
+            </footer>
+        </section>
+
+    </section>
+
+
+    </section>
+
+
+    <!-- footer -->
+    <footer class="footer">
+
+
+        <div class="grid-texto">
+            <h1>Four Hands</h1>
+            <p>Sua ideia. Nossa confecção</p>
+        </div>
+
+        <div class="navbar-footer">
+            <a href="index.html">
+                <h3>indice</h3>
+            </a>
+
+            <a href="html/servicos.html">
+                <h3>Personalizados</h3>
+            </a>
+
+            <a href="html/quemSomos.html">
+                <h3>Vitrine de moldes</h3>
+            </a>
+            <a href="html/quemSomos.html">
+                <h3>Conjuntos</h3>
+            </a>
+
+
+            <a href="html/quemSomos.html">
+                <h3>Quem Somos?</h3>
+            </a>
+
+        </div>
+        </div>
+
+        <div class="place-contato">
+            <div class="grid-contato">
+                <a class="card-contato">
+                    <img src="../imagens/instagram.png" alt="">
+                    <p>@forhands</p>
+                </a>
+                <a class="card-contato">
+                    <img src="../imagens/Whatsapp.png" alt="">
+                    <p>(11) 90000-000</p>
+                </a>
+                <a class="card-contato">
+                    <img src="../imagens/e-mail.png" alt="">
+                    <p>fourhands@gmail.com.br</p>
+                </a>
+
+                <a id="by" href="">
+                    <p>Desenvolvido por Toca do Besouro</p>
+                </a>
+            </div>
+            <img class="flor" src="../imagens/flor.png" alt="">
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

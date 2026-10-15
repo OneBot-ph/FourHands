@@ -14,6 +14,7 @@
     <script src="javaScript/validacaoQuantidade.js" async></script>
     <script src="javaScript/carrinho.js" async></script>
     <script src="javaScript/MostrarServicos.js" async></script>
+    <script src="javaScript/cardsBanner.js" async ></script>
 
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/navbar.css">
@@ -25,7 +26,7 @@
     <link rel="stylesheet" href="css/pedidos.css">
     <link rel="stylesheet" href="css/ind-vitr-moldes.css">
     <link rel="stylesheet" href="css/srv-grid-pecas.css">
-
+    <link rel="stylesheet" href="css/ind-cardBanner.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/responsivo.css">
 </head>
@@ -88,8 +89,8 @@
         </div>
     </form>
 
-    <!-- banner topo -->
-    <section class="container banner-ind">
+    <!-- banner desktop -->
+    <section class="container banner-ind desktopBanner">
         <div class="frase-hero">
             <h1>COSTURA AFETIVA <br></h1>
             <h1>& DESIGN EXCLUSIVO</h1>
@@ -120,6 +121,69 @@
                 <h1 id="p-nossos">Nossos</h1>
                 <h1 id="p-moldes">Moldes</h1>
             </div>
+        </div>
+
+    </section>
+
+    <!-- banner responsivo-->
+    <section class="container banner-ind bannerCelular">
+        <div class="frase-hero">
+            <h1>COSTURA AFETIVA <br></h1>
+            <h1>& DESIGN EXCLUSIVO</h1>
+            <p>sua peça única, do molde ao acabamento</p>
+        </div>
+        <div class="place-cards">
+
+            <div class="flip-card" tabindex="0" role="button" aria-pressed="false"
+                aria-label="Roupas e conjuntos: virar para ler a descrição">
+                <div class="flip-inner">
+                    <div class="face frente">
+                        <img src="imagens/roupas2.png" alt="">
+                        <h2>roupas &amp; conjuntos</h2>
+                        <span class="dica"><span class="dica-mouse">passe o mouse</span><span class="dica-toque">toque
+                                para ver mais</span></span>
+                    </div>
+                    <div class="face verso">
+                        <h3>conjuntos</h3>
+                        <p>Temos conjuntos e peças prontas para quem busca praticidade, conforto e um toque especial no
+                            vestir.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card" tabindex="0" role="button" aria-pressed="false"
+                aria-label="Pedidos personalizados: virar para ler a descrição">
+                <div class="flip-inner">
+                    <div class="face frente">
+                        <img src="imagens/personalizada.png" alt="">
+                        <h2>Pedidos Personalizados</h2>
+                        <span class="dica"><span class="dica-mouse">passe o mouse</span><span class="dica-toque">toque
+                                para ver mais</span></span>
+                    </div>
+                    <div class="face verso">
+                        <h3>Peças personalizadas</h3>
+                        <p>Criamos peças pensadas especialmente para você, respeitando seu estilo, suas preferências e
+                            suas necessidades.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card" tabindex="0" role="button" aria-pressed="false"
+                aria-label="Conheça nossos moldes: virar para ler a descrição">
+                <div class="flip-inner">
+                    <div class="face frente">
+                        <img src="imagens/moldesB.png" alt="">
+                        <h2>Conheça Nossos Moldes</h2>
+                        <span class="dica"><span class="dica-mouse">passe o mouse</span><span class="dica-toque">toque
+                                para ver mais</span></span>
+                    </div>
+                    <div class="face verso">
+                        <h3>Nossos Moldes</h3>
+                        <p>Oferecemos moldes desenvolvidos para você colocar suas ideias em prática</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
     </section>
@@ -202,7 +266,7 @@
             </div>
 
             <div class="card-moldes">
-                <img class="produtoimg" src="imagens/molde2.png" alt="">
+                <img class="produtoimg" src="imagens/moldesB.png" alt="">
                 <div class="grid-adicionar-carrinho">
                     <div class="tamanho">
                         <button class="btn-tamanho">P</button>
@@ -222,7 +286,7 @@
             </div>
 
             <div class="card-moldes">
-                <img class="produtoimg" src="imagens/moldes.png" alt="">
+                <img class="produtoimg" src="imagens/moldes.jpeg" alt="">
                 <div class="grid-adicionar-carrinho">
                     <div class="tamanho">
                         <button class="btn-tamanho">P</button>
@@ -262,7 +326,7 @@
             </div>
 
             <div class="card-moldes">
-                <img class="produtoimg" src="imagens/molde2.png" alt="">
+                <img class="produtoimg" src="imagens/moldesB.png" alt="">
                 <div class="grid-adicionar-carrinho">
                     <div class="tamanho">
                         <button class="btn-tamanho">P</button>
@@ -282,7 +346,7 @@
             </div>
 
             <div class="card-moldes">
-                <img class="produtoimg" src="imagens/moldes.png" alt="">
+                <img class="produtoimg" src="imagens/moldes.jpeg" alt="">
                 <div class="grid-adicionar-carrinho">
                     <div class="tamanho">
                         <button class="btn-tamanho">P</button>
@@ -324,7 +388,7 @@
             </div>
 
             <div class="card-moldes">
-                <img class="produtoimg" src="imagens/molde2.png" alt="">
+                <img class="produtoimg" src="imagens/moldesB.png" alt="">
                 <div class="grid-adicionar-carrinho">
                     <div class="tamanho">
                         <button class="btn-tamanho">P</button>
@@ -344,7 +408,7 @@
             </div>
 
             <div class="card-moldes">
-                <img class="produtoimg" src="imagens/moldes.png" alt="">
+                <img class="produtoimg" src="imagens/moldes.jpeg" alt="">
                 <div class="grid-adicionar-carrinho">
                     <div class="tamanho">
                         <button class="btn-tamanho">P</button>
@@ -384,7 +448,7 @@
             </div>
 
             <div class="card-moldes">
-                <img class="produtoimg" src="imagens/molde2.png" alt="">
+                <img class="produtoimg" src="imagens/moldesB.png" alt="">
                 <div class="grid-adicionar-carrinho">
                     <div class="tamanho">
                         <button class="btn-tamanho">P</button>
@@ -404,7 +468,7 @@
             </div>
 
             <div class="card-moldes">
-                <img class="produtoimg" src="imagens/moldes.png" alt="">
+                <img class="produtoimg" src="imagens/moldes.jpeg" alt="">
                 <div class="grid-adicionar-carrinho">
                     <div class="tamanho">
                         <button class="btn-tamanho">P</button>
@@ -546,7 +610,7 @@
     <section class="place-pecas" id="acesso-vitrRoupas">
 
         <div class="grid-pecas">
-            <a id="pecas-aside-esquerda" class="link-pecas" href="html/vitrineEsboco.html">
+            <a id="pecas-aside-esquerda" class="link-pecas" href="html/vitrineVestidos.html">
                 <div class="titulo">
                     <h1>Conheça</h1>
                     <h1 id="subTitulo-srv">Nossos Vestidos</h1>
@@ -555,13 +619,13 @@
             </a>
             <aside class="grid-pecas-aside">
                 <header class="grid-pecas-header">
-                    <a class="link-pecas-header link-pecas" href="html/vitrineEsboco.html">
+                    <a class="link-pecas-header link-pecas" href="html/vitrineConjuntos.html">
                         <div class="titulo-esquerda">
                             <h1 id="subTitulo-srv">Conjuntos</h1>
                         </div>
                         <img id="conjuntosSrv" src="imagens/conjuntos.png" alt="">
                     </a>
-                    <a class="link-pecas-header link-pecas" href="html/vitrineEsboco.html">
+                    <a class="link-pecas-header link-pecas" href="html/vitrineCasaqueto.html">
                         <div class="titulo">
                             <h1 id="subTitulo-srv">Casaquetos</h1>
                         </div>
@@ -570,13 +634,13 @@
                 </header>
 
                 <footer class="grid-pecas-footer">
-                    <a class="link-pecas-footer link-pecas" href="html/vitrineEsboco.html">
+                    <a class="link-pecas-footer link-pecas" href="html/vitrineCamisas.html">
                         <div class="titulo-esquerda">
                             <h1 id="subTitulo-srv">Camisas</h1>
                         </div>
                         <img src="imagens/camisaSrv.png" alt="">
                     </a>
-                    <a class="link-pecas-footer link-pecas" href="html/vitrineEsboco.html">
+                    <a class="link-pecas-footer link-pecas" href="html/vitrineShorts.html">
                         <div class="titulo">
                             <h1 id="subTitulo-srv">Short's</h1>
                         </div>
