@@ -75,7 +75,7 @@ function addProduto(evento) {
         alert('Selecione um tamanho antes de adicionar ao carrinho.');
         return;
     }
-        produtoTamanho = tamanhoSelecionado.innerHTML;
+    produtoTamanho = tamanhoSelecionado.innerHTML;
 
     const produtoCard = document.getElementsByClassName("nomePecaCard");
 
@@ -88,15 +88,15 @@ function addProduto(evento) {
     }
 
 
-        const novoCard = CriarCard({
-            img: produtoImg,
-            titulo: produtoTitulo,
-            preco: produtoPreco,
-            quantidade: produtoQuantidade,
-            tamanho: produtoTamanho,
-        })
+    const novoCard = CriarCard({
+        img: produtoImg,
+        titulo: produtoTitulo,
+        preco: produtoPreco,
+        quantidade: produtoQuantidade,
+        tamanho: produtoTamanho,
+    })
 
-        document.getElementsByClassName("track")[0].append(novoCard);
+    document.getElementsByClassName("track")[0].append(novoCard);
 
     AtualizacaoTotal();
 }
@@ -177,13 +177,9 @@ function NumeroParatxt(numero) {
 // abrir Carrinho
 
 function MostrarCarrinho() {
-    if (abrirPag == 0) {
-        carrinho[0].style.transform = "translateX(0px)";
-        abrirPag = 1;
-    } else {
-        carrinho[0].style.transform = "translateX(600px)";
-        abrirPag = 0;
-    }
+    // usa a classe "aberto" (definida em responsivo.css) em vez de style inline
+    const aberto = carrinho[0].classList.toggle("aberto");
+    abrirPag = aberto ? 1 : 0;
 }
 
 

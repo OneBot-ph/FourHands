@@ -1,22 +1,37 @@
-let btn = document.querySelector("#mostrarSrv")
-let servico = document.getElementsByClassName("servicos");
-let abrirPagSrv = 0;
+(function () {
+    function iniciar() {
+        const header = document.querySelector(".place-navbar");
+        const btnServicos = document.querySelector("#mostrarSrv");
+        const submenu = document.querySelector(".servicos");
+        const btnHamburguer = document.querySelector(".menu-toggle");
 
-if (abrirPagSrv == 0) {
-    servico[0].style.display = "none"
-    abrirPagSrv = 1;
+        if (btnServicos && submenu) {
+            btnServicos.addEventListener("click", function () {
+                submenu.classList.toggle("aberto");
+            });
+        }
 
-}
+        if (header && btnHamburguer) {
+            btnHamburguer.addEventListener("click", function () {
+                const aberto = header.classList.toggle("menu-aberto");
+                btnHamburguer.setAttribute("aria-expanded", aberto);
+                btnHamburguer.setAttribute("aria-label", aberto ? "Fechar menu" : "Abrir menu");
+            });
 
-btn.addEventListener("click", function ShowServicosNav() {
-    if (abrirPagSrv == 0) {
-        servico[0].style.display = "none"
-        abrirPagSrv = 1;
-
-    } else {
-        servico[0].style.display = "grid"
-        abrirPagSrv = 0;
-
+            // fecha o menu ao escolher um link (as âncoras rolam a página)
+            header.querySelectorAll(".paginas a[href], .servicos a[href]").forEach(function (link) {
+                link.addEventListener("click", function () {
+                    header.classList.remove("menu-aberto");
+                    btnHamburguer.setAttribute("aria-expanded", "false");
+                    btnHamburguer.setAttribute("aria-label", "Abrir menu");
+                });
+            });
+        }
     }
 
-});
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", iniciar);
+    } else {
+        iniciar();
+    }
+})();
