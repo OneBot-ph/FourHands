@@ -101,13 +101,9 @@
 }
 
 @keyframes OpacidadeP {
-    0% {
-        opacity: 0;
-    }
+    0% {opacity: 0;}
 
-    39% {
-        transform: translateY(40px);
-    }
+    39% {transform: translateY(40px);}
 }
 
 

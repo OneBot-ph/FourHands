@@ -224,7 +224,7 @@ button.btn-tamanho.selecionado {
         top: 64px;
         height: calc(100vh - 64px);
         height: calc(100dvh - 64px);
-        width: min(600px, 100%);
+        width: min(350px, 100%);
         display: flex;
         flex-direction: column;
         transform: translateX(100%);
@@ -404,11 +404,11 @@ button.btn-tamanho.selecionado {
 
     .proximo,
     .anterior {
-        width: 44px;
-        height: 44px;
+        width: 10px;
+        height: 10px;
         margin-top: -22px;
         padding: 0;
-        font-size: 18px;
+        font-size: 5px;
     }
 
     /* ---------- VITRINE DE MOLDES ---------- */
@@ -553,7 +553,7 @@ button.btn-tamanho.selecionado {
         height: 240px;
         margin: 0;
         overflow: hidden;
-        border-radius: 12px;
+        border-radius: 6px;
     }
 
     .place-pecas #pecas-aside-esquerda {
@@ -561,6 +561,7 @@ button.btn-tamanho.selecionado {
         width: auto;
         height: 300px;
     }
+
 
     .place-pecas .link-pecas .titulo,
     .place-pecas .link-pecas .titulo-esquerda,
@@ -580,8 +581,7 @@ button.btn-tamanho.selecionado {
         line-height: 1.2;
     }
 
-    .place-pecas .link-pecas img,
-    .place-pecas #conjuntosSrv,
+    /* .place-pecas .link-pecas img,
     .place-pecas #pecas-aside-esquerda img {
         position: absolute;
         left: auto;
@@ -592,11 +592,29 @@ button.btn-tamanho.selecionado {
         max-width: 75%;
         object-fit: contain;
         object-position: bottom right;
+    } */
+
+    .place-pecas #conjuntosSrv {
+        left: 25%;
     }
 
     .place-pecas #pecas-aside-esquerda img {
         height: 88%;
-        right: 8px;
+        right: 30%;
+    }
+
+    .place-pecas .link-pecas-footer img {
+        left: 0px;
+    }
+
+    .place-pecas .direita {
+        position: absolute;
+        left: 20%;
+    }
+
+    .place-pecas .link-pecas-footer .direita {
+        position: absolute;
+        left: 15%;
     }
 
     /* ---------- PEDIDO PERSONALIZADO (formulário em etapas) ---------- */
@@ -613,7 +631,7 @@ button.btn-tamanho.selecionado {
         gap: 8px 14px;
         width: 100%;
         padding: 8px 16px 16px;
-        border-radius: 12px 12px 0 0;
+        border-radius: 4px 4px 0 0;
     }
 
     .desc-pedido h1 {
@@ -634,7 +652,7 @@ button.btn-tamanho.selecionado {
 
     .info {
         width: 100%;
-        border-radius: 0 0 12px 12px;
+        border-radius: 0 0 4px 4px;
     }
 
     .info .grid-pedido {
@@ -715,7 +733,7 @@ button.btn-tamanho.selecionado {
         height: 72px;
         padding-inline: 12px;
         gap: 8px;
-        border-radius: 0 0 12px 12px;
+        border-radius: 0 0 4px 4px;
     }
 
     .info .botoes-pedido #anteriorForm,
@@ -969,10 +987,16 @@ button.btn-tamanho.selecionado {
     }
 
     /* ---------- Carrossel ---------- */
+    .carrossel-img-servicos{
+        padding-inline: 12px;
+        object-fit: cover;
+        object-position: center;
+    }
+    
     .proximo,
     .anterior {
-        width: 40px;
-        height: 40px;
+        width: 20px;
+        height: 20px;
         margin-top: -20px;
         font-size: 16px;
     }
@@ -999,17 +1023,22 @@ button.btn-tamanho.selecionado {
     }
 
     .apresentacao .adicionar-carrinho {
-        height: 36px;
+        height: 30px;
         font-size: 14px;
     }
 
     .grid-adicionar-carrinho .tamanho button {
-        width: 34px;
-        height: 32px;
+        width: 28px;
+        height: 26px;
     }
 
     .desc-footer-vitrine .produto p {
-        font-size: 17px;
+        font-size: 16px;
+    }
+
+    .produto .quantidade{
+        border: none;
+        border-bottom: 1px solid #4B1F6F;
     }
 
     /* ---------- Mosaico de peças ---------- */
