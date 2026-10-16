@@ -10,7 +10,7 @@
 
 .frase-hero {
     position: absolute;
-    width: 500px;
+    width: 540px;
     text-align: center;
     top: 20%;
     right: 38%;
@@ -54,15 +54,15 @@
     height: 200px;
     border-radius: 24px;
     background-color: #fdcce6;
-
     animation-name: Movimentacao;
     animation-duration: 3s;
 
 }
 
-.grid-card h1, h2 {
+.grid-card h1,
+h2 {
     z-index: 1;
-    color: #4B1F6F;
+    color: #3a2118;
     font-family: 'Cormorant Garamond', serif;
     font-size: 24px;
 }
@@ -74,8 +74,7 @@
     z-index: 2;
     animation-name: OpacidadeP;
     animation-duration: 3s;
-
-
+    color: #3a2118;
 }
 
 #e {
@@ -85,7 +84,7 @@
     z-index: 2;
     animation-name: OpacidadeP;
     animation-duration: 3s;
-
+    color: #3a2118;
 
 }
 
@@ -96,14 +95,18 @@
     z-index: 2;
     animation-name: OpacidadeP;
     animation-duration: 3s;
-
+    color: #3a2118;
 
 }
 
 @keyframes OpacidadeP {
-    0% {opacity: 0;}
+    0% {
+        opacity: 0;
+    }
 
-    39% {transform: translateY(40px);}
+    39% {
+        transform: translateY(40px);
+    }
 }
 
 
@@ -117,7 +120,7 @@
 #personalizado {
     height: 350px;
     position: absolute;
-    right: 20%;
+    right: 17.5%;
     bottom: 8%;
     z-index: 3;
     animation-name: MovimentacaoPersonalizado;
@@ -150,18 +153,18 @@
 }
 
 #bloco1 {
-    right: 24%;
-    bottom: 26%;
+    right: 23%;
+    bottom: 25%;
 }
 
 #bloco2 {
-    right: 19%;
+    right: 15%;
     bottom: 8%;
 }
 
 .grid-card #peca-psz,
 #personalizadas {
-    color: #4B1F6F;
+
     position: absolute;
     z-index: 4;
     font-size: 24px;
@@ -173,13 +176,13 @@
 }
 
 #peca-psz {
-    right: 28.5%;
+    right: 26.5%;
     bottom: 33%;
 }
 
 #personalizadas {
-    right: 20%;
-    bottom: 11%;
+    right: 14%;
+    bottom: 9%;
 }
 
 @keyframes Movimentacao {
@@ -207,7 +210,6 @@
 .grid-card #p-conh,
 #p-nossos,
 #p-moldes {
-    color: #4B1F6F;
     background-color: #fdcce6;
     position: absolute;
     z-index: 4;

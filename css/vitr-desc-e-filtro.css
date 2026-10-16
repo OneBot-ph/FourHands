@@ -1,7 +1,7 @@
 .desc {
     padding-top: 120px;
     padding-bottom: 4px;
-    border-bottom: 2px solid #4B1F6F;
+    border-bottom: 2px solid #f7b6dc;
 }
 
 .desc div {
@@ -16,7 +16,7 @@
 }
 
 .desc div h2 {
-    color: #4B1F6F;
+    color: #f7b6dc;
     font-family: Cormorant Garamond;
     text-align: center;
 }

@@ -1,0 +1,48 @@
+.pesquisa input::-webkit-calendar-picker-indicator {
+    display: none !important;
+}
+
+.pesquisa input:focus-visible {
+    box-shadow: 0 0 0 3px rgba(247, 182, 220, .6);
+}
+
+
+.pesquisa-msg {
+    font: 14px Arial, Helvetica, sans-serif;
+    color: #960018;
+    position: absolute;
+    bottom: -10%;
+    left: 15%;
+}
+
+.pesquisa-msg:empty {
+    display: none;
+}
+
+.pesquisa.nao-encontrado input {
+    border-bottom-color: #960018;
+    animation: pesquisa-tremer .3s;
+}
+
+@keyframes pesquisa-tremer {
+
+    25% {transform: translateX(-4px);}
+
+    75% {transform: translateX(4px);}
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .pesquisa.nao-encontrado input {
+        animation: none;
+    }
+}
+
+/* texto só para leitor de tela */
+.visualmente-oculto {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}

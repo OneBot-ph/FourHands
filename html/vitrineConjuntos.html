@@ -9,8 +9,9 @@
     <script src="../javaScript/carrinho.js" defer></script>
     <script src="../javaScript/apiWhast.js" defer></script>
     <script src="../javaScript/MostrarServicos.js" async></script>
+    <script src="../javaScript/pesquisa.js" async></script>
 
-
+    <link rel="stylesheet" href="../css/pesquisa.css">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/footer.css">
@@ -45,11 +46,11 @@
                 </div>
             </div>
             <div class="src">
-                <form>
-                    <input type="text" list="pesquisa">
-                    <datalist id="pesquisa">
-                        <!-- Pesquisar-->
-                    </datalist>
+                <form class="pesquisa" data-raiz="../" role="search">
+                    <input id="campo-pesquisa" type="text" list="sugestoes-pesquisa" autocomplete="off"
+                        enterkeyhint="search">
+
+                    <p class="pesquisa-msg" role="status" aria-live="polite"></p>
                 </form>
                 <button id="nav-carrinho"><img src="../imagens/carrinho.png " alt=""></button>
             </div>
@@ -79,7 +80,7 @@
         <div>
             <h2>Conjuntos</h2>
 
-            <input id="pesquisa-roupas" type="text" list="filtro-roupas" src="">
+            
 
         </div>
     </section>
@@ -168,10 +169,6 @@
 
     </section>
     <!-- Fim Vitrine horizontal 1 -->
-
-    <!-- Vitrine horizontal 2 -->
-
-    <!-- Fim Vitrine horizontal 2 -->
 
     <!-- footer -->
     <footer class="footer">

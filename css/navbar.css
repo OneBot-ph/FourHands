@@ -15,7 +15,7 @@
 .grid-navbar a,
 .src a {
     text-decoration: none;
-    color: #000;
+    color: #3a2118;
     text-align: center;
     transition: color .3 ease;
 
@@ -28,7 +28,7 @@
 .src input {
     height: 30px;
     width: 400px;
-    right: 56%;
+    right: 58%;
     position: absolute;
     font-size: 16px;
     border: none;
@@ -63,12 +63,16 @@
     justify-content: space-between;
 }
 
-.place-navbar #logo {
+.place-navbar #logo{
     padding-top: 24px;
     padding-bottom: 24px;
     text-align: justify;
-    color: #000;
+
     line-height: 18px;
+}
+
+.place-navbar #logo h2{
+    color: #3a2118;
 }
 
 .place-navbar .paginas {
@@ -147,5 +151,6 @@
     padding: 4px;
     margin: 4px;
     text-align: left;
-    color:#000;;
+    color: #000;
+    ;
 }

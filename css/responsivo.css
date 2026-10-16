@@ -277,13 +277,14 @@ button.btn-tamanho.selecionado {
     /* ---------- BANNER DA HOME ----------
        O banner original é uma colagem posicionada em % da tela, que
        não funciona em telas menores. Aqui vira 3 cartões empilhados. */
-    .desktopBanner, .mini-servicos {
+    .desktopBanner,
+    .mini-servicos {
         display: none;
     }
 
 
 
-    .bannerCelular{
+    .bannerCelular {
         display: block;
         height: auto;
         min-height: 0;
@@ -779,12 +780,14 @@ button.btn-tamanho.selecionado {
         height: auto;
         padding: 24px 0 48px;
         font-size: 16px;
+
     }
 
     .place-experiencias {
         width: 100%;
         height: auto;
         padding: 0 16px;
+
     }
 
     .background-experiencias {
@@ -840,6 +843,8 @@ button.btn-tamanho.selecionado {
 
     .grid-ex-fundadoras .fundadoraB-txt {
         order: 4;
+
+
     }
 
     .grid-ex-fundadoras p {
@@ -1075,10 +1080,12 @@ button.btn-tamanho.selecionado {
     /* ---------- Quem somos ---------- */
     .background-experiencias {
         height: 180px;
+        text-align: justify;
     }
 
     .instagram-fundadoras .card-fundadoras>img {
         height: 180px;
+
     }
 
     .proximoA,

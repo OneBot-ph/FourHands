@@ -12,8 +12,9 @@
     <script src="../javaScript/carrinho.js" defer></script>
     <script src="../javaScript/apiWhast.js" defer></script>
     <script src="../javaScript/MostrarServicos.js" async></script>
+    <script src="../javaScript/pesquisa.js" async></script>
 
-
+    <link rel="stylesheet" href="../css/pesquisa.css">
     <link rel="stylesheet" href="../css/ind-experiencias.css">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/navbar.css">
@@ -26,6 +27,7 @@
 </head>
 
 <body>
+
     <!-- cabeçalho -->
     <header class="place-navbar">
         <nav class="navbar">
@@ -43,17 +45,17 @@
                         <a href="../index.html#vitr-moldes">Nossos Moldes</a>
                         <a href="../index.html#place-pedido">Pedidos Personalizados</a>
                     </div>
-                    <a href="html/quemSomos.html">
+                    <a href="quemSomos.html">
                         <p>Quem Somos?</p>
                     </a>
                 </div>
             </div>
             <div class="src">
-                <form>
-                    <input type="text" list="pesquisa">
-                    <datalist id="pesquisa">
-                        <!-- Pesquisar-->
-                    </datalist>
+                <form class="pesquisa" data-raiz="../" role="search">
+                    <input id="campo-pesquisa" type="text" list="sugestoes-pesquisa" autocomplete="off"
+                        enterkeyhint="search">
+
+                    <p class="pesquisa-msg" role="status" aria-live="polite"></p>
                 </form>
                 <button id="nav-carrinho"><img src="../imagens/carrinho.png " alt=""></button>
             </div>
@@ -62,6 +64,7 @@
             </button>
         </nav>
     </header>
+
 
 
     <form class="carrinho-compras formularioEnvio" data-tipo="carrinho">
