@@ -3,6 +3,7 @@ let trackCompras = document.getElementsByClassName("track");
 let cardCompra = document.getElementsByClassName("card-compra");
 let carrinho = document.getElementsByClassName("carrinho-compras");
 const listTamanho = document.querySelectorAll(".btn-tamanho");
+let notificacao = document.getElementsByClassName("notificacao");
 let abrirPag = 0;
 let valorTotal = 0;
 
@@ -99,6 +100,10 @@ function addProduto(evento) {
     document.getElementsByClassName("track")[0].append(novoCard);
 
     AtualizacaoTotal();
+
+    notificacao[0].style.display = "block";
+    notificacao[0].innerHTML  = "!"
+
 }
 
 function CriarCard({ img, titulo, preco, quantidade, tamanho }) {
