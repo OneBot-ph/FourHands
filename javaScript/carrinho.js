@@ -4,6 +4,7 @@ let cardCompra = document.getElementsByClassName("card-compra");
 let carrinho = document.getElementsByClassName("carrinho-compras");
 const listTamanho = document.querySelectorAll(".btn-tamanho");
 let notificacao = document.getElementsByClassName("notificacao");
+let indNotificacao = 0;
 let abrirPag = 0;
 let valorTotal = 0;
 
@@ -70,6 +71,10 @@ function addProduto(evento) {
     const produtoPreco = produtoInfo.querySelector(".preco").innerHTML;
     const produtoQuantidade = produtoInfo.querySelector(".quantidade").value
 
+    notificacao[0].style.display = "block";
+    indNotificacao += 1;
+    notificacao[0].innerHTML = indNotificacao;
+
     const tamanhoSelecionado = produtoInfo.querySelector('.btn-tamanho.selecionado');
     let produtoTamanho = "";
     if (!tamanhoSelecionado) {
@@ -101,8 +106,8 @@ function addProduto(evento) {
 
     AtualizacaoTotal();
 
-    notificacao[0].style.display = "block";
-    notificacao[0].innerHTML  = "!"
+
+
 
 }
 
