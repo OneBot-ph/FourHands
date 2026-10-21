@@ -53,7 +53,18 @@ formularios.forEach((form) => {
 
         if (form.dataset.tipo === "carrinho") {
             AtualizarEnviar();
-            alert(`Obrigado pela sua compra!\nValor do pedido: ${NumeroParatxt(lista.total)}`);
+
+            Swal.fire({
+                position: "top",
+                width: 600,
+                height: 200,
+                icon: "success",
+                title: `Obrigado pela sua compra!\nValor do pedido: ${NumeroParatxt(lista.total)}`,
+                showConfirmButton: false,
+                timer: 1500
+            });
+
+
         }
 
         setTimeout(() => {

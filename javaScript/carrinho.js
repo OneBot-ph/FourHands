@@ -1,6 +1,3 @@
-import Swal from 'sweetalert2/dist/sweetalert2.js'
-import 'sweetalert2/src/sweetalert2.scss'
-
 let totalCarrinho = document.querySelector("#totalCarrinho");
 let trackCompras = document.getElementsByClassName("track");
 let cardCompra = document.getElementsByClassName("card-compra");
@@ -54,6 +51,7 @@ function AtualizarEnviar() {
     document.getElementsByClassName("track")[0].innerHTML = "";
     notificacao[0].style.display = "none";
     indNotificacao = 0;
+
     AtualizacaoTotal();
 }
 
@@ -79,21 +77,26 @@ function addProduto(evento) {
     indNotificacao += 1;
     notificacao[0].innerHTML = indNotificacao;
 
-    try {
-        Swal.fire({
-            title: "Drag me!",
-            icon: "success",
-            draggable: true
-        });
-    }
-    catch(error){
-        console.log(error);
-    }
+
+    Swal.fire({
+        position: "top-end",
+        width: 700,
+        icon: "success",
+        title: "Item Adicionado com Sucesso",
+        showConfirmButton: false,
+        timer: 1000
+    });
+
 
     const tamanhoSelecionado = produtoInfo.querySelector('.btn-tamanho.selecionado');
     let produtoTamanho = "";
     if (!tamanhoSelecionado) {
-        alert('Selecione um tamanho antes de adicionar ao carrinho.');
+        Swal.fire({
+            position: "top",
+            with: 1000,
+            title: "Selecione um tamanho antes de adicionar ao carrinho.",
+            icon: "info",
+        });
         return;
     }
     produtoTamanho = tamanhoSelecionado.innerHTML;
