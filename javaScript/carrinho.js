@@ -22,7 +22,7 @@ function ready() {
 
     const quantidadeInput = document.getElementsByClassName("quantidade");
     for (let i = 0; i < quantidadeInput.length; i++) {
-        quantidadeInput[i].addEventListener("change", AtualizacaoTotal);
+        quantidadeInput[i].addEventListener("change", AtualizacaoTotal, AtualizarNotificacao);
     }
 
     const btnAddCarrinho = document.getElementsByClassName("adicionar-carrinho");
@@ -31,6 +31,7 @@ function ready() {
     }
 
     RestaurarCarrinho()
+    AtualizarNotificacao();
 
 }
 
@@ -50,9 +51,11 @@ function RestaurarCarrinho() {
 function AtualizarEnviar() {
     document.getElementsByClassName("track")[0].innerHTML = "";
     notificacao[0].style.display = "none";
-    indNotificacao = 0;
+
 
     AtualizacaoTotal();
+    AtualizarNotificacao();
+    SalvarCarrinho();
 }
 
 listTamanho.forEach(btn => {
@@ -65,6 +68,19 @@ listTamanho.forEach(btn => {
     })
 })
 
+
+function AtualizarNotificacao() {
+    let total = 0;
+
+    for (let i = 0; i < cardCompra.length; i++) {
+        total += Number(cardCompra[i].querySelector(".quantidade").value) || 0;
+    }
+
+    indNotificacao = total;
+    notificacao[0].innerHTML = indNotificacao;
+    notificacao[0].style.display = indNotificacao > 0 ? "block" : "none";
+}
+
 function addProduto(evento) {
     const btn = evento.target;
     const produtoInfo = evento.target.parentElement.parentElement;
@@ -73,10 +89,6 @@ function addProduto(evento) {
     const produtoPreco = produtoInfo.querySelector(".preco").innerHTML;
     const produtoQuantidade = produtoInfo.querySelector(".quantidade").value;
 
-    notificacao[0].style.display = "block";
-    indNotificacao += 1;
-    notificacao[0].innerHTML = indNotificacao;
-
 
     Swal.fire({
         position: "top-end",
@@ -84,29 +96,31 @@ function addProduto(evento) {
         icon: "success",
         title: "Item Adicionado com Sucesso",
         showConfirmButton: false,
+        confirmButtonColor: "#f7b6dc",
         timer: 1000
     });
-
 
     const tamanhoSelecionado = produtoInfo.querySelector('.btn-tamanho.selecionado');
     let produtoTamanho = "";
     if (!tamanhoSelecionado) {
         Swal.fire({
             position: "top",
-            with: 1000,
-            title: "Selecione um tamanho antes de adicionar ao carrinho.",
-            icon: "info",
+            html: "<br> <p>Selecione um tamanho antes de adicionar ao carrinho.</p>",
+            confirmButtonColor: "#f7b6dc",
+
         });
         return;
     }
     produtoTamanho = tamanhoSelecionado.innerHTML;
 
-    const produtoCard = document.getElementsByClassName("nomePecaCard");
 
+    const produtoCard = document.getElementsByClassName("nomePecaCard");
     for (let i = 0; i < produtoCard.length; i++) {
         if (produtoCard[i].innerHTML === produtoTitulo) {
             produtoCard[i].parentElement.getElementsByClassName("quantidade")[0].value++;
             AtualizacaoTotal();
+            AtualizarNotificacao();
+            SalvarCarrinho();
             return;
         }
     }
@@ -122,11 +136,10 @@ function addProduto(evento) {
 
     document.getElementsByClassName("track")[0].append(novoCard);
 
+
     AtualizacaoTotal();
-
-
-
-
+    AtualizarNotificacao();
+    SalvarCarrinho();
 }
 
 function CriarCard({ img, titulo, preco, quantidade, tamanho }) {
@@ -152,7 +165,6 @@ function CriarCard({ img, titulo, preco, quantidade, tamanho }) {
         <button class="removerCarrinho" type="button">Remover</button>
         `;
 
-
     novoCardProduto.getElementsByClassName("quantidade")[0].addEventListener("change", AtualizacaoTotal);
     novoCardProduto.getElementsByClassName("removerCarrinho")[0].addEventListener('click', RemoverCarrinho);
 
@@ -162,6 +174,8 @@ function CriarCard({ img, titulo, preco, quantidade, tamanho }) {
 function RemoverCarrinho(evento) {
     evento.target.closest(".card-compra").remove();
     AtualizacaoTotal();
+    AtualizarNotificacao();
+    SalvarCarrinho();
 }
 
 function AtualizacaoTotal() {
@@ -185,6 +199,7 @@ function AtualizacaoTotal() {
     valorTotal = subTotal;
     totalCarrinho.innerHTML = NumeroParatxt(valorTotal);
 
+    AtualizarNotificacao();
     SalvarCarrinho();
 }
 

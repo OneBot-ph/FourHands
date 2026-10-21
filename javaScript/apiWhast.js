@@ -16,7 +16,13 @@ formularios.forEach((form) => {
         if (form.dataset.tipo === "carrinho") {
             const itens = coletarItensCarrinho(form);
             if (itens.length === 0) {
-                alert("Seu carrinho está vazio.")
+                Swal.fire({
+                    title: "Oops...",
+                    text: "Adicione itens no carrinho antes de enviar.",
+                    position: "top",
+                    width: 600,
+                    confirmButtonColor: "#f7b6dc",
+                });
                 return;
             }
 
