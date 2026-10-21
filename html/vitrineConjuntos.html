@@ -10,6 +10,7 @@
     <script src="../javaScript/apiWhast.js" defer></script>
     <script src="../javaScript/MostrarServicos.js" async></script>
     <script src="../javaScript/pesquisa.js" async></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <link rel="stylesheet" href="../css/pesquisa.css">
     <link rel="stylesheet" href="../css/main.css">
@@ -52,7 +53,10 @@
 
                     <p class="pesquisa-msg" role="status" aria-live="polite"></p>
                 </form>
-                <button id="nav-carrinho"><img src="../imagens/carrinho.png " alt=""></button>
+                <button id="nav-carrinho">
+                    <div class="notificacao"></div>
+                    <img src="../imagens/carrinho.png " alt="">
+                </button>
             </div>
             <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
                 <span></span><span></span><span></span>
@@ -85,7 +89,7 @@
         <div>
             <h2>Conjuntos</h2>
 
-            
+
 
         </div>
     </section>
@@ -200,7 +204,7 @@
 
             </footer>
         </section>
-    </section>    
+    </section>
     <!-- Fim Vitrine horizontal 1 -->
 
     <!-- footer -->

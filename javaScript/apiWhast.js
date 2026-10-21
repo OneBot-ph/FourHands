@@ -1,7 +1,7 @@
 //http://127.0.0.1:5678/webhook-test/Formulário' || http://n8n:5678/webhook-test/Formulário'
 
 let formularios = document.querySelectorAll(".formularioEnvio");
-const urlWebhook = "https://wind-kinase-lee-cast.trycloudflare.com/webhook/formulario";
+const urlWebhook = "https://bucks-draws-thanksgiving-eastern.trycloudflare.com";
 formularios.forEach((form) => {
 
     form.addEventListener('submit', async function enviarDadosN8n(dados) {

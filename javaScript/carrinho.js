@@ -71,7 +71,7 @@ function addProduto(evento) {
     const produtoImg = produtoInfo.querySelector(".produtoimg").src;
     const produtoTitulo = produtoInfo.querySelector(".nomePeca").innerHTML;
     const produtoPreco = produtoInfo.querySelector(".preco").innerHTML;
-    const produtoQuantidade = produtoInfo.querySelector(".quantidade").value
+    const produtoQuantidade = produtoInfo.querySelector(".quantidade").value;
 
     notificacao[0].style.display = "block";
     indNotificacao += 1;
