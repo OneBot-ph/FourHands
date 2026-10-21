@@ -1,3 +1,6 @@
+import Swal from 'sweetalert2/dist/sweetalert2.js'
+import 'sweetalert2/src/sweetalert2.scss'
+
 let totalCarrinho = document.querySelector("#totalCarrinho");
 let trackCompras = document.getElementsByClassName("track");
 let cardCompra = document.getElementsByClassName("card-compra");
@@ -49,8 +52,9 @@ function RestaurarCarrinho() {
 
 function AtualizarEnviar() {
     document.getElementsByClassName("track")[0].innerHTML = "";
+    notificacao[0].style.display = "none";
+    indNotificacao = 0;
     AtualizacaoTotal();
-
 }
 
 listTamanho.forEach(btn => {
@@ -74,6 +78,17 @@ function addProduto(evento) {
     notificacao[0].style.display = "block";
     indNotificacao += 1;
     notificacao[0].innerHTML = indNotificacao;
+
+    try {
+        Swal.fire({
+            title: "Drag me!",
+            icon: "success",
+            draggable: true
+        });
+    }
+    catch(error){
+        console.log(error);
+    }
 
     const tamanhoSelecionado = produtoInfo.querySelector('.btn-tamanho.selecionado');
     let produtoTamanho = "";
