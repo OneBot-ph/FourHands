@@ -121,8 +121,16 @@ button.btn-tamanho.selecionado {
 
     #nav-carrinho img,
     #nav-carrinho:hover img {
-        width: 36px;
+        width: 80px;
         height: auto;
+        position: relative;
+    }
+
+    .notificacao {
+        height: 15px;
+        width: 15px;
+        right: 2%;
+        font-size: 10px;
     }
 
     .menu-toggle {
@@ -220,6 +228,7 @@ button.btn-tamanho.selecionado {
         padding: 10px 8px;
         font-size: 15px;
     }
+
 
     /* ---------- CARRINHO (painel lateral) ---------- */
     .carrinho-compras {

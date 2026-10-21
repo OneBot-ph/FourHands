@@ -118,6 +118,7 @@
     border: none;
     cursor: pointer;
     overflow: hidden;
+    position: relative;
 }
 
 #nav-carrinho img {
@@ -157,7 +158,7 @@
 .notificacao{
     display: none;
     position: absolute;
-    right: 2%;
+    right: 10%;
     top: 15%;
     background-color: #f7b6dc;
     height: 20px;
