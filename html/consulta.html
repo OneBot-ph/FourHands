@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../javaScript/consulta.js" async></script>
+    <script src="../javaScript/validacaoQuantidade.js" async></script>
+    <script src="../javaScript/carrinho.js" defer></script>
+    <script src="../javaScript/apiWhast.js" defer></script>
+    <script src="../javaScript/MostrarServicos.js" async></script>
+    <script src="../javaScript/pesquisa.js" async></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+
+    <link rel="stylesheet" href="../css/consulta.css">
+    <link rel="stylesheet" href="../css/pesquisa.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/carrinho.css">
+    <link rel="stylesheet" href="../css/responsivo.css">
+</head>
+
+<body>
+
+    <!-- cabeçalho -->
+    <header class="place-navbar">
+        <nav class="navbar">
+
+            <div class="grid-navbar">
+                <a id="logo" href="../index.html">
+                    <h2>Four Hands</h2>
+                </a>
+                <div class="paginas">
+                    <a>
+                        <button id="mostrarSrv">Servicos</button>
+                    </a>
+                    <div class="servicos">
+                        <a href="../index.html#acesso-vitrRoupas">Roupas & Conjuntos</a>
+                        <a href="../index.html#vitr-moldes">Nossos Moldes</a>
+                        <a href="../index.html#place-pedido">Pedidos Personalizados</a>
+                    </div>
+                    <a href="consulta.html">
+                        <p>Consulte seu pedido</p>
+                    </a>
+                    <a href="quemSomos.html">
+                        <p>Quem Somos?</p>
+                    </a>
+                </div>
+            </div>
+            <div class="src">
+                <form class="pesquisa" data-raiz="../" role="search">
+                    <input id="campo-pesquisa" type="text" list="sugestoes-pesquisa" autocomplete="off"
+                        enterkeyhint="search">
+
+                    <p class="pesquisa-msg" role="status" aria-live="polite"></p>
+                </form>
+                <button id="nav-carrinho">
+                    <div class="notificacao"></div>
+                    <img src="../imagens/carrinho.png " alt="">
+                </button>
+            </div>
+            <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+    </header>
+
+
+    <!-- carrinho-->
+    <form class="carrinho-compras formularioEnvio" data-tipo="carrinho">
+        <h1>Carrinho</h1>
+        <div class="track">
+
+        </div>
+
+        <div class="place-desc">
+            <input id="nome" name="nome" type="text" placeholder="Digite seu nome completo" required>
+            <input id="numero" name="telefone" type="tel" placeholder="(11) 90000-000" required>
+
+            <div class="grid-total">
+                <h3>Total: </h3>
+                <p id="totalCarrinho">R$0,00</p>
+            </div>
+            <button id="enviarCarrinho" class="enviar" type="submit">Enviar Pedido</button>
+        </div>
+    </form>
+
+    <section class="consulta">
+        <form id="formConsulta">
+            <label for="nomeCliente">Seu nome completo</label>
+            <input id="nomeCliente" name="nome" type="text" required>
+            <button type="submit">Consultar</button>
+        </form>
+
+        <div id="resultado"></div>
+    </section>
+
+    <!-- footer -->
+    <footer class="footer" style="margin-top: 90px;">
+
+
+        <div class="grid-texto">
+            <h1>Four Hands</h1>
+            <p>Sua ideia. Nossa confecção</p>
+        </div>
+
+        <div class="navbar-footer">
+            <a href="index.html">
+                <h3>indice</h3>
+            </a>
+
+            <a href="html/servicos.html">
+                <h3>Personalizados</h3>
+            </a>
+
+            <a href="html/quemSomos.html">
+                <h3>Vitrine de moldes</h3>
+            </a>
+            <a href="html/quemSomos.html">
+                <h3>Conjuntos</h3>
+            </a>
+
+
+            <a href="html/quemSomos.html">
+                <h3>Quem Somos?</h3>
+            </a>
+
+        </div>
+        </div>
+
+        <div class="place-contato">
+            <div class="grid-contato">
+                <a class="card-contato">
+                    <img src="../imagens/instagram.png" alt="">
+                    <p>@forhands</p>
+                </a>
+                <a class="card-contato">
+                    <img src="../imagens/Whatsapp.png" alt="">
+                    <p>(11) 90000-000</p>
+                </a>
+                <a class="card-contato">
+                    <img src="../imagens/e-mail.png" alt="">
+                    <p>fourhands@gmail.com.br</p>
+                </a>
+
+                <a id="by" href="">
+                    <p>Desenvolvido por Toca do Besouro</p>
+                </a>
+            </div>
+            <img class="flor" src="../imagens/flor.png" alt="">
+        </div>
+    </footer>
+
+</body>
+
+</html>

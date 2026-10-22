@@ -1,0 +1,104 @@
+/* Container principal da seção de consulta */
+.consulta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+    font-family: sans-serif;
+    padding-top: 300px;
+}
+
+/* Estilização do formulário de busca */
+#formConsulta {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    gap: 15px;
+}
+
+#formConsulta label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+#formConsulta input[type="text"] {
+    padding: 12px 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+#formConsulta input[type="text"]:focus {
+    border-color: #555;
+}
+
+#formConsulta button {
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#formConsulta button:hover {
+    background-color: #555;
+}
+
+/* Área onde os resultados dos pedidos irão aparecer */
+#resultado {
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+}
+
+/* Estilo sugerido para os cards de pedido gerados via JavaScript (Sem Imagens) */
+.pedido-card {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-left: 5px solid #333;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    list-style-type: none;
+    margin-bottom: 12px;
+}
+
+.pedido-card h3 {
+    margin: 0 0 10px 0;
+    color: #333;
+    font-size: 18px;
+}
+
+.pedido-card p {
+    margin: 5px 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.pedido-card .status {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #e0f7fa;
+    color: #00796b;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 12px;
+}
