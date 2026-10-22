@@ -69,6 +69,10 @@ button.btn-tamanho.selecionado {
         max-width: 100%;
     }
 
+    .consulta {
+        padding-top: 50px;
+    }
+
     /* ---------- NAVBAR ---------- */
     .place-navbar {
         top: 0;
